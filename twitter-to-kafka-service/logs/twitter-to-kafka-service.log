@@ -1,0 +1,21 @@
+2023-01-31 20:29:11 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 12311 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-01-31 20:29:11 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-01-31 20:29:12 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 4.205 seconds (JVM running for 7.719)
+2023-01-31 20:29:12 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-01-31 20:29:12 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-01-31 20:29:38 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 12323 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-01-31 20:29:38 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-01-31 20:29:39 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.884 seconds (JVM running for 5.282)
+2023-01-31 20:29:39 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-01-31 20:29:39 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-01-31 20:30:36 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 12345 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-01-31 20:30:36 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-01-31 20:30:37 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.82 seconds (JVM running for 5.367)
+2023-01-31 20:30:37 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-01-31 20:30:37 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-01-31 20:44:46 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 12555 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-01-31 20:44:46 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-01-31 20:44:47 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.746 seconds (JVM running for 5.045)
+2023-01-31 20:44:47 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-01-31 20:44:47 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-01-31 20:44:47 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
