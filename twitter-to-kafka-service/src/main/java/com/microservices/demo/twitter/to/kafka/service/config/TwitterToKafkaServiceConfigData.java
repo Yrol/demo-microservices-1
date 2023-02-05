@@ -8,7 +8,7 @@ import java.util.List;
 
 /*
 * Using lombok for setters and getter
-* Reading string data from application.yml file
+* Reading string data from application.yml file. Reading from "twitter-to-kafka-service"
 * */
 @Data
 @Configuration
@@ -18,4 +18,7 @@ public class TwitterToKafkaServiceConfigData {
     // This will get populated from the value of "twitter-keywords" in src/main/resources/application.yml
     private List<String> twitterKeywords;
     private String welcomeMessage;
+    private String TwitterV2BaseUrl;
+    private String TwitterV2RulesBaseUrl;
+    private String TwitterV2BearerToken;
 }

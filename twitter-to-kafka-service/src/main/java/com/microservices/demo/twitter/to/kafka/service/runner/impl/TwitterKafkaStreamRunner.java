@@ -5,6 +5,8 @@ import com.microservices.demo.twitter.to.kafka.service.listener.TwitterKafkaStat
 import com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import twitter4j.FilterQuery;
 import twitter4j.TwitterException;
@@ -15,6 +17,14 @@ import javax.annotation.PreDestroy;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Tweet loading method 1 relying on old implementation (Not V2)
+ * This Spring bean will load at runtime via ConditionalOnExpression based on conditions set in  src/main/resources/application.yml
+ * */
+
+
+//@ConditionalOnProperty(name = "twitter-to-kafka-service.enable-v2-tweets", havingValue = "false")
+@ConditionalOnExpression("${twitter-to-kafka-service.enable-mock-tweets} && not ${twitter-to-kafka-service.enable-v2-tweets}")
 @Component
 public class TwitterKafkaStreamRunner implements StreamRunner {
 
@@ -38,7 +48,7 @@ public class TwitterKafkaStreamRunner implements StreamRunner {
         addFilter();
     }
 
-    // Method to execute when closing the twitter stream (using PreDestroy annotation).
+    // Method to execute when closing the twitter stream (using PreDestroy annotation\).
     @PreDestroy
     public void shutdown() {
         if(twitterStream != null) {

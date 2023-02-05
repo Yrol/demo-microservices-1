@@ -1,0 +1,37 @@
+2023-02-03 21:23:03 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 23679 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-03 21:23:03 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-03 21:23:05 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.396 seconds (JVM running for 5.799)
+2023-02-03 21:23:05 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-03 21:23:05 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-03 21:23:05 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-03 21:23:05 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2023-02-03 21:23:05 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-03 21:23:07 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2023-02-03 21:23:07 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2023-02-03 21:23:07 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing the twitter stream

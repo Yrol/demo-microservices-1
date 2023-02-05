@@ -1,74 +1,2033 @@
-2023-02-02 21:25:39 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 19696 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-02 21:25:39 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-02 21:25:43 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 5.802 seconds (JVM running for 9.514)
-2023-02-02 21:25:43 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-02 21:25:43 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-02 21:25:43 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-02 21:25:43 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2023-02-02 21:25:43 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-02 21:25:45 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
+2023-02-05 22:13:13 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30507 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:13:13 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:13:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.076 seconds (JVM running for 6.099)
+2023-02-05 22:13:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:13:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:13:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:13:15 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:13:17 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-05 22:13:17 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
-2023-02-02 21:25:45 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-05 22:13:17 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.main(TwitterKafkaServiceApplication.java:34)
+Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 3 [character 4 line 1]
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
+	at org.json.JSONObject.<init>(JSONObject.java:194)
+	at org.json.JSONObject.<init>(JSONObject.java:321)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:229)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:94)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:46)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.run(TwitterKafkaServiceApplication.java:45)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
+	... 5 common frames omitted
+2023-02-05 22:18:39 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30596 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:18:39 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:18:42 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 4.792 seconds (JVM running for 9.231)
+2023-02-05 22:18:42 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:18:42 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:18:42 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:18:42 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:20:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30621 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:20:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:20:09 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.911 seconds (JVM running for 6.664)
+2023-02-05 22:20:09 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:20:09 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:20:09 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:20:09 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:21:29 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30673 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:21:29 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:21:31 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.661 seconds (JVM running for 6.928)
+2023-02-05 22:21:31 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:21:31 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:21:31 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:21:31 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:22:59 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30701 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:22:59 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:23:01 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.955 seconds (JVM running for 5.207)
+2023-02-05 22:23:01 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:23:01 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:23:01 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:23:01 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:23:03 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-05 22:23:03 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
-2023-02-02 21:25:45 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing the twitter stream
-2023-02-02 22:18:17 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 20596 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-02 22:18:17 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-02 22:18:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.686 seconds (JVM running for 7.347)
-2023-02-02 22:18:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-02 22:18:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-02 22:18:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-02 22:18:20 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2023-02-02 22:18:20 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-02 22:18:35 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-05 22:23:03 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.main(TwitterKafkaServiceApplication.java:33)
+Caused by: java.lang.NullPointerException: null
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:93)
+	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:46)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.run(TwitterKafkaServiceApplication.java:44)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
+	... 5 common frames omitted
+2023-02-05 22:23:17 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30707 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:23:17 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:23:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 4.293 seconds (JVM running for 7.229)
+2023-02-05 22:23:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:23:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:23:19 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:23:19 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:24:42 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @btsbotlyrics: past the end of this cold winter 
+until the spring comes again 
+until the flowers bloom again 
+stay there a little longer
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dearis/M 2023 Spring collection
+【vol.1：2月16日(木) 12:00 発売】
 
-2023-02-02 22:18:35 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
+✔️Front zip pants
+color：BLACK/GRAY
+price：14,300yen(tax in)
 
-2023-02-02 22:18:35 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing the twitter stream
+センタープレスのスラックスにサイドプリーツや裾ファスナーなどモードなポイントをミキシングしたデザイン。高級感のある生地で丁寧に仕上げました。
+
+#dearis https://t.co/npC9cmgOz0
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Ginger_Tucci @DanKelly72 @AFandango @MumbrianSpinner @janemmcnulty JANE, TELL HER
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ขออนุญาตสุ่มแจกเลยนะครับ
+ผู้โชคดี 2 ท่านรายงานตัว DM แจ้งชื่อที่อยู่ได้เลยครับบ
+@ppaizhouke @MXiang15 https://t.co/M7vcDHxqWn https://t.co/AxA4iVRXnP
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @alexntwt @Purelove341 @lexandhertweets @mrdswifeyy @urfavhere_ Alex and alexa are your parents spring
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者公演
+交換を探しております
+
+【譲】2/18夜 2階〜2列 12-23 
+
+【求】2/23夜 同等席　1枚
+
+上乗せ、列上がり上乗せ可、列下がり可
+DMまでご連絡お願いします。
+
+#スプパラ譲 #少年忍者譲 #少年忍者求 #スプパラ交換 #少年忍者交換
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Yibo_Thailand: 230119 | Henan TV weibo update
+#หวังอี้ป๋อ กับโชว์ Twins《双生》ในงาน 2023 Henan Spring Festival Gala
+
+#WangYibo #王一博 2/2
+#W…
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Official_LJL: ＼#LJL2023 Who Will Win ファン予想／
+
+🏁LJL 2023 Spring Split DAY 5 Match 2🏆
+DetonatioN FocusMe
+🆚 V3 Esports
+
+同世代のTOPレーナー対決に注目！
+こ…
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @dontbecringey @NxB_N7 @DunwallEnjoyer The reality is that for instance Spanish pledge doesn’t come from active forces, but storage. They need 3 months to regenerate the tanks apparently. Polish tanks same deals they are supposed to be Leo2PL. But now it’s possible they could be 2A5. No one knows when, what.
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @HannahStitfall: A snowy red squirrel this Sunday ❄️🤍 Although I must admit…it certainly feels like spring is in the way today in Cornwa…
+2023-02-05 22:24:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Visit_Japan: From late April to early May, the cherry blossoms peak in Goryokaku Park and around 1,600 trees are beautifully illuminate…
+2023-02-05 22:25:01 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30732 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:25:01 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:25:03 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.0 seconds (JVM running for 5.505)
+2023-02-05 22:25:03 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:25:03 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:25:03 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:25:03 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:25:05 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign billboard ad spotted on a building in Seoul, South Korea!
+
+©JJH_SRH…
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Now is @nicolas_frankel bridging the Java and Kotlin communities 🤝 https://t.co/gbAuNxvYhb
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Spring_zerofour: 若干キレ気味の
+「何なんですかこの世界は❗❓」がおハーブでしたわ〜💕
+#サロメ満点配信ですわ 
+#サロメ百万展 https://t.co/srylHtKIdR
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @amefurasshi: ／
+AMEFURASSHI TOUR 2023 “Spring”
+FC先行本日23:59まで！
+＼
+
+📆日程
+大阪3/3 (金) ESAKA  MUSE
+愛知3/4(土) NAGOYA CLUBQUATTRO
+東京3/10(金)duo MUSI…
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @T1LoL: [2023 #LCK Spring R1 M6 vs. NS]
+
+‘Ashe’와 @T1Keria, 'Keria'와 'Ashe'.
+NS전 첫 POG, 류민석 선수입니다.
+
+‘Keria’ as Ashe commanded the Rift!
+H…
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ipagination: Une extraordinaire et monumentale sculpture mouvante a été créée par l'artiste tchèque David Cerny à #Prague en hommage à…
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者公演　求めております
+   
+【日時】2/19、22 昼 夜
+【座席】〜9列、左右列〜5
+【枚数】1枚〜2連
+【金額】ご提示ください
+【取引】要相談
+
+お手持ちの座席と即決明記の上直接DMお願いします。
+いいね不可。
+
+#スプパラ譲 #少年忍者譲 #スプパラ求 #少年忍者求
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Black swan and the current Bts era have the same time gap than Black swan and spring day
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @javinpaul: Top 23 Design Patterns Experienced Java Programmers Should Learn https://t.co/0TimOYz2Z5 https://t.co/WlV0BdOAvz
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @halfatoneoff Hi there, we are so sorry to hear that. We will be more than happy to help you out. You can share with us your domain and Google Workspace details via private DM so we can further look into this. -WR
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Why is it cold out I can't wait for Spring/Summer
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patrick_THFC: 230205 | 𐐪 สรุปเทรนด์ 𐑂
+
+— Patrick Spring Festival —
+🌐 9
+🇹🇭 1
+
+— #PaiPai四海同春2023 —
+🇹🇭 1
+
+— #แพทริค —
+🇹🇭 18
+
+🖇 https://t.c…
+2023-02-05 22:25:15 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @spring_oranges: これ自分のアカウントだったやつです！フレンド申請してください！ 知り合いにも教えてあげてフレンド申請してほしいです！嫌がらせしましょう！ https://t.co/QD8zR86H7N
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @putLove_JB: ฝากเติมBBให้แจบอมด้วยนะคะ
+ขอคนละ1รีทวิต
+Will Spring Come? 
+I love to listen to #WillSpringCome by #Def  #WillSpringCome_Def…
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Evening Course Spring 2023 - Sugarcraft & Cake Decoration (Advanced)
+
+Gain advanced skills in the art of sugarcraft. Two cakes will be completed: Celebration/Novelty Cake & Two-tier Stacked Cake
+
+Course Info & Online Application: https://t.co/DfDpc2wEnK https://t.co/qqkvJYQaAW
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ AmBitious
+交換を探しています。
+
+【譲】 
+3/5 夜 1階 〜14列 下手 1枚
+
+【求】
+3/4夜 3/5昼 1枚
+
+お心当たりのある方は担当年齢等必要事項明記の上、DMお願いいたします。
+#スプパラ交換  #SpringParadise交換
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kimura_kenchin: กินบัวลอยตามแพท บัวลอยคิทแคทจากmkอร่อยมากกกก
+Patrick Spring Festival
+#PaiPai四海同春2023 
+#แพทริค @patrick_pppat https://t.…
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @HornyMilfForFu1: Is spring coming yet?  #Milf #Flashing #Boobs #outdoorfun #Slut #nsfwtw #Cougar #SundayFunday https://t.co/2FvoL7KXoI
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kankan_0111: 【交換/譲渡】 あんスタ イベコレ フィーチャ テーマ 缶バッジ
+
+譲・画像参照
+
+求・22 spring iみか2、c/iジュン1、summer i薫1 or 定価＋送料
+
+郵送希望。お約束分は除いております。
+譲渡は星5は星4含む方優先。…
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 수고 많으셨습니당 ~~~ https://t.co/NPQapMytJn
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ArtGuideAlex: Spring in Islington #MelissaScottMiller https://t.co/6ViNkF2bO7
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Jooniesoob Duas
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @hackinarticles: Python Cheat Sheet
+
+#devops #roadmap #programmer #programming #coding #developer #code #webdeveloper #javascript #coder…
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text え！！めっっっっちゃくちゃかわいい！！！！！！！ https://t.co/udVPpslPIm
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ericat_lol Esses drafts porcos da DK desde do spring de 2022 não muda plmds toda santa partida o Canyon precisa fazer 1 X 9 para os outros brilhar cadê os picks do meta Gorila... https://t.co/p5ETsgJ6JM
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Springtime near https://t.co/rVroWGuG52
+2023-02-05 22:25:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text such as written with spring waters hanging spring LiuChun dye spring beauty; Bottom allied with autumn qiu yuan hang fall persimmon chou-heung #红绿灯 #粗口 #内射 Don't talk too fast or too slow https://t.co/JzfuDQey6q
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Lime_NC: เพลงบังทัน 💜
+ชอบที่สุด: Telepathy 🍂
+ฟังบ่อยที่สุด: Dis-ease 🤧
+ฟังตอนเศร้า: Love Yourself: Answer 💜
+ฟังตอนเดินทาง: Idol 🎇
+ฟังตอ…
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: Canyon 
+
+"그저 G.O.M. 🐻‍❄️"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/OmK8Rh…
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @paipai__pppat: คนเก่งง ขอบคุณที่ทำงานหนักนะคับ
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+
+ https://t.co/XmTprkkQTp
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Inmersión lingüística 🇬🇧
+III Spring Camp 4º EP 12, 13 y 14 de abril
+Documentación para las familias
+https://t.co/6OCgufuXOp
+#bilingual #bilingües #yosoydeidiomas #bilingüescyl #CentrosEducacyl @CFPIdiomas @LasCortasdeBlas https://t.co/eioEiaSv5k
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ghumare64: Learn DevOps by playing games 🎮
+
+1. DevOps
+https://t.co/JzrPfmPZM0
+
+2. Linux
+https://t.co/hT6XkaaFsG
+
+3. DevOps Party Games…
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Eu tô falando… eu incorporo uma entidade coreana meia boca kkkkkkkkkkkkkkkkkkkl é tão, tão, tão bom cantar Spring Day https://t.co/wkr0rCCt24
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DplusKIA @KDF_LoL I love you S+ Kia 💚
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 광프 선수들 수고많았어요 정말 잘했어요 다음 경기 화이팅💪 https://t.co/IpFCYR3hpS
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @aeuhu1: ยังชอบน้องแพทบนเวทีเหมือนเดิมนะ ☺️ 
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patrick_pppat https://t.co/R3kv8QqYtN
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @wilusy: Happy Spring Festival！#Pixelart #tearsofthemisfanart #TearsOfThemis https://t.co/Kz2UmhL1li
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @mhall55nine: "In winter I dream of Spring flowers!" #AlmostFriday #abstractart #abstractartist #ArtistOnTwitter #art https://t.co/txuLp…
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Forgiving the Angel: Four Stories for Franz Kafka 5TZJX8J
+
+https://t.co/isY2WZTzch
+2023-02-05 22:25:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ตุ๊กตา spring home ซองอู 
+ #ตลาดนัดwelo #ตลาดนัดวีโร #ตลาดนัดWANNAONE #ตลาดนัดซองอู https://t.co/rmQbSHKld1
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @H_Spring_Sarah 春ちゃんこえええあよあおおおお:(´◦ω◦｀):ｶﾞｸﾌﾞﾙ
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @LoveLifeTriumph Love seeing bulbs push through, makes it feel like Spring is just around the corner 🌷🌷🌷
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @1Rain_spring: #حايل سفوح وريضان آجاء الجميلة https://t.co/tlbsa5XDGj
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @IHATEMYSELFNGL @alexntwt @lexandhertweets @mrdswifeyy @urfavhere_ Yeas💥my parents are the Bombe
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Mesoy640 @X_Concilium The Russians are using numbers as an offensive weapon! It is very limited due to the logistical burden as well as the training and will to fight of their largely conscripted army... Russian generals are still using the same doctrine they tried in the previous world wars...
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text PERIODDD https://t.co/h0vLi5pOZn
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Good Morning All! Sunday again
+
+Lovely, bright and breezy out there. Spring is starting to happen. So if you are out and about, do drop by. Last day of the #sale.
+
+12-4. https://t.co/c7TzQ4zSkb
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ipagination: Une extraordinaire et monumentale sculpture mouvante a été créée par l'artiste tchèque David Cerny à #Prague en hommage à…
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Blake Swift Spring Sally Blake Swift  #重庆资源 #重庆 https://t.co/316Me7lf2p
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @bangkokaussie: Spring cleaning at home. My course work from @MonashUni Readings in Thai A from 1997. Soon after that Asian language dep…
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @_mostafam_: Taliban have sent official representatives to Ghazni province in Malistan district, Nawor and Jaghori to discuss providing…
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Just found out that Mojang gave out the Vanilla cape to all accounts who owned both Java and Bedrock before the bundle and despite purchasing Bedrock on Windows twice neither were on the same account as Java somehow https://t.co/Z0PoGvpuGv
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:25:40 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @k2m_jb: ความสุขของฉันคือการเห็นเธอมีความสุขเห็นเธอยิ้มและหัวเราะกินอิ่มนอนหลับแค่นี้เราก็มีความสุขมากแล้ว
+
+Will Will Spring Come? 
+I lo…
+2023-02-05 22:25:57 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30747 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:25:57 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:25:58 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.06 seconds (JVM running for 5.529)
+2023-02-05 22:25:58 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:25:58 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:25:58 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:25:58 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:26:01 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ambergambler_ @DanKelly72 @AFandango @MumbrianSpinner @janemmcnulty Jane is sick of your shit as well ‘oh oh I’m growing, look at me all growing like the seasons’. You’re not the first bulbs of spring sprouting. Shut up.
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "Victoria's Secret, Spring Catalogue, Page 27."
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Satellizer95G 不得了，好想啜一口哦😚
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @desmond__neba Great start there.
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @elixir4paradise: Like my heart, my seasons are in love with you.
+See the sun and moon rise and fall each day,
+But for you, never will m…
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @TimesLIVE I never believe it’s until I experienced it. For a start I deposited R7000 for a test, in 7 days I got a return of R70,800 am so happy I invested under your platform @JamesAlderson0
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Time is not real https://t.co/rrOPItYh48
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Gill83984493 @KatieWright_bbc @chrischirp I’d get one now! Last week of winter, first week of Spring 🤷‍♀️
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Good morning to everyone who believes that balloon should have been dealt with a hell of a lot sooner than it was. 
+
+43 days until Spring! 47 dates until kid watch! 
+Power outage last night for 2 hours, so I'm watching the incubator very closely. Day 19 of 21.
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text “Lost a furlong”
+
+Did she fuck. https://t.co/WKiOOJU0RR
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @TakTribal 楽しみすぎてもう一回をこなせる自信がありませんっ！
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Garden range list spring writer couple red describe. https://t.co/w3jt25Y6wh
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LBFlyawayhome: “When we see the hazel catkins turn yellow, we know that spring is not far off”
+#ELGrantWatson #CFTunnicliffe https://t.…
+2023-02-05 22:26:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @xpvit: Top 6 #Java testing libraries every Java developer should know about and use 👇
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @eieixpatpat: น้องแพทปังๆค่าาาา
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patrick_pppat https://t.co/AU59xZtUXV
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/aLCDf5p2MI
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text This is a ‘get the job done first then rest players’ starting XI from Spalletti and I like it.
+
+I’m expecting Napoli to be set up to spring out of the tracks today. Maybe some early goals?
+
+#SpeziaNapoli https://t.co/vnCgPUgOMC
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @JSailUnconf: We are proud to become part of the JUnConf alliance: https://t.co/fzOVBZMxc1
+
+Its a great movement in the @java community…
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @MarkPrendergas1 Sure is
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @amefurasshi: ／
+AMEFURASSHI TOUR 2023 “Spring”
+FC先行本日23:59まで！
+＼
+
+📆日程
+大阪3/3 (金) ESAKA  MUSE
+愛知3/4(土) NAGOYA CLUBQUATTRO
+東京3/10(金)duo MUSI…
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @bloke_cntry: Another bate 😉 so fuckin horny this week... must be Spring! https://t.co/5N4KHPCTXj
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ploypin66: @callmebxe เพลงบังทัน💜
+ชอบที่สุด:Home
+ฟังบ่อยที่สุด:Home
+ฟังตอนเศร้า: The truth untold
+ฟังตอนเดินทาง:Love maze
+ฟังตอนฝนตก: P…
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kankan_0111: 【交換/譲渡】 あんスタ イベコレ フィーチャ テーマ 缶バッジ
+
+譲・画像参照
+
+求・22 spring iみか2、c/iジュン1、summer i薫1 or 定価＋送料
+
+郵送希望。お約束分は除いております。
+譲渡は星5は星4含む方優先。…
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @johnnys: Yuto Nakajima of #HeySayJUMP wrapped up a "bachelor & bachelorette" special screening of his new film #Manhole!
+
+Asked about p…
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Tabio_JP: 靴下屋2023年Springカタログできました
+今回も！　#アンジュルム　#上國料萌衣  さん！です！
+https://t.co/Jm8m1jJYpE https://t.co/54AQEWNHp9
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 久々の飯あげ
+青椒肉絲 https://t.co/G64TKeuQiv
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text “그러고 보니 내 아들을 많이 닮았네요.”
+
+Spring, Spring 2 (완결) | 광년
+
+[YES24 eBook]
+
+엄마....🥹
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Japanese voice artist @Hatis_Noit's Aura tour continues this spring, seeing performances across the continent and beyond.
+
+Book tickets for the tour: https://t.co/5tq8jVQb4f https://t.co/OpR5TCNF2s
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RSPCA_official: 🐶🐾 15-year-old Roxy has sadly had little interest since coming into the care of our #GreatAyton branch 💔
+
+Despite her g…
+2023-02-05 22:26:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PhindileForbes: "Keep your heart with all diligence, For out of it spring the issues of life." - Proverbs 4:23
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Step L'Artiste Women's Damour Sandals White Multi EU 42 / US 10.5-11 https://t.co/URNUZuqJ0P eBay https://t.co/Zr1uL1c05Y
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text เพลงบังทัน💜
+ชอบที่สุด: You never walk alone
+ฟังบ่อยที่สุด: Blue&Grey
+ฟังตอนเศร้า: 2!3!
+ฟังตอนเดินทาง: Tokyo 
+ฟังตอนฝนตก: Forever rain
+แนะนำคนอื่น: Spring day
+ฟังตอนวอร์: Ugh
+
+I’m voting for #YetToCome for  #BestMusicVideo #iHeartAwards https://t.co/7DZsTikvuc
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring__silence 성적인걸로 당할가능성이 커서 진짜 안좋아해...
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Hey, I want to introduce my new design hre, it’s Best t-shirt & other dress design Get my art printed on awesome products. Support me at Teespring & Redbubble https://t.co/z75dvgubch https://t.co/ljwkZVsdyN https://t.co/BlUgFrZmcl
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Bob #石家庄 Mike Jenkin(s) #上海 Adolph Carl Judy Gallup https://t.co/KxXTnoWawL
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DREAMBUFF_YIU: เพลงบังทัน💜
+ชอบที่สุด: You never walk alone
+ฟังบ่อยที่สุด: Blue&Grey
+ฟังตอนเศร้า: 2!3!
+ฟังตอนเดินทาง: Tokyo 
+ฟังตอนฝนตก:…
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @KXvaou A BLUETOOTH DEVICE HAS CONNECTED https://t.co/lZiAQuXIKj
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @beverleyturner: Right! Can the British media finally start debating this now please??
+Some of us have been trying to do so since spring…
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Abel Garcia Quentin Roy Reginald Benedict Spring Lytton #杭州 #绍兴 #宁波 https://t.co/5L6akYj7DE
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @adeylart I want spring to come so much. Resurrection. a new beginning.💙💫
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yellow__spring_: 공연이 끝나도 손면도칼에 위협받는 륩엄마 https://t.co/xT4UsyAmeR
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @spring___1121: #트친이_아닌데도_날_안다_rt_트친들도_rt
+
+유행탑승 https://t.co/fPqcmHYmEX
+2023-02-05 22:26:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @aspose: Do you need Java API For Email Processing? https://t.co/wHmxraK3lD for Java can create Outlook emails, parse emails or convert…
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @_Apricityy_: ชอบที่สุด: Boy With Luv
+ฟังบ่อยที่สุด : Spring Day 
+ฟังตอนเศร้า : 00:00
+ฟังตอนเดินทาง : Dynamite 
+ฟังตอนฝนตก : The Truth u…
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 黄色视频黄色网站看片吃瓜福利姬足交乱伦母子人妻制服萝莉调教母狗老师反差婊黑丝性交做爱内射眼镜未成年初中后入人兽破处幼女网黄厕所绿帽换妻迷奸强奸熟女自慰文爱叫床少妇极品偷拍 https://t.co/nJ6MssCGFN
+Spring strategy nearly thousand before our.
+😌💌😋😀😆
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL 
+
+승리의 닻을 올렸습니다. 다음 목적지까지 단단하게 정비해 다시 항해를 시작하겠습니다!
+ 
+Mission complete. The team is headed to its…
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise 少年忍者
+お譲り先を探しております。
+
+【日時】2/19（日）13:00
+【枚数】2枚
+【座席】3階5列　1〜10番
+【金額】ご提示ください
+【取引】当日手渡し
+
+お心当たりのある方はDMよりご連絡をお願いします！
+
+#スプパラ譲 #スプパラ求 #少年忍者譲 #少年忍者求
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text %x;pC  Spring is a pretty season，          #许昌     #承德                    https://t.co/gRnXg5DQ4O
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #北京资源 #北京线下 https://t.co/eVB7oULj2K
+Campaign spring significant Mr.
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Matthew Bertram Spring Wells #POS #福利 https://t.co/wiiubCGwUp
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text keeping a balanced diet is a must with more fruit and vegetables #肉棒 #绿奴 Spring Festival is a busy holiday https://t.co/WQ1OD8getz
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign billboard ad spotted on a building in Seoul, South Korea!
+
+©JJH_SRH…
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Wts lfb 
+
+Blackpink photocards 
+
+bp PC lalisa solo ice cream spring ed wc2022 tokopedia bpwc 202p lag the album jennie lisa rosé jisoo https://t.co/aF0lgPqRfR
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Lost_Kashmir: is an expert who was one of the main forces behind Egypt's Arab Spring. He's a student of 'Nuland' school of Regime chang…
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text David Cone on where Yankees stand heading into spring training https://t.co/4oUi6gw0Lh https://t.co/stbAesiHPd
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DrAmirKhanGP Cheer me up no end. Beautiful colours. Morning.
+2023-02-05 22:26:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @CSCECNEWS: #SolarTerms In #spring, the field bursts into life. “Lichun,” or the beginning of spring, is the first of the 24 solar terms…
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @baberubybear: ทีมไหนกันค๊าาาาาาาาาา
+
+Patrick Spring Festival
+#PaiPai四海同春2023 
+#แพทริค @patrick_pppat https://t.co/pVBeXmSOjo
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @HannahStitfall: A snowy red squirrel this Sunday ❄️🤍 Although I must admit…it certainly feels like spring is in the way today in Cornwa…
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Kafka_0666 @tenshinnmama カフカさん、いとおちゃんのアドバイスを効かせて『完全形』になったんですな♪😃👍
+
+間違いなく酒🍺がススムよね♪😂👍(笑)
+
+乙華麗様ですな♪😂
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AnhuiTravel: The graceful sculpture, the catchy Wuhu folk song, and the red lanterns of different sizes with "Happy New Year" and the C…
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @UxWi4 ≧(´▽｀)≦ｱﾊﾊ
+ごめんごめん✨
+ぱんさん素直ですもんね(๑•̀ㅂ•́)و✧
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Ginger_Tucci @DanKelly72 @AFandango @MumbrianSpinner @janemmcnulty I think it’s your negative outlook that’s stunting your growth.
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @rossmacleodputt gonna try to this morning
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MbUf5z66mmB3hH4: あんスタ　イベコレ　2022Autumn spring シャッフル　フィーチャー　缶バッジ　idol casual　交換
+譲：翠・光・創・桃李・忍・マヨイ・ひなた・なずな・北斗
+
+求：イベコレ　iこはく・弓弦・一彩
+cこはく・一彩
+
+二…
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @simonaol87 Intendi la Java Book o sbaglio?
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @cognitivepolicy <waves> <bow>
+"From a certain point onward, there is no turning back. That is the point that must be reached." --- Franz Kafka
+
+Indeed, by deeds,... Onwards! https://t.co/j2hrcpmLRz
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @tompalmerauthor It’s a Babbadook I reckon
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AmschelKavka: But now not another word, only kisses — because it’s Sunday. 
+
+Franz Kafka, 1912.
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #spring #sundayvibes ☀️ https://t.co/CDp7BXKpOM
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LCK: Final match of #LCK Spring Week 3 goes to @DplusKIA! https://t.co/fUWVG4Nmwv
+2023-02-05 22:26:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likePeacemakerZachariahRaymond   
+#安徽 #平度 #韶关 https://t.co/fvbxfC8UqP
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @singwithyou0919: 230205 中国侨网 Global Chinese Spring Festival Celebration
+
+Short message + 《是你想成为的的人吗》 
+
+#AzoraChin #Zhangjing #尤长靖 #YouZ…
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #宁波   #天津  #海珠   https://t.co/i3OieTwb3f
+Check generation science her teacher spring.
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @SignGuyHarm @AleAsombrosa @cat_elg It's considered bulgar AF, the poster wants to get people into uncomfortable situations
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @amefurasshi: ／
+AMEFURASSHI TOUR 2023 “Spring”
+FC先行本日23:59まで！
+＼
+
+📆日程
+大阪3/3 (金) ESAKA  MUSE
+愛知3/4(土) NAGOYA CLUBQUATTRO
+東京3/10(金)duo MUSI…
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Bock Foundation Grants Open For Spring Cycle https://t.co/yqyOx4yYzL
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Backend Software Engineer Java AWS - Remote
+at Client Server
+Backend Software EngineerDeveloper Java AWS Remote UKImmediate Start to £9...
+#BackEndDeveloper #freelancer 
+https://t.co/DYgRgLCa6G
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Day 778. My next major project is still out on the porch until the primer stops reeking, but I had this Nexos ready to go, and she's a model I've been wanting to get to for a while now https://t.co/XhvZHlWoii
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @singwithyou0919: 230205 中国侨网 Global Chinese Spring Festival Celebration
+
+Translation of message 
+
+#AzoraChin #Zhangjing #尤长靖 #YouZhangj…
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Ginger_Tucci @ambergambler_ @AFandango @MumbrianSpinner @janemmcnulty Here we go. Lying about height.
+
+Why do women do this???
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Good Morning it definitely looks and feels like spring is in the air today! 
+
+Don’t forget we still have our 10% off all products ending tonight 11.59pm 05/02/23 
+
+#jadesonlinegiftshop #uniquegifts #ukgiftshop #Derbyshire #Online #incense #giftsforher #giftsforhim #giftsforthem
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text In case you're already making spring break plans: https://t.co/D0n0Dws3TI
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring paradise スプパラ 少年忍者公演お譲り先を探しています 
+
+【譲】2/23 昼  
+【座席】2階1列 下手   
+【枚数】1枚
+【金額】10〜即決あり
+【取引】都内事前手渡し     
+
+お心当たりのある方は担当、金額明記の上お気軽にdmまでお願い致します。
+#少年忍者譲 #スプパラ譲 #スプパラ求
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sastrajawacom: Niki istilah-istilah silsilah keluarga wonten budaya jawa.
+
+https://t.co/0aWrQxeUG8
+
+Sliramu apal tekan nomor pira para…
+2023-02-05 22:26:55 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jared18729: Why is it cold out I can't wait for Spring/Summer
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @FrancSteve3: First video on Java Visitor Design Pattern: https://t.co/tUhRmenT75
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL 
+
+승리의 닻을 올렸습니다. 다음 목적지까지 단단하게 정비해 다시 항해를 시작하겠습니다!
+ 
+Mission complete. The team is headed to its…
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patrick_THFC: สวัสดีบ่ายวันอาทิตย์ค้าบ~ เจ้าปลาดาวตื่นมารอดูน้องแพทกันรึยังน้า 🥰
+
+ไหนใครมาเทรนด์แล้วบ้าง ขอมือหน่อยคับ 🙋🏻‍♀️🙋🏻‍♂️
+
+Patr…
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign billboard ad spotted on a building in Seoul, South Korea!
+
+©JJH_SRH…
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text today’s to-do-list 
+🍄 recapping os algorithms (bc i surprisingly 🤔 encountered questions regarding os in an interview last week, i wasn’t expecting like these questions. generally, data structures and algorithms questions are asked.)
+🍄 solving java exercises on @exercism_io
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @johnnys: Yuto Nakajima of #HeySayJUMP wrapped up a "bachelor & bachelorette" special screening of his new film #Manhole!
+
+Asked about p…
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @inumakiraimu 検索より失礼します
+🈂️トミさんSpring等身を買取らせて頂きたいです
+検討の方お願いします🙇‍♀️
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Dann sitzt man da mit Leuten, die Ende 30 sind, Kinder haben, Karrieren haben, selbständig sind... und das sollen meine ehem. Schüler*innen sein?! Wie ist das denn passiert? Irgendwie voll komisch. Ganz so, als wäre ich... alt?!! 😆🙈
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL 
+
+승리의 닻을 올렸습니다. 다음 목적지까지 단단하게 정비해 다시 항해를 시작하겠습니다!
+ 
+Mission complete. The team is headed to its…
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ Boys be公演 交換を探しております。
+
+【譲】2/26 夜 1階 7列 A〜20番 1枚
+【求】2/25 夜 2/26 昼 同等列 1枚
+
+事前大阪手渡し優先、他は要相談
+担当、取引方法、お手持ちの席を記載の上、DMお願い致します。
+
+#スプパラ譲 #Boysbe交換 #ボイビ交換
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @annebuapat15: @patrick_pppat เคยรันวงการกินผัดไทยทั้งไทมไลน์มาแล้ว ถึงเวลาน้องบัวลอยแล้วคับ 🐰
+Patrick Spring Festival
+#PaiPai四海同春2023…
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_poison 헐 이 트윗 갑자기 내가 다서운함
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @rockhand_spring 有難うございます🤗寒い中、ピントを合わせるのに四苦八苦です💦
+2023-02-05 22:27:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング:32位❗ (今週の新着)
+
+「○令和4年産 山形県産 はえぬき 20kg (5kg×4袋)  」
+メーカ:
+
+価格:¥7,020(20:27)
+
+https://t.co/hqisceh1O7
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング：12位❗(CPU)
+
+「Xeon E5-2430Lv2  (2.40GHz/ 6C/ 15MB)  PY-CP38X1」
+メーカ:富士通
+
+価格:¥204,010✨
+🔥売り切れ間近🔥(20:27)
+
+https://t.co/3fwtpR3vOw
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #济南  #山东  #青岛   https://t.co/cmfww1pw5x
+Economy grow spring many spring find.
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign billboard ad spotted on a building in Seoul, South Korea!
+
+©JJH_SRH…
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @OfficialEVRIS ボトム M
+シューズ L
+希望です💙
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text horrible Java, perfect Scala, WTF
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @salaryman_28: our home in autumn and spring 
+🏡🍂🍃🌸 https://t.co/e7n7QvMBg4
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @tlcright Straight in the deep end. Did little bit of C# when Xbox had their XNA game library available, and a bit J2ME java, but always seemed to avoid all the heavy duty stricter languages.
+
+Can't even remember now if Pascal was typed, it's been so long  😱
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @genk_tag 初めまして。検索から失礼いたします。まだお譲り先が決まっていないようでしたら詳しくお話をお伺いしたいのですが可能でしょうか？
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kankan_0111: 【交換/譲渡】 あんスタ イベコレ フィーチャ テーマ 缶バッジ
+
+譲・画像参照
+
+求・22 spring iみか2、c/iジュン1、summer i薫1 or 定価＋送料
+
+郵送希望。お約束分は除いております。
+譲渡は星5は星4含む方優先。…
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @JJ23jm: ที่เกาเล่นใหญ่สุดๆ ขึ้นบิลบอร์ดใหญ่เบ้อเร่อเลย ..ศลปเกาคนเดียวของแคมเปญนี้ เอเชียคนเดียวของแคมเปญนี้ ก้จัดให้ใหญ่สุดๆ..ก้ Jaehy…
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text [Java] Collectionクラスまとめ https://t.co/Bl72BAcXSF #Java #まとめ #Collection #Java入門 #コレクション
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Guy Maltz Spring Stowe Guy Maltz #上海资源 #上海 https://t.co/nmxmkTdnJC
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kankan_0111: 【交換/譲渡】 あんスタ イベコレ フィーチャ テーマ 缶バッジ
+
+譲・画像参照
+
+求・22 spring iみか2、c/iジュン1、summer i薫1 or 定価＋送料
+
+郵送希望。お約束分は除いております。
+譲渡は星5は星4含む方優先。…
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Kanisha77795664: No matter yesterday, today and tomorrow, as long as there is a dream in your heart, it will always be spring #代孕  #代孕机…
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @beverleyturner @MarinaPurkiss My 2 favourite people https://t.co/arOMGhiggx
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sdsntyyds: [ENG SUB] 230205 Zhenyuan Weibo update 💖
+
+“Our first meeting in this spring 🪄”
+
+#张真源 #ZhangZhenyuan https://t.co/33oaSWWBA6
+2023-02-05 22:27:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @pppynklemonade: ฟน้าตาตอนเอาน้องไปทอด โรยด้วยน้ำตาลทรายแดงป่นราดด้วยไซรัปหรือน้ำเชื่อม 🤤
+Patrick Spring Festival
+#PaiPai四海同春2023 #แพทริ…
+2023-02-05 22:28:50 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 30788 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-05 22:28:50 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-05 22:28:55 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 7.714 seconds (JVM running for 10.2)
+2023-02-05 22:28:55 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-05 22:28:55 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:28:55 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-05 22:28:55 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-05 22:28:58 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @japantimes: As China's regional power grows, Japan plans to join the U.S. this spring in taking steps to prevent Beijing's military fro…
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DailyPicTheme2 Spring is sprung.
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sastrajawacom: Niki istilah-istilah silsilah keluarga wonten budaya jawa.
+
+https://t.co/0aWrQxeUG8
+
+Sliramu apal tekan nomor pira para…
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @amefurasshi: ／
+AMEFURASSHI TOUR 2023 “Spring”
+FC先行本日23:59まで！
+＼
+
+📆日程
+大阪3/3 (金) ESAKA  MUSE
+愛知3/4(土) NAGOYA CLUBQUATTRO
+東京3/10(金)duo MUSI…
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @mingy_mingy: หล๋าย..มาแล้วรายงานตัวหน่อยจ้า😁 มาทายกันว่าวันนี้มุมุใส่ชุดสีอารายเอ่ย!? 
+
+❗️สุ่มแจกเคสทรศ.ปลาดาวแก้มป่อง1อัน❗️
+
+✨รี+เมน…
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 수고많았어!! 다음 경기 힘내서 이기자🔥🔥 https://t.co/v8JhdyTvuE
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @mjhptcott So beautiful! Field of snowdrops😊
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RBabaei25: Taliban have sent official representatives to Ghazni province in Malistan district, Nawor and Jaghori to discuss providing f…
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @WorldAroundXZ: Xiao Zhan studio Update: On the night of the Yuan Dynasty, the spring breeze is played, and the flower market is full of…
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @2bells1ravine: Kafka #HonkaiStarRail #2b1r #Rebelle6 https://t.co/ICkKuIGVFr
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text How to Convert Stream to List, Set, and Collection in Java 8? Example Tutorial https://t.co/iEtFeANVXj https://t.co/iRu10Yj1yK
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patrick_THFC: #แพทริค is on trending🔥
+
+🌍 Worldwide trends No.15
+🇹🇭 Thailand trends No.1,1
+
+ไหนใครบอกไม่รู้จะเทรนด์ยังไงดีนะ?!🤔
+
+Patrick…
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Kristin II. Cathy Grace Sara Croft Spring Huggins #VPN推荐 #火箭加速器 #梯子 #旋风加速器 https://t.co/X5MbjSGho9
+2023-02-05 22:29:09 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Solomon Irving Phyllis Harold Gladys Morrison Spring Rosa #苏州 #徐州 #常州 https://t.co/fj1Xrvp3VC
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل واجبات حاسب | شبكات 
+ NSB/Android/kotlin
+Java/c++/python
+ رسم حاسب | نظم ذكية
+ذكاء صناعي | مشاريع تخرج
+Html/css/jav…
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Beautiful Spring-like day.
+Lots to do, but first…enjoy. https://t.co/6Zi99GBFFY
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Wanda Smollett Spring IV. Pamela Kennan Stacey Pound #上海 #南通 #南京 https://t.co/6807y2t5BT
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل اختبارات/حل واجبات/ اسايمنت/بروجكت
+مشروع تخرج/جرافيكس/ui/ux بحث/عروض/هندسة برمجيات تراسل بيانات /قواعد بيانات/احصاء…
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @estoicisme: Un llibre ha de ser la destral que trenqui la mar gelada que hi ha dintre de nosaltres. Franz Kafka. En llegiu?, jo sí!
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Let’s hope so https://t.co/fHFW4obIrC
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @rfn006 @Java_jigga oh yeah lemme just go find 20 y/o evidence rq on the internet just bc a twitter user doesn’t believe an anecdote of shit I’ve heard in the past 💀 gtfoh LMFAOO
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @iceberg_spring BSは強い。
+
+え、YouTubeでカーリングの試合見られるんですの。見たいですの。
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #山东  #青岛  #浙江   https://t.co/NVN4Xot25D
+Member water say yes spring authority.
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل واجبات حاسب | شبكات 
+ NSB/Android/kotlin
+Java/c++/python
+ رسم حاسب | نظم ذكية
+ذكاء صناعي | مشاريع تخرج
+Html/css/jav…
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @beverleyturner @MarinaPurkiss @GBNEWS GBeebies is a disgrace!
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @hrk__O613: EBiDAN THE PARADE 2023 SPRING
+同行してくださる方を探しています
+
+【枚数】1枚（当方と連番になります）
+【金額】定価＋手数料
+
+FF内で探してるので良かったら声掛けてください( > < )
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل اختبارات/حل واجبات/ اسايمنت/بروجكت
+مشروع تخرج/جرافيكس/ui/ux بحث/عروض/هندسة برمجيات تراسل بيانات /قواعد بيانات/احصاء…
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LCK: Final match of #LCK Spring Week 3 goes to @DplusKIA! https://t.co/fUWVG4Nmwv
+2023-02-05 22:29:17 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Rainmaker1973: In early spring, the meadow lining Grüner See, in Austria, blooms. Only in later months, when night temperatures increas…
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yellow__spring_: ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ표정 진짴ㅋㅋㅋㅋㅋㅋ설에 맨날 폰게임만 하다가 혼나는..철없는 삼촌같음 https://t.co/mbBnCKQSmW
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ThoralfHagen @helene_her Ser for meg at det tidligere kan ha vært utbredt mange steder, og at melken heller ikke var strengt forbeholdt barn. 
+Husker mot slutten av John Steinbecks roman «Vredens Druer», hvor den unge Saronsrose slik forbarmet seg over en utsultet mann.
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @whatstodaysmath: "Prevent the rise of a "messiah" who could unify and electrify the militant black nationist movement." - J.E. Hoover,…
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者公演の交換を探しております。
+
+【譲】2/19 昼1階 左列 2連
+
+【求】2/21昼 2/22 2/23 昼夜  2連
+          
+【取引方法】要相談
+
+条件の合う方いましたら座席を添えてお気軽にDMお願い致します。
+
+ #スプパラ交換  #少年忍者交換
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @suu_ambtaro: Spring Paradise スプパラ AmBitious公演
+交換してくださる方を探しています。
+
+【譲】3/3 1階後列下手 1枚
+
+【求】3/4昼夜 1枚
+
+3/3は隣に私が入ります。再交換などされない方。お人柄のわかるアカウントよりご…
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @suka_japanese: Pemeran : SUZU AIHO
+Gendre : JAV
+Durasi : 02:28:57
+Tonton atau Download ⬇️⬇️
+📺📥https://t.co/OzgQooIjCA
+
+[SSIS-490] Laugh…
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BernieRandall8: Energy prices to soar again as Jeremy Hunt rejects pleas to halt rise https://t.co/850QWkdxNW 
+40% in April?
+This is  c…
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @UniverseMotion: Winter Night Skies...  Spring might be on the way but it's still a great time to see the winter constellations in the s…
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #1127+1149 idolized UR pair
+Flower Bouquet ver.「Spring's Japanese Sweets」+「No Matter What Flowers」  https://t.co/a5ZKHH0nHo
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @zOdqo uhuy
+#iweb3 #Spring_Festival
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @MariettaDaws So you have already an idea about the places 💡. Good. 
+My family is from the middle atlas mountains ⛰ 😀. 
+If one day you have the opportunity to visit Morocco choose the spring period.
+Kind of architecture that you can see in Morocco👇.
+
+https://t.co/33YbMQ28ES
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ChrisAdamsWall Chris, you were fantastic!  But we hope you keep your spring and summer gig at the ballpark…
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Rachel Nahum #厦门 Rae Chapman #上海 Flora Dierser Spring Gaskell https://t.co/Qc2nvhfjlI
+2023-02-05 22:29:26 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @spring_pan_fest: 【３ヶ月後に◯◯するグエスレ】最終話
+『３ヶ月後に婚約するグエスレ』🎉
+読んで下さってありがとうございました！ https://t.co/apS4EbX8hM
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Northlakesuk: First signs of spring on its way #snowdrops #armathwaite https://t.co/JmdgQZg93s
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @paipai__pppat: คนเก่งง ขอบคุณที่ทำงานหนักนะคับ
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+
+ https://t.co/XmTprkkQTp
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ghumare64: Learn DevOps by playing games 🎮
+
+1. DevOps
+https://t.co/JzrPfmPZM0
+
+2. Linux
+https://t.co/hT6XkaaFsG
+
+3. DevOps Party Games…
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text David Lawrence Spring Monroe Upton Norton Andy Cooper #潍坊 #广州 #江苏 https://t.co/rczoSWi8dc
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise AmBitious 
+アンビ スプパラお譲り先を探しております。
+
+【日程】3/3夜 17時
+【枚数】1枚
+【座席】1階13-15列　センブロ
+【金額】即決6
+【取引】要相談
+
+金額、担当、取引方法明記の上、DMお願い致します
+（いいね不要です）
+#スプパラ譲 #アンビ譲 #アンビ求 #Ambitious譲
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text How Caching Data in Angular with Rxjs
+#angular #technology #android #webdesign #code #website #web #development #programming #coding #python #developer #java #software #webdevelopment #webdesigner #webdeveloper #javascript #programmer #html #coder
+https://t.co/lVbYD1kERn
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Met4CastUK We can move on with spring 😁🤣☺️ https://t.co/UIDYA0qqrE
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @sweeting_sour find me in your memory
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text How Caching Data in Angular with Rxjs
+#angular #technology #android #webdesign #code #website #web #development #programming #coding #python #developer #java #software #webdevelopment #webdesigner #webdeveloper #javascript #programmer #html #coder
+https://t.co/jVMS7v1h4O
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ramsatt: How Caching Data in Angular with Rxjs
+#angular #technology #android #webdesign #code #website #web #development #programming #…
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 会社で送られた写真を見てて、さすがの吉田ワールドだと思った。
+スケッチと呼ばれるこの手の「お花が綺麗」の写真はテンプレになりすぎてて感動がないけど、さすが。 https://t.co/CKg5hcGZbK
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @noritakahamao めちゃくちゃ素敵なお写真と映像で、ノリさんの作品の中でもトップクラスで好きです🏅
+髪型もとってもかっこいいし、雨と傘とノリさんのコラボレーションが強すぎて素敵ですＴ ˙̫ Ｔ♡素敵なお写真ありがとうございます📸💘
+2023-02-05 22:29:33 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patreasure_: มารอให้กำลังใจเจ้าเด็กแล้ว สู้ๆนะคะ🫶🏻💖
+cr.https://t.co/pI8nqtwTuB
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patric…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @mayu_pt03: ตำนาน เทรนโลกที่ 15 แต่แค่เปิด MV เฉยๆจ้า 5555555555555555555555555555555555555555555555555555555555555555555555555555555555…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LCK: Final match of #LCK Spring Week 3 goes to @DplusKIA! https://t.co/fUWVG4Nmwv
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @WhenVspeaks2: If we had no winter, the spring would not be so pleasant; if we did not sometimes taste of adversity, prosperity would no…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ramsatt: How Caching Data in Angular with Rxjs
+#angular #technology #android #webdesign #code #website #web #development #programming #…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @GerrySimons @VisualsbySauter I don't have any proper printing facilities but I printed out a couple on my Instax Square printer. Results were ... mixed. https://t.co/rxhFeec6Tn
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @CodingPullingo: How Caching Data in Angular with Rxjs
+#angular #technology #android #webdesign #code #website #web #development #progra…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL 
+
+승리의 닻을 올렸습니다. 다음 목적지까지 단단하게 정비해 다시 항해를 시작하겠습니다!
+ 
+Mission complete. The team is headed to its…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Jerry Adelaide Harvey Dorothy Spring Nora Ansel Marner #青岛 #福州 #宁波 https://t.co/qzsrXgNUHV
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PaiPaiinsider: เบ้าหน้าคือหล่อ น่ารัก ละมุน ครบจบในคนเดียว ชอบลุคนี้ ละมุนบอยยย
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patri…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PopBase: Madonna’s daughter Lourdes Leon was seemingly denied entry into a Marc Jacobs runway show this week.
+
+Leon was the previous fa…
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeHoraceDrewDirk   
+#河间 #攀枝花 #汕尾 https://t.co/hxVPdblaVV
+2023-02-05 22:29:41 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @JourneytoSpring: [달감베네] 빛이 있으라 II (6.0 스포일러)
+
+온 하늘에 별이 가득했고 먼 달이 그들을 비추고 있었다.
+
+종말 30년 후, 환생 4부작 연재물입니다.
+
+아래에서 보실 수 있습니다!
+→ https://t.co…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise AmBitious 
+アンビ スプパラお譲り先を探しております。
+
+【日程】3/4 昼　
+【枚数】1枚
+【座席】2階1-2列　下手
+【金額】最高額6.8 即決7.2
+【取引】要相談
+
+金額、担当、取引方法明記の上、DMお願い致します
+（いいね不要です。）
+
+#スプパラ譲 #アンビ譲 #アンビ求 #Ambitious譲
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Tweeterforyou1: For authors, By Authors.
+
+#author #writer #writingcommunity
+Support your Indie Author!
+Mugs, Tumblers and water bottles…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @OfficialEVRIS: \ EVRIS10周年特別企画 //
+
+⚠️3日間限定⚠️
+
+抽選で1名様にSPRING LOOKのコーディネート1体プレゼント🎁💘
+
+【応募方法】
+①@OfficialEVRISをフォロー
+②2/5(日)23:59までにこのツイートをい…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AngstillDances: Winter sighs
+Spring beckons Her forward
+in
+Feint whispers
+
+The Sun awakened 
+from
+Midnights slumber
+Rises in Sync
+with…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @evilinside44 我现在看到个白点都以为是气球。不想再看到气球了，气球无意义地消耗了我太多注意力😮‍💨
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text java jazz woee 😭
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 쇼태식이 돌아왔구나 https://t.co/v8XVIeVjUi
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text i mean uang tabungan gw…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Oliver #南京 Norton Jones #杭州 Lydia Bridges George Maria https://t.co/YrQyd2yupz
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ラシード、佐藤の離脱もあったが“java君”米山という予想外の上積みもありアウェイ3カード6試合を全勝で乗り越えた👏
+…が、リーグ連勝記録が「18」でなく「20」らしいので、来週末久々のホームで記録に並ぶこと、ByeWeek開けのホーム宇都宮戦で記録更新に挑戦となるか。
+#chibajets https://t.co/nBoGLmJOse
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 連勝記録更新というか、原宿が2ゲーム差でずっとついてきているので勝ち続けないことには安心できないのね…彼らの追走があってこその連勝記録ということは否定できないｗ
+#chibajets
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @23_anonymous15: If you wanna learn about change management, go meditate in a forest at the beginning of spring and then again in autumn…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #LegalizationOfNUG   
+#2023Feb5Coup                                                                 
+#WhatsHappeningInMyanmar https://t.co/C0JqBne1n0
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @aprajita_ayesha: @Neels17Bist So true no one can bind a child and jitna u try to bind a child utna he tries to run child is like a spri…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @rin_s2___: 【交換・譲渡】テーマ フィーチャー イベコレ 缶バッジ 2020 2021 2022 Spring Summer Autumn Winter
+
+〈譲〉①②
+弓弦 藍良 マヨイ 泉 敬人 晃牙 レオ ひなた 斑 こはく 北斗 忍 スバル 嵐 奏汰…
+2023-02-05 22:29:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring is is in the air!:)🌷
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @tulips_holland: A river of blue grape hyacinths with double tulips. Have a beautiful weekend! 💙🌷💙
+
+#travel to the #tulipsinholland spri…
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ppppukpui: แพทไม่พลาดจริงๆด้วย เด็กน้อยมาโชว์ทานบัวลอยแล้วค้าบบบ น่ารักจัง มาทุกเทศกาล ❤️😘
+
+Patrick Spring Festival
+#PaiPai四海同春2023 
+#แ…
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @FarahhCastillo: Getting ready for the spring @RiverviewBaseb1 @FlatgroundBats @BaseballCf @TampaBSBL @813Preps @Seth_3773 https://t.co/…
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @FiveLeavesBooks: Good Morning All! Sunday again
+
+Lovely, bright and breezy out there. Spring is starting to happen. So if you are out a…
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ Boys beボイビ公演交換探しております
+
+【譲】2/26昼 1階3列 下手 
+
+【求】2/26夜 1階1〜3列 上手
+
+1枚同士の交換。列上がりの場合上乗せいたします。
+お譲りのみも検討しますので必要事項明記のうえDMお願いします。
+
+#スプパラ交換 #ボイビ交換 #Boysbe交換 #Boysbe譲
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Yibo_Thailand: 230119 | Henan TV weibo update
+#หวังอี้ป๋อ กับโชว์ Twins《双生》ในงาน 2023 Henan Spring Festival Gala
+
+#WangYibo #王一博 1/2
+#W…
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RBabaei25: Taliban have sent official representatives to Ghazni province in Malistan district, Nawor and Jaghori to discuss providing f…
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RSPCA_official: 🐶🐾 15-year-old Roxy has sadly had little interest since coming into the care of our #GreatAyton branch 💔
+
+Despite her g…
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 그저 쇼칼리 우미쇼 오늘 너무 잘했다!! https://t.co/Un9Im210pa
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @GadSaad https://t.co/Wl1HP1z4h8
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:29:56 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MozziokaneB: Photo with my sister😋, last spring. https://t.co/WBzZmHfPbx
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ntoinedoinel: babe you haven’t touched your david byrne kafka birthday cake is everything okay? https://t.co/klMu9lTcoE
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PaiPaiinsider: เบ้าหน้าคือหล่อ น่ารัก ละมุน ครบจบในคนเดียว ชอบลุคนี้ ละมุนบอยยย
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patri…
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text What could possibly go wrong? https://t.co/tMicpjYL1o
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @dohfree: Kyungsoo, captured as he takes pics
+spring edition                 winter edition https://t.co/mJCVA6aRVi
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @troopervesgo @joaopqcavalcan1 @PrimeVideoBR Manda o povo pedir no Ifood rapá
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ohululu @Lockload15 Yes, for sure and just 10 to go this week and then a few spring stragglers but we are also getting bulls ready to sell, have a couple going to a consignment Thur-Sat and making video for 9 others private treaty.  Thank you LuLu! 🙏🏽
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Dzeko_in_denial @NorthxNorEast @S0NlA9 He also wants human moms to kill and eat her children if she is hungry enough 🤷🏾‍♀️.
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @siirsozu: ''Beyinlerimiz savaşsın isterdim, Ama görüyorum ki silahsızsınız bayım.''
+
+Franz Kafka
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @CyclistAttitude @cycleoptic They do however contrast well against foliage, particularly in the spring.
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者 
+交換を探しております。
+
+【譲】2/20 夜 2階1～5列 2連
+
+【求】2/19,2/21,2/22 2階3列以内 2連
+
+上乗せ可能
+
+お心当たりのある方はDMまでよろしくお願い致します。
+
+ #スプパラ交換  #少年忍者交換
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 나 죽을게 https://t.co/g53H96jxBq
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @suu_ambtaro: Spring Paradise スプパラ AmBitious公演
+交換してくださる方を探しています。
+
+【譲】3/3 1階後列下手 1枚
+
+【求】3/4昼夜 1枚
+
+3/3は隣に私が入ります。再交換などされない方。お人柄のわかるアカウントよりご…
+2023-02-05 22:30:05 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_rain93 ヤバすぎ？？？？？
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Happy Spring meadow; Crying November dwelling; Funny June forest.
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 🦊 Experian is hiring Data Engineer 
+
+🌇 Colombia 
+💪 #python #java #spark #azure #sql 
+
+#tech #softwareengineer #jobs 
+https://t.co/UmX1JzLtPA
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @bommi_spring 이 그렇게도 좋냐.
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 👋 Experian is hiring Data Engineer 
+
+🌇 Colombia 
+💪 #python #git #machinelearning #java #spark 
+
+#tech #softwareengineer #jobs 
+https://t.co/NPxvTyIJqL
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AmschelKavka: But now not another word, only kisses — because it’s Sunday. 
+
+Franz Kafka, 1912.
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @dinkyHEADROLL: Happy 立春 (Start of Spring) from the CQL Franchise!! 🥰🌱🌞💖
+
+东风吹散梅梢雪，一夜挽回天下春。
+
+Weibo: https://t.co/timMTNWbes https://t.co/…
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @NanKet6: น้องแพทมาทุกเทศกาลเลยยยย
+อยากกินบัวลอยทันที
+
+Patrick Spring Festival
+#PaiPai四海同春2023 https://t.co/znMrwmAvXF
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 👋 Nutanix is hiring Principal Engineer  
+
+🌇 Bengaluru, India, India 
+💪 #azure #sql #java #go #golang 
+
+#tech #softwareengineer #jobs 
+https://t.co/wNRGLFRiAN
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 🔥 Zillow is hiring Senior Software Development Engineer 
+
+🛖 #remote #wfh 
+💪 #javascript #python #java #node #nodejs 
+
+#tech #softwareengineer #jobs 
+https://t.co/8U0he951ha
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Hey, #Java #Developers! Looking for… 
+
+✅ Great income & better career growth? 🚀
+✅ Silicon-valley clients? 😎
+✅ Flexible working hrs in all time zones? ⏰
+✅ Cutting-edge tech stack projects? 🤩
+
+Then, join us at https://t.co/eGV87RP7dw!
+
+#workfall #chile #coders #hiring https://t.co/k091CrZFgF
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 💜💜 https://t.co/nJ9JPCyJFl
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @comt216: 🌸【GIVEAWAY】🌸
+(free to choose samples)
+💖 2 keychains (or)/ 3 stickers/ 4 artprints
+💖 1 spring book (or)/ 1 liner/ 4 cards
+
+How…
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DrJessTaylor @Victim_Focus Can you use this? https://t.co/filel1DE7m
+2023-02-05 22:30:08 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text This simple and elegant calf-length dress from Invitations by Veni features contemporary split sleeves and pearl decorated cuffs. 
+
+Perfect for any spring or summer formal event!
+
+Book a style appointment now, call us on (071) 966 2031
+
+https://t.co/nBf2KlwRYN https://t.co/hEqSaQWkfx
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @tomoka__s: Spring Paradise #スプパラ交換 AmBitious公演探しております。
+譲: 3/4 13:00 昼公演 1階右左列 後半番号 1-2枚
+求: 3/5 17:00 夜公演 1-2枚 座席問わず
+同枚数での交換、2/11,18,19,…
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @haru94_spring バルス!!!
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #Java #100DaysOfCode #javaquiz #javaprogramming #programming #CPP #fun_java    
+
+#19. Errors and Exception class is derived from which class in Java ?      
+
+a) Object class         b) Throwable class
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Now Playing 🔊 Epic45 - The Stars In Spring ⚡️🌲 #EForestRadio #ElectricForest
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @OfficialEVRIS どっちもMで😀
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 正在营业
+Spring fear nor carry find worker hard interesting.
+🤏😆🤐😅💘
+2023-02-05 19:30:03
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text **NEW EVENING ESOL COURSES**
+
+We are now offering evening online ESOL courses in the Spring Term.
+
+Come in for a FREE English Assessment.
+
+Enrol now for these new courses.
+
+https://t.co/x75Amj2qwI
+
+#learnEnglish
+
+Step 2 Skills funds most of our courses. https://t.co/9QheyXiCHK https://t.co/Fo2utPg8wc
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MajAnony1: #Java #100DaysOfCode #javaquiz #javaprogramming #programming #CPP #fun_java    
+
+#19. Errors and Exception class is derived…
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text It's SUNDAY! Join us this morning at one of our 3 campuses! There's something for kids at every service. 😎 
+-
+Rock Spring-
+8:00am | 9:30am | 11:00am
+Rossville-
+11:00am
+Dalton-
+11:00am https://t.co/C6AnyPzx2r
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング：13位❗(CPU)
+
+「Xeon E5-2430Lv2  (2.40GHz/ 6C/ 15MB)  PY-CP38X12」
+メーカ:富士通
+
+価格:¥204,010✨
+🔥売り切れ間近🔥(20:30)
+
+https://t.co/NwdRYcNTHw
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Isaac_Morris Good luck 🍀🍀🍀
+2023-02-05 22:30:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Kafka_yuyu 「はい。(頷くと、そちらを見つめている) 僕の目指すべき人だ。 それは今も変わらない (握られていなかった方の手をぐっぱーと動かして) 遠回りにはなりそうだけど」
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ランキング:6位 (ゲーム、おもちゃ)
+
+ポケモンカードゲーム スカーレット＆バイオレット スカーレットex 拡張パック 5パックセット...(20:30)
+
+https://t.co/APrMIOUXv1
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @salaryman_28: our home in autumn and spring 
+🏡🍂🍃🌸 https://t.co/e7n7QvMBg4
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeLion-likeGardenerStanley   
+#定远 #贵阳 #淮北 https://t.co/52qj9EaSXE
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Boris Gus Spring Abraham Vita Sailsbury Devin Felix #烟台 #大连 #郑州 https://t.co/LWdi9kOxCA
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング:33位❗ (今週の新着)
+
+「い・ろ・は・す天然水 540ml×24本 (1箱)  」
+メーカ:
+
+価格:¥2,700(20:30)
+
+https://t.co/Rjc6AFZ0J5
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者公演の交換を探しております。
+
+【譲】2/19 昼1階 左列 15~21番 2連
+
+【求】2/21昼 2/22 2/23 昼夜  2連
+          
+【取引方法】要相談
+
+条件の合う方いましたら座席を添えてお気軽にDMお願い致します。
+
+ #スプパラ交換  #少年忍者交換
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @GylesB1 Ooooo another word game, thank you 😊
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MajAnony1: #Java #100DaysOfCode #javaquiz #javaprogramming #programming #CPP #fun_java    
+
+#19. Errors and Exception class is derived…
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BooksBySueDay: Looking forward to spring and watching my garden unfold with glorious colour and birdsong 🌷🌸
+Meanwhile this garden birds…
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 쇼태식이 돌아왔구나 #DKWIN https://t.co/v8XVIeVjUi
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 💜 https://t.co/N0Q6nr6KJC
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @CGMeifangZhang 河南省政府伙同银行抢劫储户存款！殴打维权储户致伤致残！
+Henan provincial government collaborates with banks to rob depositors' deposits! Beat the rights savers to injure and cripple! https://t.co/8Zv853e7jG
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #上城 #深圳 Leo Trevelyan Mildred Jack Spring Trollpoe https://t.co/CBSnOt0hQe
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DubFireBrigade Great advice
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Have you seen Spring bulbs emerging yet? It won't be long before we can celebrate the first daffodil of the year, shortly followed by bright tulips, delicate cherry blossom, and huge magnolias 🌸 These long, verdant leaves of daffodil shoots, spotted on our Nursery garden. https://t.co/5VFJF5Ho8C
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patrick_THFC: INTO1 - 《 #BornToFly 》
+
+งาน “四海同春”2023 
+#全球华侨华人新春云联欢 
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patrick_pppat 
+ht…
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Yorokobe_LTD he never misses 😩
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patrick_THFC: 230205 | 𐐪 สรุปเทรนด์ 𐑂
+
+— Patrick Spring Festival —
+🌐 9
+🇹🇭 1
+
+— #PaiPai四海同春2023 —
+🇹🇭 1
+
+— #แพทริค —
+🇹🇭 18
+
+🖇 https://t.c…
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Husker_Baseball: Cade Povich has received an invite to Baltimore @Orioles Spring Training in Sarasota.
+
+Congrats, @Cpo22!
+
+#ProBigRed h…
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @haru94_spring ジャングル伐採中に面倒くさくなって火打ち石をもってくる
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @roy_official20: 2023 SPRiNG/SUMMER COLLECTiON VOL.1
+
+PRE ORDER 2/9(THU)12:00〜
+START.
+
+coming soon...
+
+▶︎ https://t.co/I0B3Git1Pu
+
+#royr…
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @LBFlyawayhome Ahhh, the good old days when we had lapwings.
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sastrajawacom: Niki istilah-istilah silsilah keluarga wonten budaya jawa.
+
+https://t.co/0aWrQxeUG8
+
+Sliramu apal tekan nomor pira para…
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Alan Pater #北京 Herman Sandy #上海 Jason Swinburne Spring Gilbert https://t.co/eIFCNsdgyX
+2023-02-05 22:30:32 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @brightlycrying: Just thinking about how BTS slips into your life and claims everything. Spring is theirs now. Purple is theirs. Bicycle…
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeHoraceDrewDirk   
+#河间 #攀枝花 #汕尾 https://t.co/6IP81nzZiv
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DraganJ08: Sanjam u bojama.
+Moji snovi su crno beli, kao i java.
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_takami りょうかーい！向かうね！
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Disewakan Apartemen Pakubuwono Spring Jakarta Selatan – 2 BR Fully Furnished https://t.co/eK5dtsBpRD
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ
+AmBitiousお譲り致します。
+【譲】
+　　　①3/3夜　1階 13-15列　センター
+　　　②3/4 昼　2階 1-2列　下手
+【金額】即決①6 ②7
+【枚数】1枚　
+【取引】大阪手渡し、当日手渡し優先
+
+ #AmBitious譲 #アンビ求 #アンビ譲 #スプパラ譲　#スプパラ求
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل واجبات حاسب | شبكات 
+ NSB/Android/kotlin
+Java/c++/python
+ رسم حاسب | نظم ذكية
+ذكاء صناعي | مشاريع تخرج
+Html/css/jav…
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Hiker87945919: There's a feeling of spring in the air today.
+
+Wishing a happy weekend. https://t.co/gzE3vLJWhd
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者公演
+お譲り先を探しています。
+
+【日時】2/18 夜
+【枚数】1〜2枚
+【座席】1階12〜15列 9〜20番
+【金額】即決8.0
+【取引】要相談
+
+必要事項記載の上、DMお願い致します。
+#スプパラ譲 #少年忍者譲 #スプパラ求 #少年忍者求
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل اختبارات/حل واجبات/ اسايمنت/بروجكت
+مشروع تخرج/جرافيكس/ui/ux بحث/عروض/هندسة برمجيات تراسل بيانات /قواعد بيانات/احصاء…
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @midoriiaa @hunterpresly Stolen pic from @._oCoincoino_
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @lol_atir 500 dias com summer foi tão bom e tão mau credo
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @zhaolusi290: #ZhaoLiying for China Federation of Literary and Art Circles 2023 Spring Festival Gala
+
+#赵丽颖 https://t.co/F10rtAqiEl
+2023-02-05 22:30:37 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fraveris: „Spring: trees flying up to their birds.. “ 
+
+- Paul Celan https://t.co/tx403YpGac
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ForestServiceNW: As we make the gradual shift from Winter snows, what are you most looking forward to doing in the woods this Spring? h…
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Garden range list spring writer couple red describe. https://t.co/ftWz2wbLZZ
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @meru419 あざす！
+始点叩いたら離すようにしてみます。
+離してた時期もあったんですけど、イーチスラの巻き込み消しひどすぎて押さえるようになってました。
+そして相変わらずスラ中のタップは混乱します。←離して改善できるといいな
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @spring___1121: #트친이_아닌데도_날_안다_rt_트친들도_rt
+
+유행탑승 https://t.co/fPqcmHYmEX
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @VisitDanzhou: It's the Beginning of #Spring! Go for spring outing with your best friends!🌱🌱
+#Danzhou  #travel https://t.co/dz2EDVtuWA
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text It looking like a €30,000 plus prizepool!!!
+
+Our final two flights to the €25,000 GUARANTEED Spring Series take place today with the 1st flight kicking off at 3.00pm and the final flight at 8.00pm, late registration for both flights is open for 9 levels and we play 13 levels. https://t.co/IN8N4WAa2W
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 쇼태식이 돌아왔구나 https://t.co/v8XVIeVjUi
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @johnnys Looking forward to this strikingly intriguing film!!
+『#マンホール 』
+Let's wish for the best!!
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RBabaei25: Taliban have sent official representatives to Ghazni province in Malistan district, Nawor and Jaghori to discuss providing f…
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @miko_miko10 やったー！ありがとみこち〜💕
+
+石砕いてでも見ようと思う！のんびり時間のある時に笑
+アイドルオタクのショタって印象！自分のこと卑下してるのも可愛い笑
+
+うん、Knightsとか人気ユニットはちょいちょいそのユニットだけの箱イベが来てた！Ra*bitsは人気ユニットと組まされるからボーダーがえぐく…
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeMonicaSibylMabel 
+#极速赢家 #承德 https://t.co/G7YRXessRU
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @temptedbyabbyxo: ❣️Bring me back to spring time!! 💯💯 I absolutely cannot wait to create content on my deck again!! ✅✅ https://t.co/GDGa…
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BroderieCreativ: Sakura Branch Machine Embroidery Design, Cherry Blossom Embroidery, Spring Flower Design, Hanami Season Pattern https:…
+2023-02-05 22:30:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ipagination: Une extraordinaire et monumentale sculpture mouvante a été créée par l'artiste tchèque David Cerny à #Prague en hommage à…
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @23_anonymous15: If you wanna learn about change management, go meditate in a forest at the beginning of spring and then again in autumn…
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @amefurasshi: ／
+AMEFURASSHI TOUR 2023 “Spring”
+FC先行本日23:59まで！
+＼
+
+📆日程
+大阪3/3 (金) ESAKA  MUSE
+愛知3/4(土) NAGOYA CLUBQUATTRO
+東京3/10(金)duo MUSI…
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PhindileForbes: "Keep your heart with all diligence, For out of it spring the issues of life." - Proverbs 4:23
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 秀卡丽 https://t.co/Q4olROpeZt
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Mommypaipai: เอ้อ เทรนด์ทิพย์กันเก่งเหมือนเดิมเลยนะ 👍🏻👍🏻👍🏻
+
+Patrick Spring Festival
+ #PaiPai四海同春2023 
+#แพทริค @patrick_pppat https://t.…
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 【自分でも作れる！】プログラミング初心者が作ったWebサービス8選
+https://t.co/bMmP9EUNLd ##PHP,#Laravel,#Java,#エンジニア,#プログラマ
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DrAmirKhanGP Is there no limit to your talents Dr Khan? Xx
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @johnnys: Yuto Nakajima of #HeySayJUMP wrapped up a "bachelor & bachelorette" special screening of his new film #Manhole!
+
+Asked about p…
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO SMILE PARADISE 2023 SPRING WATWING × NOA 
+
+【求】2/22 1部 スタンディングAor2階指定席 2連のみ
+
+【譲】〜4
+
+ #BUDDiiS求  #NOA譲  #WATWING求  #WATWING譲  #BUDDiiS譲
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 興味を持って頂けたでしょうか？ 
+でしたら、ぜひ一度お話しましょう！！ 
+ありがとうございました。
+合同会社nest++
+合同会社nest++ ／　ネスプラ
+http: ##PHP,#Laravel,#Java,#エンジニア,#プログラマ
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 【即時・JAVA・部分リモート(週4日在宅)・週5日】証券系保守案件・横浜YBP
+https://t.co/1M7qXkrNmb
+#求人 #人材募集 #システムエンジニア  #JAVA
+2023/2/5 20:30 https://t.co/fE1KIMBLaI
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @QcBp6_ 検索より失礼致します。
+ロックがかかってしまいdmを送れないのでdmを送ってもらうことは可能でしょうか。
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @VictoriaAsh2012 Hi, there's a 7 from Normanton Spring Rd/Normanton Grove at 0710 on Saturday morning. It arrives Castle St, city at 0733. There's a 2 from Waingate/CG12 at 0743. That arrives Station Rd/Commerce St (Chapeltown) at 0809 & it's 201 at 0826 from this stop to Wentworth Way at 0833
+2023-02-05 22:30:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @GingersnapSaint Hahaha haha. 😂😂😂😂😂😂
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @dublinpokerclub: It looking like a €30,000 plus prizepool!!!
+
+Our final two flights to the €25,000 GUARANTEED Spring Series take place…
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MiguelHilargiak: @Brigitt01214804 spring is coming https://t.co/B7uBPjumo1
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @CozOfYouPaiPai: ติดเทรนโลก🌏อันดับ1-5 สุ่มแจกเสื้อ 1 ตัวค่ะ 💗 ‼️ขอ3 คำ ให้แพทริค‼️รี+เม้น ติดแท็กมาให้ครบค่ะ
+
+Patrick Spring Festival
+#P…
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text None of this is any good in the long term...in 10 years Japan will be less than a fifth of China's GDP, you can't compete with a 1 billion collective with 100 million old bozos whose distinguishing characteristic is just servility... https://t.co/2BELxMIYcB
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign billboard ad spotted on a building in Seoul, South Korea!
+
+©JJH_SRH…
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #３年型 https://t.co/5NCOj9VY43
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Looking forward to seeing some upcoming #7v7. Spring ball will be here before you know it!
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @annebuapat15: พี่ 娱情Lab "Yin Haoyu’s Lantern Festival เซลฟี่สุดเซอร์ไพรส์!ใส่เสื้อสีขาวดูเหมือนขนมจีบข้าวเหนียว! ถ่ายเซลฟี่คอลเล็กชั่น…
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Garden range list spring writer couple red describe. https://t.co/q9en29lhQN
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AmschelKavka: But now not another word, only kisses — because it’s Sunday. 
+
+Franz Kafka, 1912.
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text SPRiNG(スプリング) 
+
+2022年 12月号
+
+表紙:西畑大吾・大西流星・道枝駿佑・高橋恭平（なにわ男子）
+
+Amazon
+▶️https://t.co/UZvguSIU7i
+
+https://t.co/UZvguSIU7i
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AmschelKavka: But now not another word, only kisses — because it’s Sunday. 
+
+Franz Kafka, 1912.
+2023-02-05 22:30:58 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @noritakahamao: Wpc. #Wpc @wpcUmbrella 2023 SPRING/SUMMER COLLECTION
+https://t.co/2swCpqcC3t https://t.co/EPoqLfALHH
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PaiPaiinsider: เบ้าหน้าคือหล่อ น่ารัก ละมุน ครบจบในคนเดียว ชอบลุคนี้ ละมุนบอยยย
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patri…
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Signs of Spring, first vinca this year #winterflowers #GardeningTwitter #garden https://t.co/5j0eL0eq7L
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_is_ded どんどん痩せてます？？
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Renata Christiana Renata Christiana Spring Isabel #成都 #成都丝足 https://t.co/eUG2MNvJUg
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @estoicisme Quan aprèns amb un llibre a la mà, avui dia sembla que les xarxes els hi facin sombra, no ho permetem, cal llegir, aprendre, tenir cultura
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Altuzarra #2015 İlkbahar Koleksiyonu
+https://t.co/omEAfusBrw
+
+#Ilkbahar #ReadyToWear #Spring https://t.co/9rQ4YVmdZ4
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @mjhptcott 💔
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Jerome Benedict Christian Hunter Hardy #微信查手机 #护照信息 #个人户籍 https://t.co/NdBS2Ofobe
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @pengumina29 oii
+#iweb3 #Spring_Festival
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ﾋﾙﾉﾌﾞ→2161 https://t.co/KWfK7zUBwk
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeHoraceDrewDirk   
+#河间 #攀枝花 #汕尾 https://t.co/8A6id3DUxS
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AmschelKavka: But now not another word, only kisses — because it’s Sunday. 
+
+Franz Kafka, 1912.
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ClassicalAssoc1: CAI Dublin Branch 
+Lecture Programme Spring 2023
+- Dr Eric Kondratieff @HistoryDeptWKU 
+- Dr Rosie Wyles @RosieWyles…
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:31:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ᅠ
+𝓞pening a new journey, bringing spring as a gift of life. Presenting a new Girl Group: 𝐒𝐏𝐑𝐈𝐍𝐆𝐈𝐑𝐋𝐒. Titled “Fall In Spring”, please give them lots of love.
+ᅠ https://t.co/ZuKLxr9rsl
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text CyberCoders is looking for a Senior Software Engineer - $150K (Python, Django, Microservices)
+https://t.co/UQqu6iJzOz San Francisco, CA, United States
+( Python  Cloud  ML  Django ) 
+#careers #Django
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Rockwell American Tandem 3,500 lb Electric Brakes Trailer Axles w/Springs, Ubolts & Hanger Kit (95" Hubface, 80" Spring Cente S1KW4RB
+
+https://t.co/QTZ6SU2pDa
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @CozOfYouPaiPai @patrick_pppat เก่งมาก ๆ
+Patrick Spring Festival
+#PaiPai四海同春2023 
+#แพทริค    @patrick_pppat
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @JocAPhotography: A Northern Cardinal floofing on a brisk winter day to help stay warm. The grey tips on his feathers will wear away bef…
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TAT4N_: Spring Out 
+은발문대 https://t.co/Qy598yDnBB
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Huxley is looking for a Java Developer
+https://t.co/eQxQZ4omOX New York, NY, United States
+( CSharp  Python  Cloud ) 
+#hiring #CSharp
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ᅠ
+1. @yiphyun 
+2. @qohan 
+3. @jirawtat 
+4. @jaemink 
+5. @isaleew
+6. @Ningnilg 
+7. @parkjismung 
+8. @WlINWIN 
+ᅠ
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @spring_Scherzo: wip。。 https://t.co/ChTxVo6IiG
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Highlight der gestrigen FFF White Nights: #Prison77
+
+Realhistorisches Gefängnisdrama mit ordentlichem Hauch Kafka. Beeindruckend beklemmend.
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Virgo_Syrma ありがとう☺️🧡エスカレーターの近くにおるね！
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeHoraceDrewDirk 
+#百家乐 #邯郸 https://t.co/vw0qrbEfaR
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise AmBitious公演
+アンビ スプパラお譲り先探しております
+
+【譲】
+2/28 初日 1階4〜5列センブロ 2枚
+3/5昼 1階3〜4列下手 2枚
+3/5千秋楽 1階〜2列 センブロ 2枚
+【金額】ご提示ください
+
+必要事項明記の上DMお願い致します
+
+#AmBitious譲 #SpringParadise譲 #アンビ譲 #スプパラ譲
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @1SAq6KyxToDo4gA: ❗ランキング:33位❗ (今週の新着)
+
+「い・ろ・は・す天然水 540ml×24本 (1箱)  」
+メーカ:
+
+価格:¥2,700(20:30)
+
+https://t.co/Rjc6AFZ0J5
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @paipai__pppat: คนเก่งง ขอบคุณที่ทำงานหนักนะคับ
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+
+ https://t.co/XmTprkkQTp
+2023-02-05 22:31:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @neco_spring すっかりその気になってきました❣️ありがとうございます❣️
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @beverleyturner: Right! Can the British media finally start debating this now please??
+Some of us have been trying to do so since spring…
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Java_curry ちなみにボタンって使うの苦手なんでしたっけ？
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @forsomeone_001: OVERSIZE KNIT
+
+SPRING SUMMER 2023 COLLECTION
+-UNTITLE-
+
+ONLINESTORE
+https://t.co/ZdeiJe2lNO
+
+FLAGSHIP STORE 
+℡ 03-5708-…
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @workieXXX Sexy
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Kafka_Journal 「こんにちは。今、話をしてもいい？(首を小さく傾けた)」
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @raim_Spring らいむちゃんも...💕
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Inconforme75: Escultura de David Cerny en Praga en homenaje a Franz Kafka...
+Increíble!!!👏 https://t.co/xIWbqCAWtD
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #杭州 #上海  #杭州线下 https://t.co/VvqfGg0R2c
+Commercial then maybe according spring concern body.
+😋😀💫🤐😍
+2023-02-05 19:31:10
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @gp_pulipaka: Understanding Semiconductors! #BigData #Analytics #DataScience #AI #MachineLearning #IoT #IIoT #Python #RStats #TensorFlow…
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ghumare64 @SaveToBookmarks
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Kafka_0666 やったぜぇ💃✨
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @snaphookgolfuk @Positively4thS When she disappeared it was at low water, and the way the tides  work, the tide would have been much lower  being  a spring tide.
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @nao_503018 私も最近聞いてます🎵
+2023-02-05 22:31:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO SMILE PARADISE 2023 SPRING WATWING×NOA KT Zepp yokohama
+チケットのお譲り先を探しております
+
+【日時】2/22 1部　昼
+【座席】2階
+【枚数】1連
+【金額】ご提示下さい（即決有）
+【取引方法】サイト通し 口座振込のみ cloakにて分配
+
+必要事項明記の上DMお願いいたします
+
+#NOA譲  #WATWING譲
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Poppy Pope Spring Martha Poppy Pope #青岛  #青岛资源 https://t.co/P9i6byVeWb
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Empi 17-2669 Vw Rear Adjustable Swing Axle Spring Plates F/ 21-3/4" Torsion Bar TXNGZQ7
+
+https://t.co/yO0oFpy2tq
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text If there was no Tory leadership election last summer, last Oct would not have happened. There was no need for one, even if you wanted to rid of Boris. Leave him in place, let him take the cost of living crisis heat, reassess in the spring.
+Self inflicted wound over CAKE!
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DJ_JAVA JAVAさんならいけるでしょー
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text I'm just exhausted & hoping there are others like me. https://t.co/dwvKgkSSGP
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @aql9yckeeeFeWun @tenshinnmama ひいろサン
+この角煮はマジで美味かったです。ただ時間がかかるため、仕事から帰って子供達にパパッと作るには不向きかもしれませんね😘💕
+休日用、もしくは次の日用って感じです✨
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 凱旋MCbattle in 北海道、めちゃくちゃ良かった。
+他の人も言ってるように
+がーどまんvsIDは、観てて少し涙ぐんでしまったなぁ。
+チコさんも、もっとイケると思った。
+とにかく呂布さん強すぎた。
+脱走さんコレ優勝できるのでは！！！って思ったのに
+本当に悔しいな。。。
+kafka、東京に呼びたい。。。
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL 
+
+승리의 닻을 올렸습니다. 다음 목적지까지 단단하게 정비해 다시 항해를 시작하겠습니다!
+ 
+Mission complete. The team is headed to its…
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Grape hyacinth, my favourite,  along with snowdrops, both signs of #hope https://t.co/bLg5LZBcwm
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Cl1Richard: When did the Liebrals lower our taxes. Cigarettes Beer and Alcohol are on auto increase every April fools day. The carbon t…
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kochi_lalala: お待たせいたしました！
+「ラ・ラ・ラ春まつり」の会場別出演者・出演バンド一覧をUPしました。
+https://t.co/JEukLPclsE
+※時間や出演者・出演バンドの変更などがある場合がございます。予めご了承ください。
+
+※出演者・出演バ…
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @KAFKA_Dev @Barry_deH ❤️
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #宁波  #合肥  #济南   https://t.co/7dqxw8qKkx
+Reflect spring rule rule or pay president.
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text They tried to make bwl a new spring day but its so fucking annoying https://t.co/Q1vUUqsnOJ
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 関西コレクション 関コレ2023.03.04
+SPRING＆SUMMER 京セラドーム
+
+譲：プラチナ席 〜4列 1枚
+求：金額ご提示ください 
+
+お求めの方は金額明記の上、ＤＭまで宜しくお願い致します。
+
+#関西コレクション #関コレ #関コレ譲 #関コレ求
+2023-02-05 22:31:30 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BuddhistCeo: I sit zazen
+The garden birds
+Seem excited today 
+Flitting between
+Bushes and trees 
+Like me they sense
+Spring is near 
+Soo…
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل واجبات حاسب | شبكات 
+ NSB/Android/kotlin
+Java/c++/python
+ رسم حاسب | نظم ذكية
+ذكاء صناعي | مشاريع تخرج
+Html/css/jav…
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text The Weekly – List and Rankings Bonzana, South Bend Drops Some Good Vids, Pics from Spring Training, and a Favorite Returns https://t.co/sGkEzb6cXW
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign billboard ad spotted on a building in Seoul, South Korea!
+
+©JJH_SRH…
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Tangmopo1: Due to "后浪 24 solar terms version preview" released by 电视剧后浪 on 4th Feb 2023, the day of 
+立春 (beginning of spring), 
+number…
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patrick_THFC: สวัสดีบ่ายวันอาทิตย์ค้าบ~ เจ้าปลาดาวตื่นมารอดูน้องแพทกันรึยังน้า 🥰
+
+ไหนใครมาเทรนด์แล้วบ้าง ขอมือหน่อยคับ 🙋🏻‍♀️🙋🏻‍♂️
+
+Patr…
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @kafka_2sc4081 スルメとバター美味そうだな
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @mingy_mingy: หล๋าย..มาแล้วรายงานตัวหน่อยจ้า😁 มาทายกันว่าวันนี้มุมุใส่ชุดสีอารายเอ่ย!? 
+
+❗️สุ่มแจกเคสทรศ.ปลาดาวแก้มป่อง1อัน❗️
+
+✨รี+เมน…
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text My Queens of Manhwa ✨ Top 3
+✨Park Ji-yeon ✨ Wolf in the house, Momentum, Spring the color of Love https://t.co/MUL72Jh1D8
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @GrayingApostate @inqdragon2 I loved that when I was in high school and figured it out on the piano, roughly, to my parents’ consternation.
+2023-02-05 22:31:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ✨ U-pi ✨My way with you, The pizza delivery man and the gold palace https://t.co/Bq7NoHuLO6
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل واجبات حاسب | شبكات 
+ NSB/Android/kotlin
+Java/c++/python
+ رسم حاسب | نظم ذكية
+ذكاء صناعي | مشاريع تخرج
+Html/css/jav…
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @traveler002: @HarryMi47749146 @theappocalypso @robcarlson20 @NickDowdy10 @Roe50 @GuitrNl @Mike24632892 @PunkinDyer @OldCrow002 @N8theGr…
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LCWF_TBK: #spring #sundayvibes ☀️ https://t.co/CDp7BXKpOM
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @s4r4h_l Good morning, Sarah ... I was thinking about you while out on my walk this morning, "looking for Spring " 😊👋 hope all well with you xx
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @patrick_THFC: แพทริคและพี่ๆ INTO1 เข้าร่วมงาน “四海同春” 2023 全球华侨华人新春云联欢 
+
+🗓 05.02.2023 
+⏰ 14.00 น.🇹🇭
+📺 ช่องทางรับชม : https://t.co/FyxUr8…
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise Boys beボイビ公演
+交換探しております
+
+【譲】2/26昼 1階3列 下手 
+【求】2/26夜 1階1〜3列 上手
+関西手渡し優先
+
+1枚同士の交換。列上がりの場合上乗せ可能。
+お譲りのみも検討しますので必要事項明記のうえDMお願いします。
+
+#スプパラ交換 #ボイビ交換 #Boysbe交換 #Boysbe譲
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل اختبارات/حل واجبات/ اسايمنت/بروجكت
+مشروع تخرج/جرافيكس/ui/ux بحث/عروض/هندسة برمجيات تراسل بيانات /قواعد بيانات/احصاء…
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text nah i love j hus man, i said he’s coming back new year ahlie, watch, this nigga might just drop on the spring equinox 🤭 hehe
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @chochosmx Yes, the string format is slow. I recently created a benchmark to compare the "+" vs the format of 2 params. And "+" is 8x faster on these 2 params. https://t.co/JzTYrhiybj
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @mamad_jfr عجبا
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @StarkistAq: Spring awaits https://t.co/FtLtaQLkWC
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ Boys be公演お譲り先を探してます
+
+【日時】2/25 昼
+【枚数】1枚
+【金額】1.5~即決有
+【座席】dmにてお願い致します
+【取引】要相談
+
+お心当たりある方は、DMお願い致します。
+#スプパラ譲 #Boysbe譲 #ボイビ譲
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 私の手元にもコミックスの特典類が届きました！リーフレットが多かったのでいつも以上にたくさんイラストも漫画も描けて楽しかったです。
+引っ越した頃の話とか、子供の頃を振り返るようなネタにしてます。お手に取ってくださった方にも楽しんで頂けてたら嬉しいです🙇‍♂️ https://t.co/9kASv0zYXY
+2023-02-05 22:31:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fukuoka_rta: 本日21時より「Fukuoka RTA Forum 2023 Spring」採用ゲームリストを配信内で発表します！
+
+▼配信チャンネル
+https://t.co/Br76g1JGEf
+#福岡RTA
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Honey Lucia Tina Hornby Spring Betty Franklin Turner #济南 #青岛 #潍坊 https://t.co/fuiXuYzfji
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @BartGonnissen Prima draadje, duidelijk! Thanks
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @zOdqo hello
+#iweb3 #Spring_Festival
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Despite the forecast, live like it’s spring
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign billboard ad spotted on a building in Seoul, South Korea!
+
+©JJH_SRH…
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @hasantoxr: Learn Programming for Free👇:
+
+📂 HTML  →  html .com
+📂 CSS  →  w3schools .com
+📂 Java   → codecademy .com
+📂 Python  →   learnpy…
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ Boys be公演探しております。
+
+【日時】2/25夜
+【枚数】1〜2枚
+【座席】1階 〜5列
+【金額】ご提示ください
+
+詳しい座席明記の上dmまでお願いします。
+
+#スプパラ求 #Boysbe求 #ボイビ求 #スプパラ譲 #Boysbe譲 #ボイビ譲
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RatherGoodArt: The Newell Convers Wyeth Postcard Collection.
+A set of 6 rather good postcards, featuring some of his well known works,…
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_haru0416 @1tW0 止めてって！
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @WendyWatson222 If you discount Pope Gregory's calendar, we're still in 2022. New Year in end of March/begunning April. I don't acknowledge Gregory's new year. 2022 rapture? Hopefully.
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ghumare64: Learn DevOps by playing games 🎮
+
+1. DevOps
+https://t.co/JzrPfmPZM0
+
+2. Linux
+https://t.co/hT6XkaaFsG
+
+3. DevOps Party Games…
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #重庆 #广州 #线下 https://t.co/LxVHvE7Mul
+From around point spring room.
+🤨😌💫😆🤏
+2023-02-05 19:31:53
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LCK: Final match of #LCK Spring Week 3 goes to @DplusKIA! https://t.co/fUWVG4Nmwv
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @severeweatherEU: Spring forecast 2023: The La Nina Winter pattern is forecast to extend into the new weather season, despite the rapid…
+2023-02-05 22:32:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Isaiah 58:11 - And the LORD shall guide thee continually, and satisfy thy soul in drought, and make fat thy bones: and thou shalt be like a watered garden, and like a spring of water, whose waters fail not.
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @nidepaipai: ระหว่างรอดูน้องแพท ทุกคนทำไรกันอยู่คะ 
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patrick_pppat
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AmschelKavka: But now not another word, only kisses — because it’s Sunday. 
+
+Franz Kafka, 1912.
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likePeacemakerZachariahRaymond   
+#安徽 #平度 #韶关 https://t.co/64BmIyuhXG
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @TheBuccosFan ‘Ol Honus had his priorities straight!  First baseball then fishing!
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラステッカー交換探しております。
+
+1セット購入致しました。
+届き次第発送。
+
+求）織山尚大＞山井飛翔
+譲）忍者，💙以外
+
+郵送のみ
+
+⚠️【織山激求】
+山井の場合の交換は2:1の比率違い優先で交換致します。
+
+交換お待ちしております。
+
+#スプパラ交換 
+#スプパラステッカー交換 https://t.co/kGmrt9SXmW
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text if you like this t-shirt design, please visit the link
+
+https://t.co/RmqdsD3ZQ2
+#desiGirl #design #desahancowo #KaranJohar #RIPIan #KaranJohar #SidharthMalhotra #Anupamaa #KaranJohar #Chandler #marketingtips #Graphics #business #tshirtdesign #summertimesaga #CatsOfTwitter https://t.co/CtZ5qA1Osl
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @beverleyturner: @MarinaPurkiss @GBNEWS How much have you actually watched?? Most people make this snap prejudicial judgement based on h…
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text YSTARDREAM Hummingbird Car Accessories for Women Men Spring Flower Seat Covers for Car for Women 11-pcs with Steering Wheel C QWEWFFU
+
+https://t.co/TiS6Hgvvwc
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text anyway let’s start with os. i am gonna follow tutorials point os course 👩🏻‍💻
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #母狗   #磕炮   #反差    https://t.co/XPQiO79Ooc
+Support offer rock spring suggest allow past.
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @TheRealMukhtar Lol. My guy. let me dm
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise AmBitious アンビ スプパラお譲り先を探しております。
+
+【譲】3/4   夜公演
+【座席】3階4列1〜15番
+【金額】ご提示ください
+【取引】手渡しまたはアプリ通し
+
+必要事項記載の上DMまでお願い致します。
+#スプパラ譲　#アンビ譲
+2023-02-05 22:32:14 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BIGHIT_MUSIC: [기사] #BTS’ #SUGA Dons Monochromatic Look for Valentino’s Haute Couture Show
+https://t.co/hmpp4T4XtB
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @baronboris @HommesLars @KAFKA_Dev Je bent je ervan bewust dat in Rusland ook elke 6 jaar verkiezingen zijn?
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 【交換/譲渡】訂正版
+あんスタ イベコレ缶バッジ 2022 spring idol casual
+求→画像の【巽】または定価+送料
+譲→ i & c【日和】
+⚠️☆5、周年との交換で＋84円切手×1枚
+⚠️纏めての交換優先
+検索からも気軽にお声かけ下さい！
+大変難しいと思いますが、ご検討よろしくお願い致します。 https://t.co/R5Lkkpsmpn
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @linjinki89: To potato jj acc who said she didn't read any discussions about yibo acting in Hidden Blade.. she's probably in hibernation…
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @TSYalerts Thank you, how much would that cost would it be better to get a day pass?
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text what a nice sunday https://t.co/ZaPxwWpFSG
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Lost_Kashmir: is an expert who was one of the main forces behind Egypt's Arab Spring. He's a student of 'Nuland' school of Regime chang…
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kimura_kenchin: 8. สรุปเทรนด์จากบ้านเบส คือปลาดาวพวกนางเริ่ด พวกนางเชิ่ด พวกนางคือบอทมืออาชีพ คอนเท้นไม่ต้องมาก แต่เทรนด์โลกสูงมากถึงอั…
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @solutins_Academ: حل اختبارات/حل واجبات/ اسايمنت/بروجكت
+مشروع تخرج/جرافيكس/ui/ux بحث/عروض/هندسة برمجيات تراسل بيانات /قواعد بيانات/احصاء…
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise  Boys be  スプパラ
+
+【日時】2/26 17:00 
+【枚数】1枚
+【座席】1階6-8列 9-20番
+【金額】6.5~即7.5
+【取引】大阪事前手渡し
+
+お心当たりの方は希望額明記の上DMにご連絡お願い致します。
+
+#スプパラ譲 #ボイビ譲 #Boysbe譲
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @annebuapat15: พี่ 娱情Lab "Yin Haoyu’s Lantern Festival เซลฟี่สุดเซอร์ไพรส์!ใส่เสื้อสีขาวดูเหมือนขนมจีบข้าวเหนียว! ถ่ายเซลฟี่คอลเล็กชั่น…
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kimura_kenchin: ใครมารอน้องแพทแล้วบ้างค้าา แจกแก้วจากบ้านดีโหวต 2 เซ็ต (แก้วขาว1แก้วใส1/เซ็ต) สุ่มจากรีทวิตค่า 
+
+Patrick Spring Festiva…
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Starting9 When can Tatis start playing again.  Do spring training games count?
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Directors Guild to Wait on Bargaining Until ‘Later This Spring’ https://t.co/B7pO7RaYpo #paypal #lvanka #forbes #pentagon #montana #liztruss #salmankhan #kyungsoo #tejran #top3 #sabrina #arisingwinnerpriyanka #neckless #entertainment #trendingnews
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kankan_0111: 【交換/譲渡】 あんスタ イベコレ フィーチャ テーマ 缶バッジ
+
+譲・画像参照
+
+求・22 spring iみか2、c/iジュン1、summer i薫1 or 定価＋送料
+
+郵送希望。お約束分は除いております。
+譲渡は星5は星4含む方優先。…
+2023-02-05 22:32:23 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeMonicaSibylMabel   
+#通许 #商丘 #伊春 https://t.co/yHLM5tpe8E
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @trhk_17s 検索より失礼致します。
+こちら詳しくお話お伺いしたいのですか制限がかかってしまうため、一時的にフォローして頂くことは可能でしょうか？
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise AmBitious公演
+アンビ スプパラお譲り先探しております
+
+【日程】3/2
+【枚数】1枚
+【座席】1階3~5列 通路横
+【金額】ご提示ください
+【取引】アプリ通し
+
+必要事項明記の上DMお願い致します
+
+#AmBitious譲 #SpringParadise譲 #アンビ譲 #スプパラ譲
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeLion-likeGardenerStanley   
+#定远 #贵阳 #淮北 https://t.co/jPbb2dau7I
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ AmBitious
+大阪公演お譲り先を探しています
+
+【譲】3/5 17:00 夜
+           1階 14列 A〜12番
+【枚数】1枚
+【金額】即決7
+【取引】ジャム通し
+
+必要事項記載の上DMへお願い致します。
+
+ #スプパラ譲 #AmBitious譲 #アンビ譲
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @nidepaipai: ระหว่างรอดูน้องแพท ทุกคนทำไรกันอยู่คะ 
+
+Patrick Spring Festival
+#PaiPai四海同春2023
+#แพทริค @patrick_pppat
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Hugh Maggie Spring Franklin Marcia Edie Woodrow Gracie #西安 #咸阳 #成都 https://t.co/14l8DMRQKD
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text The Beginning of Spring,the first solar term of Year of the Rabbit,falls on February 4. Everything is about to revive,showing the prelude of the spring. Customs such as eating spring cakes and breaking up the clay-made cattle are followed on this day. #我在江西过大年 #文化赣鄱 https://t.co/n0utcbgnqz
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jeschtt: when franz kafka wrote “i was ashamed of myself when i realized life was a costume party and i attended with my real face”
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @HATOBUS_JP: リラックマラッピングバス運行中🚌
+2月4日から夜コースの運行が開始します✨
+お食事会場の東京ドームホテル「リラッサ」では、リラックマパフェのデザート付😋
+お土産にリラックマ陶器コースターをご用意🎁
+
+コースの詳細・ご予約はこちら💁‍♂️
+http…
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @thekeyislove222 It's in the works.    We almost did last year but I thought better of that as it was just before the winter.    I'd rather do my learning in the spring summer...
+Looking forward to the added help they provide to a garden.
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text はっ！こんなに早く告知するって事は、サイン会とか、お渡し会とかやるんやな…🫥
+
+じゃあ、まだAmazonで予約しない方がいいかぁ…🤔💭
+
+https://t.co/28reMphNzU https://t.co/sq6Evnpz0Z
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @tweeterforyou2: For authors, By Authors.
+#author #writer #writingcommunity
+Don’t Fuck with Writers, 
+We’ll Describe You
+
+Cup/tumbler/wa…
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring AdamsMartina WhitmanSpencer Barney #青岛 #东莞 https://t.co/U0Keysz5ff
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Im reading Kafka on the shore and the character in the first few pages sounds like an edgy teenager u see in coming of age films 😝
+2023-02-05 22:32:28 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK SPRING] vs @KDF_LoL
+
+Today's POG: ShowMaker
+
+"쇼.칼.리"
+
+#DplusKIA #DKWIN #WeConnected #LCK https://t.co/yzG3nDC17H
