@@ -48,7 +48,7 @@ public class TwitterKafkaStreamRunner implements StreamRunner {
         addFilter();
     }
 
-    // Method to execute when closing the twitter stream (using PreDestroy annotation\).
+    // Method to execute when closing the twitter stream (using PreDestroy annotation).
     @PreDestroy
     public void shutdown() {
         if(twitterStream != null) {
