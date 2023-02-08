@@ -1,12 +1,13 @@
 package com.microservices.demo.twitter.to.kafka.service;
 
-import com.microservices.demo.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.microservices.demo.config.TwitterToKafkaServiceConfigData;
 import com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Arrays;
 
@@ -15,6 +16,7 @@ import java.util.Arrays;
 * Using the CommandLineRunner to run specific code only once. Same can be achieved using the ApplicationListener
 * */
 @SpringBootApplication
+@ComponentScan(basePackages = "com.microservices.demo") // will add the bas package "com.microservices.demo" in the "app-config-data" module since it resides outside.
 public class TwitterKafkaServiceApplication implements CommandLineRunner {
 
     // Logging data of this class using slf4j logger

@@ -1,4 +1,4 @@
-package com.microservices.demo.twitter.to.kafka.service.config;
+package com.microservices.demo.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -8,14 +8,14 @@ import java.util.List;
 
 /*
 * Using lombok for setters and getter
-* Reading string data from application.yml file. Reading from "twitter-to-kafka-service"
+* Reading config data from application.yml file. Reading from "twitter-to-kafka-service" section of the yml file
+* Each variable will be mapped to the property in the yml file ex: twitter-keywords -> twitterKeywords
 * */
 @Data
 @Configuration
 @ConfigurationProperties(prefix = "twitter-to-kafka-service")
 public class TwitterToKafkaServiceConfigData {
 
-    // This will get populated from the value of "twitter-keywords" in src/main/resources/application.yml
     private List<String> twitterKeywords;
     private String welcomeMessage;
     private String TwitterV2BaseUrl;

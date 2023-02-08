@@ -12,10 +12,18 @@
     <artifactId>twitter-to-kafka-service</artifactId>
 
     <dependencies>
+
+
         <!-- Overriding the required dependencies of parent pom file without the versions -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--Overriding the local config dependency package "com.microservices.demo" in "app-config-data" module - which consist  of configs globally-->
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
+            <artifactId>app-config-data</artifactId>
         </dependency>
 
         <dependency>
@@ -37,12 +45,6 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
