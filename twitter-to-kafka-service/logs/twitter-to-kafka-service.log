@@ -1,12 +1,130 @@
-2023-02-06 22:13:13 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 35148 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-06 22:13:13 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-06 22:13:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.069 seconds (JVM running for 5.58)
-2023-02-06 22:13:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-06 22:13:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:13:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-06 22:13:14 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2023-02-06 22:13:14 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:13:16 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+2023-02-07 21:16:23 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 36906 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-07 21:16:23 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-07 21:16:25 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.099 seconds (JVM running for 5.242)
+2023-02-07 21:16:25 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-07 21:16:25 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:16:25 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-07 21:16:25 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:16:30 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Looking forward to seeing you next week at our annual Spring Housing Fair. Off-campus housing options, free food, tons of swag! https://t.co/NDDIlFzJDj https://t.co/m8mbj2S7rj
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Freddyfazbea7 https://t.co/4UzYJ0nMKv
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text it’s really spring day https://t.co/KmQXYp37sg
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @cyanmagazine: 【好評発売中】
+CYAN ISSUE 36 SPRING 2023
+『晴れ、ときどき、春。』
+
+バックカバーには THE RAMPAGEの #川村壱馬 が登場！軽やかなカラーのスタイリングとメイクで、春の訪れを知らせてくれます🌸
+
+詳細はWE…
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kchartsmaster: "Spring Day" by @BTS_twt is trending at #1 on MelOn search.
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Not much bigger than just a spring and autumn 3liberty1396 
+#裤里丝 #盯射 #射脸 https://t.co/4D2ecSZuXX
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MaromaroNU: Hello! Project 2023 Spring　CITY CIRCUIT
+【求】
+4/22 座間 BEYOOOOONDS （出来れば連番2枚希望）
+【譲】
+定価＋手数料＋α（相談で）
+
+是非よろしくお願いします！！！
+#ハロプロ　#拡散希望…
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @geniusessay_ctr: Dm  for quality help
+#java
+#cpp
+#Accounting
+#Math
+#Statistics
+#physics
+#finance
+ #chemistry
+#Algebra
+#BHCK
+#KCST
+#HU
+#…
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text I'm proud of you jeong jaehyun!! 🥺❤️ https://t.co/9EabRmBmXJ
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @vialattea_p: ハロー!プロジェクト 2023 Spring CITY CIRCUIT Juice=Juice
+
+求：3/18 八王子 1枚
+譲：定価
+
+心当たりある方はお気軽にお声がけください、よろしくお願いいたします。🙇‍♀️ https://t.co/U…
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 2023/03.04 関西コレクション
+SPRING&SUMMER 時間貸し
+
+【求】プラチナ席・VIP席
+【譲】ご提示ください
+
+BUDDiiS出演時の座席権利求めております。お心当たりのある方DMまでお願い致します。
+
+ #関コレ譲 #関コレ求 #関西コレクション #関コレ
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Fah822: เห็นแบบนี้แล้วก็นึกขึ้นได้ ขอเล่าในมุมของเราแล้วกัน ตอนที่ Shine จู่ๆก็เข้าชาร์ตขึ้นมามันมีความสุขมาก เพนทากอนได้ยืดโปรโมท แต่ห…
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LiSA_OLiVE: チラ見せ中‥🐈‍⬛👑🧸💭
+
+@roy_official20 
+・・・
+.
+2023 SPRiNG/SUMMER COLLECTiON VOL.1
+
+PRE ORDER 2/9(THU)12:00〜
+START.
+
+coming soon...…
+2023-02-07 21:16:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Guo Wengui has already started planning to build momentum by using the "Guo Spring Festival Gala", and the routine is probably inseparable from the rumors that come out of his mouth, and the "big picture and great cause" that he closes his eyes to swindle money https://t.co/VMY9bG1W93
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Fried some just to show y’all what you’re missing out on😄
+Paired them with this ukwaju, made in Mombasa. Watu wa Mombasa, do yourselves a favour and get this ukwaju for your snacks! https://t.co/tTYgOZsmBN https://t.co/F6UuIXkFZa
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Grand Seiko Spring Drive Chronograph GMT Ref. SBGC253 https://t.co/MrjzX574vo
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @cyanmagazine: 【好評発売中】
+CYAN ISSUE 36 SPRING 2023
+『晴れ、ときどき、春。』
+
+バックカバーには THE RAMPAGEの #川村壱馬 が登場！軽やかなカラーのスタイリングとメイクで、春の訪れを知らせてくれます🌸
+
+詳細はWE…
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @liamero_sub 初めまして、検索より失礼します。
+💜さん写真のもの所有しているのですが💛Summer等身と交換可能でしょうか？
+ご検討よろしくお願いします。 https://t.co/CTBGsjWQEd
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Not much bigger than just a spring and autumn 2cX2890 
+#中山 #台州 #兰州 https://t.co/v3sAM8TVHW
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @cyanmagazine: 【好評発売中】
+CYAN ISSUE 36 SPRING 2023
+『晴れ、ときどき、春。』
+
+バックカバーには THE RAMPAGEの #川村壱馬 が登場！軽やかなカラーのスタイリングとメイクで、春の訪れを知らせてくれます🌸
+
+詳細はWE…
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text I wanna sing ahappy song
+i wanna sing happy song today
+散りばめる愛はメロディ
+願いは強い 想い
+「Happysongtoday(for my girl)」／Hanah Spring
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jenniedebuts: Jennie with Cardi B at the Spring/Summer 2020 CHANEL show @BLACKPINK https://t.co/9A1663xyjb
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @SteveBackshall @greenbeltsal More money for Spring and Winter Watch, it's not all doom and gloom, thankfully!
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @EDNewsChina: This year's #SpringFestival holiday tourism has boomed, Enshi Tujia and Miao Autonomous Prefecture of #China's Hubei Provi…
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @silence423_nm: ถ้าไม่มีแฟนไม่ตายหรอก พี่เจโน่ใส่แว่นดำนี่สิกุตาย
+https://t.co/HqUB10ODrk
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ufi_fc: 「Hello! Project 2023 Spring　CITY CIRCUIT」FC2次受付のお知らせ https://t.co/5YNyBa1Dsx
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text wrtgerht SDFGH Spring, Autumn and Summer Women's Driving and Riding Ice Silk Sleeves Arm Guard Lace Thin Gloves Gloves
+https://t.co/CQkoev9ZVj
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @ruminarist @Downy_PH @natures_spring Last na po, promise 🙃 https://t.co/U39ZIf2rNt
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ Boys be公演譲り先を探してます 
+
+【譲】2/26 昼
+【枚数】1枚 
+【座席】1階4列 上手
+
+金額、担当ご明記の上dmまでご連絡お願いします
+
+#スプパラ譲 #Boysbe譲 #ボイビ譲 #スプパラ交換
+2023-02-07 21:16:51 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @victoriabeckham: LOOK 37 from the Spring Summer 2023 collection, as worn by @BLACKPINK’s #Lalisa for @Madamefigaro Paris. https://t.co/…
+2023-02-07 21:43:13 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 37311 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-07 21:43:13 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-07 21:43:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.662 seconds (JVM running for 4.485)
+2023-02-07 21:43:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-07 21:43:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:43:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-07 21:43:14 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2023-02-07 21:43:14 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:43:15 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
 <html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
 Please use V2 filtered and sample volume stream as alternatives
 </title>
@@ -20,7 +138,7 @@ Please use V2 filtered and sample volume stream as alternatives
 </body>
 </html>
 
-2023-02-06 22:13:16 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+2023-02-07 21:43:15 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
 <html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
 Please use V2 filtered and sample volume stream as alternatives
 </title>
@@ -34,76 +152,74 @@ Please use V2 filtered and sample volume stream as alternatives
 </body>
 </html>
 
-2023-02-06 22:13:16 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing the twitter stream
-2023-02-06 22:14:06 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 35167 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-06 22:14:06 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-06 22:14:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.521 seconds (JVM running for 4.786)
-2023-02-06 22:14:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-06 22:14:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:14:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-06 22:14:08 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
-2023-02-06 22:14:08 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:14:09 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
+2023-02-07 21:43:15 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing the twitter stream
+2023-02-07 21:44:32 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 37343 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-07 21:44:32 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-07 21:44:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.708 seconds (JVM running for 4.773)
+2023-02-07 21:44:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-07 21:44:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:44:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-07 21:44:33 [main] INFO  c.m.d.t.t.k.s.r.i.MockKafkaStreamRunner - Starting to mock filtering tweeter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:44:33 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text etiam Nostra arcu Microservices penatibus penatibus
+2023-02-07 21:44:43 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Nostra arcu fusce Kafka fusce penatibus
+2023-02-07 21:44:53 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Mus etiam etiam Elasticsearch penatibus fusce
+2023-02-07 21:45:35 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 37363 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
+2023-02-07 21:45:35 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-02-07 21:45:37 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 4.156 seconds (JVM running for 6.563)
+2023-02-07 21:45:37 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-07 21:45:37 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:45:37 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-07 21:45:37 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-07 21:45:43 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Edith Cheryl Lucy Spring Edith #昆明 kmxx  https://t.co/8dkgbPcS2M
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @cyanmagazine: 【好評発売中】
+CYAN ISSUE 36 SPRING 2023
+『晴れ、ときどき、春。』
 
-2023-02-06 22:14:09 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
-Please use V2 filtered and sample volume stream as alternatives
-</title>
-</head>
-<body>
-<h2>HTTP ERROR: 403</h2>
-<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
-<pre>    
-Please use V2 filtered and sample volume stream as alternatives
-</pre>
-</body>
-</html>
+バックカバーには THE RAMPAGEの #川村壱馬 が登場！軽やかなカラーのスタイリングとメイクで、春の訪れを知らせてくれます🌸
 
-2023-02-06 22:14:09 [SpringApplicationShutdownHook] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing the twitter stream
-2023-02-06 22:15:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 35190 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-06 22:15:07 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-06 22:15:08 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner' available: expected single matching bean but found 2: mockKafkaStreamRunner,twitterV2KafkaStreamRunner
-2023-02-06 22:15:08 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+詳細はWE…
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @cyanmagazine: 【好評発売中】
+CYAN ISSUE 36 SPRING 2023
+『晴れ、ときどき、春。』
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-02-06 22:15:08 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+バックカバーには THE RAMPAGEの #川村壱馬 が登場！軽やかなカラーのスタイリングとメイクで、春の訪れを知らせてくれます🌸
 
-***************************
-APPLICATION FAILED TO START
-***************************
+詳細はWE…
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/kIYf7Lq56g Humpty Had A Wonderful A fun way to show off your individualism is with fall shirts. Show off your humorous side by wearing these to school in any season, whether it be Spring, Summer, Fall, or Winter.
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 当日行けなくなった為、Spring ParadiseスプパラIMPACTors大阪公演のお譲り先探しております。
 
-Description:
+【公演】3月9日17:00〜FC当選
+【枚数】2枚 (バラ可)
+【金額】ご提示下さい(即決12)
+【取引】事前に大阪市内手渡し優先
 
-Parameter 1 of constructor in com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication required a single bean, but 2 were found:
-	- mockKafkaStreamRunner: defined in file [/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/runner/impl/MockKafkaStreamRunner.class]
-	- twitterV2KafkaStreamRunner: defined in file [/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/runner/impl/TwitterV2KafkaStreamRunner.class]
+お心当たりのある方はDMお願い致します
+ #スプパラ譲 #スプパラ求 #IMPACTors譲
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @sogoomiya くださーい🤣お願いします🙇⤵️
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Rogerd21826262 So lovely 🌹🌹
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Steamed Dim Sum : Xiao Long Bao, Sezchuan Dumpling, Kaica, Lomaykai
 
+Fried Dim Sum : Spring Roll Vegetable, Chicken and Crabstick in Nori Roll, Pumpkin, Dumpling Chicken Mushroom, dan Chicken Breaded
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Stop sleeping on #Altcoins! Now's the time to get in and make your $ETH count - don't miss out! @Binance, let's go!! @kim https://t.co/d6q4Y3Gcc8
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Sakshimeel: my heart makes a barren noise, i don’t know if this is reality or a dream. my Kafka on the shore, please don’t go to the fo…
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 👋💫😝🤏😍
+Debate protect mention professor positive week spring.
+  #AG真人  #百家乐  #万博体育   https://t.co/Z1vC6H8r95
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @mynavi_PR: ／
+#マイナビTGC💙2023 S/S特別協賛記念💎
+観覧チケットプレゼント🎫
+＼
 
-Action:
+3/4(土)開催『第36回 マイナビ 東京ガールズコレクション 2023 SPRING/SUMMER』のアリーナ席ペアチケットを1組2名様に🎁
 
-Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+🌸応募方法
+☑️…
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text We have lined Chek Lap Kok South Road and Scenic Hill with some 100 cherry blossom trees. Come early spring, these cherry blossom trees deliver picture-perfect floral profusion💓
 
-2023-02-06 22:17:58 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 35235 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-06 22:17:58 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-06 22:17:59 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 2.69 seconds (JVM running for 4.927)
-2023-02-06 22:17:59 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-06 22:17:59 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:17:59 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-06 22:17:59 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:18:01 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @rockice_kokubo: ／
+#cherryblossomsinHK #cherryblossoms #HKIAcherryblossomgarden #hkia #hongkongairport #hkg #aviation https://t.co/atTCokqBHp
+2023-02-07 21:45:52 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @paz_gerionion ∑(ㅎㅁㅎ)!!
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @rockice_kokubo: ／
 #春のロックアイスキャンペーン 🧊🥤🧊
 ＼
 QUOカードPay1,000円分📱が抽選で300名様に当たる🎁
@@ -112,7 +228,203 @@ QUOカードPay1,000円分📱が抽選で300名様に当たる🎁
 1️⃣ @rockice_kokubo　をフォロー
 2️⃣ この投稿をRT🔁
 締切：3月31日（金）23:59…
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @rockice_kokubo: ／
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @akimin831: Spring Paradise AmBitious交換を探しております。
+譲: 3/4 昼 1階右左列 後半番号 1枚
+
+求: 3/5 夜 座席問わず 1枚
+
+舞台、松竹事前手渡し可能。お心当たりのある方は、普段お使いのアカウントよりご連絡ください…
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @mio_spring (｡>ω<)人✩⡱
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text spring blooms and you find the love that's true
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ AmBitious公演 お譲り先探しております
+
+【日程】3/1  
+【枚数】1枚
+【座席】1階14～16列 1~20番
+【金額】～即決5.7
+
+お心当たりのある方は金額、年齢、担当明記の上DMお願いします。
+#アンビ譲 #スプパラ譲 #AmBitious譲
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Dawn loves the morning dew, anticipating your departure while I relish the small time we have together. That I could love you like the winter loves the spring, that I could understand how the waking world touches dreams. I reach farther still, looking for these things
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Guo Wengui has already started planning to build momentum by using the "Guo Spring Festival Gala", and the routine is probably inseparable from the rumors that come out of his mouth, and the "big picture and great cause" that he closes his eyes to swindle money https://t.co/1ceDKgd8bE
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @cyanmagazine: 【好評発売中】
+CYAN ISSUE 36 SPRING 2023
+『晴れ、ときどき、春。』
+
+バックカバーには THE RAMPAGEの #川村壱馬 が登場！軽やかなカラーのスタイリングとメイクで、春の訪れを知らせてくれます🌸
+
+詳細はWE…
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #FESSPD  Jigsaw ''RALLYing Around Young People” – Supporting Young People’s Mental Health'' with Carrie Budds @JigsawYMH Tuesday 21st February,  10.00 am – 11.30 am @QQI_connect @SOLASFET @ThisisFet @ETBIreland @FETColleges_IE @nalaireland @ALOA_Ireland @nalaireland @Carcher_PD https://t.co/sUTp5WUeKV
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @chuckknoxx: If I'm Eli and Kafka leaves, I'm walking into the front office and putting my resume, balls and my flag football coaching c…
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @cyanmagazine: 【好評発売中】
+CYAN ISSUE 36 SPRING 2023
+『晴れ、ときどき、春。』
+
+バックカバーには THE RAMPAGEの #川村壱馬 が登場！軽やかなカラーのスタイリングとメイクで、春の訪れを知らせてくれます🌸
+
+詳細はWE…
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 悦刻四代五代水果味烟弹口味齐 ，烟杆颜色齐全，需要加微信：19842517331  #悦刻幻影 #悦刻5代 #悦刻 #水果味 #悦刻4代 #RELX #电子烟 #悦刻产品 #烟弹 #水果味烟弹
+Home pretty quality spring or change key.
+😀👋😅😝💯 https://t.co/iPgUqNS1uT
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Sara(h) Spring Sara(h) Coral Nell Magee Henry #跑分 #投资 https://t.co/bJnbdFiuxp
+2023-02-07 21:45:59 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text If Truss/Kwarteng were tradesmen they'd be hammered for compensation.
+As is, they are politicians who can not legally be held accountable for broken promises or the disasters that spring from their ill-conceived actions. https://t.co/0Fazf5x8SS
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TheOrielles: 🇪🇺 EUROPA 🇪🇺
+
+here’s the first stint we have, off the back of the uk tour in early spring. will get tickets up in that lin…
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DC_Draino: The latest video by @Project_Veritas  confirms Pfizer knew about the vax affecting women’s fertility
+
+But here’s a major twi…
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Fun Fact เพิ่มเติม: บังทันติด bubbling under hot 100 ตั้งแต่ Spring day (ต้นปี 2017) และ DNA เพลงแรกที่ติด hot 100 เป็นเพลงที่ปล่อยวันจันทร์ เก็บยอดไม่ครบวีค
+
+#YetToCome #BestMusicVideo #iHeartAwards https://t.co/YxC8dKDFf0
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Ladybug Felted Garland- Red, Black & White- Spring Summer- 1" Felt Balls, 1 25" Ladybugs - 100% Wool IRW1WJC
+
+https://t.co/blvNGfc0hQ
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ChaEunwooINTL: 📍Giordano KR IG
+
+Spring 2023
+
+Like, share, save & comment
+🖇️https://t.co/NckJYIZvpk
+🖇https://t.co/UG8TUomn6n
+🖇https://t.…
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LiliesHome_: .@victoriabeckham Instagram, reel & Facebook Updates with #LISA please engage;
+
+"#VBMuse lalalalisa_m wearing look 37 from…
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring__silence 헉!! 저는 18살여자에요..!!!
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BashoSociety: a sandy beach
+sparkling  in the
+spring sunshine
+
+Shiki
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kchartsmaster: "Spring Day" by @BTS_twt is trending at #1 on MelOn search.
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ufi_fc: 「Hello! Project 2023 Spring　CITY CIRCUIT」FC2次受付のお知らせ https://t.co/5YNyBa1Dsx
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text h2V&  Spring is a pretty season，          #许昌     #承德 https://t.co/V3Pq2ihrdQ
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @hekatete @pn_kafka 固定値20%から17%に減ったせいですね。
+あとはランダム値にお祈りします。
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @victoriabeckham: LOOK 37 from the Spring Summer 2023 collection, as worn by @BLACKPINK’s #Lalisa for @Madamefigaro Paris. https://t.co/…
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @helloakas: Hello! Project 2023 Spring  CITY CIRCUIT 23 ハロプロ 春ツアー ハロコン 
+
+【譲】
+定価＋手数料
+
+【求】
+
+3/18
+八王子
+開演 14:30
+アンジュルム 1 枚 
+
+4/15
+座間
+開演 15:3…
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @choi_bts2: Spring will come soon! 💜
+2023-02-07 21:46:04 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ufi_fc: 「Hello! Project 2023 Spring　CITY CIRCUIT」FC2次受付のお知らせ https://t.co/5YNyBa1Dsx
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Hello! Project 2023 Spring　CITY CIRCUIT   Juice=Juice
+
+求    3/18  八王子  女性名義
+
+譲   定価＋手数料
+
+DMにてお待ちしております。よろしくお願い致します。
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @riko_spring_pf しんどい時は、楽しましょ。
+しんどくない時に動けばいいのですから。
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者
+交換求めてます
+
+【譲】
+2/18 昼　3階3列上手
+
+【求】
+2/18昼   同等列13番〜22番
+
+座席、取引方法記載の上DMまでお願いいたします。
+
+ #スプパラ交換  #少年忍者交換
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_mis اره!
+این بهترین توصیف از حسیه که موندن تو رابطه اشتباه به آدم القا میکنه
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text JavaでNPE対策にプリミティブラップした独自型を使ってたりするけど、言語としてデフォルトでnull safeが保証されてる言語使えばいいだけなのでは、という気持ちになることはある
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LiSA_OLiVE: チラ見せ中‥🐈‍⬛👑🧸💭
+
+@roy_official20 
+・・・
+.
+2023 SPRiNG/SUMMER COLLECTiON VOL.1
+
+PRE ORDER 2/9(THU)12:00〜
+START.
+
+coming soon...…
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text We are excited to announce that registration for the Jakarta EE Track at @Devnexus 2023 is now open! Join us on April 4-6, 2023 for the largest #Java platform conference in the US and learn from industry leaders in the field. Register now at https://t.co/9R5eZ8myQO https://t.co/fMNgSTzYZ5
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text アイドアラブズまたまた出演させていただきます！！好きなアイドルさんばっかりで楽しみです꒰ ᐡ '֊'ᐡ ꒱あえる！？ https://t.co/mnazRbtelA
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 急に来た。これを乗り越えればあったかくなるハズ
+
+Sudden headache coming, probably spring having been come
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @LiSA_OLiVE: チラ見せ中‥🐈‍⬛👑🧸💭
+
+@roy_official20 
+・・・
+.
+2023 SPRiNG/SUMMER COLLECTiON VOL.1
+
+PRE ORDER 2/9(THU)12:00〜
+START.
+
+coming soon...…
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kchartsmaster: "Spring Day" by @BTS_twt is trending at #1 on MelOn search.
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 「Hello! Project 2023 Spring　CITY CIRCUIT」FC2次受付のお知らせ｜ハロー！プロジェクトオフィシャルファンクラブWebサイト https://t.co/c33YwDzT7T @ufi_fcより 
+
+大阪はともかく、本当に関東以外行かないヲタクが増えてるんかねぇ～
+単純にヲタクの母数が多いだけでここまで差が出るか？
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TheLitAdvocate: 🎉🥳🎊👀 at this SHOWCASE presented FEB. 7 by @KidLitTV_NYC! They are a force for 💜good📚 in the #kidlit 🌎! #BookPosse #mgli…
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @birds_spring え！？
+2023-02-07 21:46:12 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @victoriabeckham: LOOK 37 from the Spring Summer 2023 collection, as worn by @BLACKPINK’s #Lalisa for @Madamefigaro Paris. https://t.co/…
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kchartsmaster: "Spring Day" by @BTS_twt is trending at #1 on MelOn search.
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DC_Draino: The latest video by @Project_Veritas  confirms Pfizer knew about the vax affecting women’s fertility
+
+But here’s a major twi…
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Jimin13_spring: 그렇지..
+하체는 이정도 심박수는 해줘야🏋‍♀️
+그동안 너무 설렁했지🥲
+
+#VIBE @realtaeyang #JIMIN #ParkJimin of #BTSJIMIN @BTS_twt https://t.co/F382Ho…
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @fhk2014_kk: こんばんは🌛
+
+本日は「VF-830α」で布団ばさみ用のねじりコイルばねを製作している動画です✨
+
+明日からまた頑張って行きましょう✊
+
+#ばね #spring #中小企業 #ものづくり #製造業 #フセハツ工業 #東大阪市 #町工場 #動画…
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text It's a beautiful February morning at BACN HQ! It's starting to feel a lot like Spring 🌸🌸
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @SNYtv Captain Nims
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kchartsmaster: "Spring Day" by @BTS_twt is trending at #1 on MelOn search.
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_ksk 憂鬱ですね😅
+月曜日と火曜日と
+水曜日と木曜日
+あと金曜日も憂鬱です😭
+
+ほとんどだった😭😭
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Will the Ohio State Football team name a QB starter by Spring? - Scarlet and Game https://t.co/uiS4ckWMWm
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Live Cooking Station : Roasted Duck, Roasted Hongkong Chicken, berbagai hidangan Mie dan juga Panseared dim sum sebagai hidangan baru lainnya di All You Can Eat Dim Sum
+
+Tertarik mampir?
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text รับเขียนโค้ด (เน้นมหาลัย มัธยมส่งมาให้ดูก่อนได้ค่ะ) 
+
+- Python
+- Java
+- JavaScript
+- C++
+- Kotlin 
+และภาษาอื่น ๆ แล้วแต่พิจารณา 
+
+ส่งโจทย์มาให้พิจารณาทาง DMได้เลยค่ะ 
+**โดย วิศวะซอฟต์แวร์ ม.เกษตร บางเขน
+
+❤️‍🔥ราคาดีสุดๆ ยังไม่เคยถึงหลักร้อยเลย❤️‍🔥
+
+#รับเขียนโค้ด #เขียนโค้ด
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @rockice_kokubo: ／
 #春のロックアイスキャンペーン 🧊🥤🧊
 ＼
 QUOカードPay1,000円分📱が抽選で300名様に当たる🎁
@@ -121,38 +433,10 @@ QUOカードPay1,000円分📱が抽選で300名様に当たる🎁
 1️⃣ @rockice_kokubo　をフォロー
 2️⃣ この投稿をRT🔁
 締切：3月31日（金）23:59…
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text The word https://t.co/cvVZgtzL9q
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @charts_k: Melon Weekly Chart 🇰🇷 (@BTS_twt)
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Tomorrow we kick off the Kiuas events for this year with the Accelerator Spring 23 info session at Startup Sauna! 🤩 If you are an early-stage startup entrepreneur looking to boost your company to the next level, you don't want to miss this! 🔥
 
-#5 (+1) VIBE (4 wks)
-#27 Rush Hour (20 wks)
-#46 Dreamers (11 wks)
-#60 That That (41 wks)
-#6…
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @De_Ninaaa @KAFKA_Dev @GunayUslu Kafkak heeft weer een reden gevonden om z'n onderbuik te legen, niet gehinderd door enige kennis van zaken, zoals altijd....
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @k2m_jb: เราชอบกินขนมโดยเฉพาะเลย์ เลย์เอฟวรี่เดิฟ เลิฟเอฟวรี่เดย์☺️☺️☺️
-
-Will Will Spring Come? 
-I love to listen to #WillSpringCome by…
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @PiWhales Saya sih cukup angka keramat saja, yg mana sebesar $4287 per 1 pi.
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text The Critical Role of APIs in Microservices Architectures https://t.co/lLhWjjUYzM
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @pnbox14: มือสั่น คือคอลเลคชั่นที่เตนใส่ไปงานก็คือ Spring/Summer 23 ละมันมีลุคนึงที่เป็นขาสั้น คืออันนิ ถ้าเตนใส่คือ…🤯🤯🤯 https://t.co/Of…
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング:29位❗(今週の新着)
-
-「クッション 低反発 腰 産後 痔 お医者さんの円座クッション ブルーグレー 5613」
-メーカ:アルファックス
-
-価格:¥5,520✨
-🔥売り切れ間近🔥(20:18)
-
-https://t.co/qAAaVODrXB
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MeribelOfficial: 🍑예약안내🍑
-[Spring Sailor]
-(예약) 2/6 ~ 2/18
-(배송) 3월 말~4월 초 예정
-
-둥근 세일러카라, 하늘하늘한 오건디 리본, 프릴과 하트모양의 진주단추까지 사랑스러운 디테일을 가득 담은 봄…
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @rockice_kokubo: ／
+Sign up: https://t.co/VGWxGS7zbc https://t.co/VIheTFRky4
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @rockice_kokubo: ／
 #春のロックアイスキャンペーン 🧊🥤🧊
 ＼
 QUOカードPay1,000円分📱が抽選で300名様に当たる🎁
@@ -161,65 +445,4 @@ QUOカードPay1,000円分📱が抽選で300名様に当たる🎁
 1️⃣ @rockice_kokubo　をフォロー
 2️⃣ この投稿をRT🔁
 締切：3月31日（金）23:59…
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @nsaidian: Come closer #Spring 🌿🌼 https://t.co/T4TSKogIeS
-2023-02-06 22:18:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ❗ランキング：9位❗(CPU)
-
-「増設CPUボード (12C/ E5-2680v3)  N8101-948」
-メーカ:NEC
-
-価格:¥563,220✨
-🔥売り切れ間近🔥(20:18)
-
-https://t.co/iLcKc7K0CA
-2023-02-06 22:18:36 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 35251 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-06 22:18:36 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-06 22:18:37 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.microservices.demo.twitter.to.kafka.service.runner.StreamRunner' available: expected single matching bean but found 2: mockKafkaStreamRunner,twitterKafkaStreamRunner
-2023-02-06 22:18:37 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-02-06 22:18:37 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 1 of constructor in com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication required a single bean, but 2 were found:
-	- mockKafkaStreamRunner: defined in file [/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/runner/impl/MockKafkaStreamRunner.class]
-	- twitterKafkaStreamRunner: defined in file [/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/runner/impl/TwitterKafkaStreamRunner.class]
-
-
-Action:
-
-Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
-
-2023-02-06 22:21:32 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Starting TwitterKafkaServiceApplication using Java 11.0.12 on Yrols-MBP with PID 35294 (/Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo)
-2023-02-06 22:21:32 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2023-02-06 22:21:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 3.002 seconds (JVM running for 4.694)
-2023-02-06 22:21:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-06 22:21:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:21:33 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-06 22:21:33 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-06 22:21:35 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
-2023-02-06 22:21:35 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-02-06 22:21:35 [main] ERROR o.s.boot.SpringApplication - Application run failed
-java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.main(TwitterKafkaServiceApplication.java:33)
-Caused by: org.json.JSONException: A JSONObject text must begin with '{' at 3 [character 4 line 1]
-	at org.json.JSONTokener.syntaxError(JSONTokener.java:433)
-	at org.json.JSONObject.<init>(JSONObject.java:194)
-	at org.json.JSONObject.<init>(JSONObject.java:321)
-	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.getFormattedTweet(TwitterV2StreamHelper.java:229)
-	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2StreamHelper.connectStream(TwitterV2StreamHelper.java:94)
-	at com.microservices.demo.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:46)
-	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.run(TwitterKafkaServiceApplication.java:44)
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768)
-	... 5 common frames omitted
+2023-02-07 21:46:21 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @SHRodman Thanks for sharing 🌿

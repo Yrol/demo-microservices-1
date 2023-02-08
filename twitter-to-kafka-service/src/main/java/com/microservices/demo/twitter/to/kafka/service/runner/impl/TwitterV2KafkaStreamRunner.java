@@ -22,7 +22,7 @@ import java.util.Map;
 //@ConditionalOnProperty(name = "twitter-to-kafka-service.enable-v2-tweets", havingValue = "true", matchIfMissing = true)
 
 //Using ConditionalOnExpression instead of ConditionalOnProperty for complex conditions. Loading real tweets to mock tweets based conditions set
-@ConditionalOnExpression("${twitter-to-kafka-service.enable-v2-tweets} && not ${twitter-to-kafka-service.enable-mock-tweets}")
+@ConditionalOnExpression("${twitter-to-kafka-service.enable-v2-tweets} && not ${twitter-to-kafka-service.enable-mock-tweets} && not ${twitter-to-kafka-service.enable-v1-tweets}")
 public class TwitterV2KafkaStreamRunner implements StreamRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterV2KafkaStreamRunner.class);
