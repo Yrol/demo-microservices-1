@@ -9,6 +9,13 @@ The Docker based Kafka services are located in `/microservices-demo/docker-compo
 * Brokers - 3
 * schema-registry - 1
 
+**Kafka module** <br/>
+Located in `/Spring/microservices-demo/kafka`.
+* kafka-admin - Create and verify Kafka topics programmatically.
+* kafka-model - Create and hold Kafka objects in Avro format.
+* kafka-producer - Use spring-kafka to write Kafka producer implementation.
+
+
 **Running Kafka services** <br/>
 To run these services, `cd` into `/microservices-demo/docker-compose` and execute the following command
 ```
