@@ -37,4 +37,17 @@ For this we can use the docker based Kafkacat as below.
   ```
   docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b  localhost:19092  -L
   ```
+  
+**Generate Avro schemas via IntelliJ**<br/>
+Assuming that the project is opened in IntelliJ (an alternative to running the command `mvn clean install` when Maven is installed on the machine).
+* Select the Maven tab
+
+* Select the option: Execute Maven Goal
+
+* Select the module (kafka-model)
+
+* Type and enter "mvn clean install"
+
+<p><img src="https://i.imgur.com/K0Xid2W.png"></img></p>
+
 
