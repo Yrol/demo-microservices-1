@@ -6,27 +6,38 @@
         <artifactId>microservices-demo</artifactId>
         <groupId>com.microservices.demo</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>kafka-admin</artifactId>
+    <artifactId>common-config</artifactId>
 
     <dependencies>
-        <!--Overriding the local config dependency package "com.microservices.demo" in "app-config-data" module - which consist  of configs globally-->
+        <!--Reusing the dependencies -->
         <dependency>
             <groupId>com.microservices.demo</groupId>
             <artifactId>app-config-data</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>com.microservices.demo</groupId>
-            <artifactId>common-config</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
         </dependency>
+
+
+        <!--Spring Retry provides an abstraction around retrying failed operations. For instance, you can configure a plain POJO operation to retry if it fails. -->
         <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+
+
+        <!-- Starter for aspect-oriented programming with Spring AOP and AspectJ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
     </dependencies>
+
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>

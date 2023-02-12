@@ -9,7 +9,7 @@ import java.util.List;
 /*
 * Using lombok for setters and getter
 * Reading config data from application.yml file. Reading from "twitter-to-kafka-service" section of the yml file
-* Each variable will be mapped to the property in the yml file ex: twitter-keywords -> twitterKeywords
+* Each variable will be mapped to the property in the application.yml file ex: twitter-keywords -> twitterKeywords
 * */
 @Data
 @Configuration

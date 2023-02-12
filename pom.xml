@@ -9,6 +9,7 @@
 		<module>kafka/kafka-model</module>
 		<module>kafka/kafka-admin</module>
 		<module>kafka/kafka-producer</module>
+		<module>common-config</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -36,6 +37,9 @@
 		<httpclient.version>4.5.13</httpclient.version>
 		<json.version>20140107</json.version>
 		<avro.version>1.11.1</avro.version>
+		<springkafka.version>3.0.2</springkafka.version>
+		<springretry.version>2.0.0</springretry.version>
+		<springbootstarteraop.version>3.0.2</springbootstarteraop.version>
 	</properties>
 
 	<!--
@@ -51,7 +55,12 @@
 				<version>${project.version}</version>
 			</dependency>
 
-
+			<!-- Local Dependency - common-config that consist of common configuration -->
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>common-config</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>
@@ -97,6 +106,27 @@
 				<version>${projectlombok.version}</version>
 				<scope>provided</scope>
 			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.kafka</groupId>
+				<artifactId>spring-kafka</artifactId>
+				<version>${springkafka.version}</version>
+			</dependency>
+
+			<!--Spring Retry provides an abstraction around retrying failed operations. For instance, you can configure a plain POJO operation to retry if it fails. -->
+			<dependency>
+				<groupId>org.springframework.retry</groupId>
+				<artifactId>spring-retry</artifactId>
+				<version>${springretry.version}</version>
+			</dependency>
+
+			<!-- Starter for aspect-oriented programming with Spring AOP and AspectJ -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-aop</artifactId>
+				<version>${springbootstarteraop.version}</version>
+			</dependency>
+
 
 		</dependencies>
 	</dependencyManagement>

@@ -16,7 +16,9 @@ import java.util.Arrays;
 * Using the CommandLineRunner to run specific code only once. Same can be achieved using the ApplicationListener
 * */
 @SpringBootApplication
-@ComponentScan(basePackages = "com.microservices.demo") // will add the bas package "com.microservices.demo" in the "app-config-data" module since it resides outside.
+
+//ComponentScan will add the base package "com.microservices.demo" of other modules such as app-config-data, common-config, kafka (and its sub-modules) & etc
+@ComponentScan(basePackages = "com.microservices.demo")
 public class TwitterKafkaServiceApplication implements CommandLineRunner {
 
     // Logging data of this class using slf4j logger
