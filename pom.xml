@@ -39,7 +39,8 @@
 		<avro.version>1.11.1</avro.version>
 		<springkafka.version>3.0.2</springkafka.version>
 		<springretry.version>2.0.0</springretry.version>
-		<springbootstarteraop.version>3.0.2</springbootstarteraop.version>
+		<spring-boot-starter-aop.version>3.0.2</spring-boot-starter-aop.version>
+		<spring-boot-starter-webflux.version>3.0.2</spring-boot-starter-webflux.version>
 	</properties>
 
 	<!--
@@ -124,9 +125,14 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-aop</artifactId>
-				<version>${springbootstarteraop.version}</version>
+				<version>${spring-boot-starter-aop.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-webflux</artifactId>
+				<version>${spring-boot-starter-webflux.version}</version>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
