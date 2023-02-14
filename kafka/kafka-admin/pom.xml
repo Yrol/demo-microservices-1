@@ -27,6 +27,7 @@
             <artifactId>spring-kafka</artifactId>
         </dependency>
 
+        <!--Starter for building WebFlux applications using Spring Framework's Reactive Web support. Using for WebClient web request calls (Rest, Post & etc)-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>

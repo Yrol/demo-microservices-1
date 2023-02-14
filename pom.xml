@@ -41,7 +41,16 @@
 		<springretry.version>2.0.0</springretry.version>
 		<spring-boot-starter-aop.version>3.0.2</spring-boot-starter-aop.version>
 		<spring-boot-starter-webflux.version>3.0.2</spring-boot-starter-webflux.version>
+		<kafka-avro-serializer.version>5.3.0</kafka-avro-serializer.version>
 	</properties>
+
+	<repositories>
+		<!--providing kafka-avro-serializer repo location (since not located in maven central repo) -->
+		<repository>
+			<id>confluent</id>
+			<url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+		</repository>
+	</repositories>
 
 	<!--
 		- Using dependency management to be overridden by microservices.
@@ -49,7 +58,7 @@
 	-->
 	<dependencyManagement>
 		<dependencies>
-			<!-- Local Dependency. "com.microservices.demo" is the package that consist configs (globally) in app-config-data module -->
+			<!-- Local Dependency -  app-config-data module -->
 			<dependency>
 				<groupId>com.microservices.demo</groupId>
 				<artifactId>app-config-data</artifactId>
@@ -62,6 +71,13 @@
 				<artifactId>common-config</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>kafka-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>
@@ -128,15 +144,40 @@
 				<version>${spring-boot-starter-aop.version}</version>
 			</dependency>
 
+			<!--Starter for building WebFlux applications using Spring Framework's Reactive Web support. Using for WebClient web request calls (Rest, Post & etc)-->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-webflux</artifactId>
 				<version>${spring-boot-starter-webflux.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>io.confluent</groupId>
+				<artifactId>kafka-avro-serializer</artifactId>
+				<version>${kafka-avro-serializer.version}</version>
+
+				<!-- Exclude following libraries being used from kafka-avro-serializer -->
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-log4j12</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>io.swagger</groupId>
+						<artifactId>swagger-annotations</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>io.swagger</groupId>
+						<artifactId>swagger-core</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 
 	<build>
 		<!-- Maven compiler plugin to be used globally -->
