@@ -37,8 +37,8 @@
 		<httpclient.version>4.5.13</httpclient.version>
 		<json.version>20140107</json.version>
 		<avro.version>1.11.1</avro.version>
-		<springkafka.version>3.0.2</springkafka.version>
-		<springretry.version>2.0.0</springretry.version>
+		<spring-kafka.version>2.6.2</spring-kafka.version>
+		<spring-retry.version>2.0.0</spring-retry.version>
 		<spring-boot-starter-aop.version>3.0.2</spring-boot-starter-aop.version>
 		<spring-boot-starter-webflux.version>3.0.2</spring-boot-starter-webflux.version>
 		<kafka-avro-serializer.version>5.3.0</kafka-avro-serializer.version>
@@ -127,14 +127,14 @@
 			<dependency>
 				<groupId>org.springframework.kafka</groupId>
 				<artifactId>spring-kafka</artifactId>
-				<version>${springkafka.version}</version>
+				<version>${spring-kafka.version}</version>
 			</dependency>
 
 			<!--Spring Retry provides an abstraction around retrying failed operations. For instance, you can configure a plain POJO operation to retry if it fails. -->
 			<dependency>
 				<groupId>org.springframework.retry</groupId>
 				<artifactId>spring-retry</artifactId>
-				<version>${springretry.version}</version>
+				<version>${spring-retry.version}</version>
 			</dependency>
 
 			<!-- Starter for aspect-oriented programming with Spring AOP and AspectJ -->

@@ -1,10 +1,10 @@
-2023-02-14 21:38:44 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests], using SpringBootContextLoader
-2023-02-14 21:38:44 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-02-14 21:38:44 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests]: TwitterKafkaServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-02-14 21:38:44 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication for test class com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests
-2023-02-14 21:38:45 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-02-14 21:38:45 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@52851b44, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@584f54e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5d8bafa9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@576f63f6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2dca0d64, org.springframework.test.context.event.EventPublishingTestExecutionListener@f80945f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ff684e1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23aa363a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ef6ae06, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55dfebeb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6e35bc3d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1cdc4c27]
-2023-02-14 21:38:46 [main] WARN  o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+2023-02-15 22:04:24 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests], using SpringBootContextLoader
+2023-02-15 22:04:24 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-15 22:04:24 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests]: TwitterKafkaServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-15 22:04:25 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication for test class com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests
+2023-02-15 22:04:25 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-15 22:04:25 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@52851b44, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@584f54e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5d8bafa9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@576f63f6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2dca0d64, org.springframework.test.context.event.EventPublishingTestExecutionListener@f80945f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ff684e1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23aa363a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ef6ae06, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55dfebeb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6e35bc3d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1cdc4c27]
+2023-02-15 22:04:26 [main] WARN  o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -13,417 +13,108 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-02-14 21:38:47 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - Starting TwitterKafkaServiceApplicationTests using Java 15.0.1 on Yrols-MBP with PID 81629 (started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service)
-2023-02-14 21:38:47 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2023-02-14 21:38:49 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - Started TwitterKafkaServiceApplicationTests in 4.444 seconds (JVM running for 8.172)
-2023-02-14 21:38:49 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-14 21:38:49 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-14 21:38:49 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-14 21:38:49 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-14 21:38:53 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign ad spotted at Shinsegae Department Store in Gangnam, Seoul South Ko…
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yarrowtownsend: Hello teachers! 
+2023-02-15 22:04:26 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - Starting TwitterKafkaServiceApplicationTests using Java 15.0.1 on Yrols-MBP with PID 90161 (started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service)
+2023-02-15 22:04:26 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-02-15 22:04:28 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - Started TwitterKafkaServiceApplicationTests in 3.023 seconds (JVM running for 6.422)
+2023-02-15 22:04:28 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-15 22:04:28 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-15 22:04:28 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
+2023-02-15 22:04:28 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-15 22:04:31 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text まじこの服わろた https://t.co/bkm8HVcBkH
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @HistoryEmpires: Spring lectures of the PhD program in Global History of Empires.
+All meetings will be in person and on-line. https://t.…
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Im done w work for today, gonna go through my DM and @ 💜 *blasting spring day
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @manwhohasitall: ALL MEN! Are your eye lashes water resistant? Have you said hello to Spring? Is your hair full of antioxidants? Are you…
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @UnniHundhammer I don't know if I should thank you for sharing or cry for not being allowed to visit. My travel plans fell through and England grounded me from flying there for the Winter Solstice at Stonehenge. Maybe Norway would let a felon who hasn't committed a crime in 35 years visit.
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 
+IMPACTors公演交換探してます。
 
-I'm looking forward to some school visits this spring! Did you know there are Chapter-by-Chapter teac…
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Not much bigger than just a spring and autumn 8expertair400 
-#昆明 #南京 #兰州 https://t.co/5VNwwP81UF
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Good luck to @dom_rowl and the U of L Hornets this Spring!! #teamoverme https://t.co/Xgk8njuowK
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 【カープ】沖縄キャンプに向けて選手の入れ替えが発表。アドゥワ・會澤・韮澤が1軍合流 
-https://t.co/dzQBFGmyyk
-｜
-｜
-#carp #カープ https://t.co/MbmENnXhe9
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Gillesvdwiele @kaggle Only you survived 😁
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @WarMonitor3 Send drone to observe the
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @FNChiefAko: NEW HEISTED EXOTICS
+【譲】3/8夜 1階 14-15列 1~8番 2枚
+【求】3/8昼 1.2.3階1列、左右列
+【取引】手渡し優先、要相談
 
-The Compact SMG grants infinite spring, while the Twin Mag grants Zero Point Dash!
+必要事項明記の上、DMまでお願い致します。
+列上がり上乗せ可能
 
-Via:@FNLeaksAndInf…
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DongguanZ: 相逢一场春天的烟雨
-Spring is coming, in the pond, in the field, in the sky,
-everywhere is full of vigor and vitality. https://t.co/H4…
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @idoldotst: [#SIF2] 🌸μ's Key Visual🌸
+#スプパラ交換 #IMPACTors交換 #スプパラ譲 #IMPACTors譲
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @swapnakpanda: Top YouTube channels for Programming
 
-The high-quality μ's spring-themed key visual has been added to the official SIF2 website!
+❯ C ➟ Jacob Sorber
+❯ C++ ➟ TheCherno
+❯ Java ➟ amigoscode
+❯ C# ➟ kudvenkat
+❯ PHP ➟ P…
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_daos @clubofshadows Done
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text やっぱり...🥺 https://t.co/O2QT7HZb2G
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jzehnderBHHSPRO: Why It Makes Sense To Move Before Spring https://t.co/3dZ4Pyi7a8 https://t.co/58I6Ngxnky
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @_REFLEM: REFLEM×藍染カレン 2023 SPRING COLLABORATION VISUAL RELEASE
 
-It's c…
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 今年のバレンタイン♡🍫🍫
-右はカワイイ缶目当て🐈‍⬛
-左は見た目も綺麗で美味しそうだったから🥰
-巨峰ガナッシュ食べてみたけど濃厚でぶどう強くて美味しい〜！ https://t.co/jvXmtC3pot
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DplusKIA: [2023 LCK CL SPRING] vs @LiivSANDBOX 
+REFLEMの2023 SPRINGは、彼女が表現することで新たな魅力が存分に引き出されたイメージビジュアルに。
+ 
+REFLEM取り扱い直営…
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Miruriron_r: グッズ買取
 
-Dplus KIA가 승리만을 남겼습니다. 
-Dplus KIA has emerged victorious.
+求:2022 Spring缶バッチ
+　🐹💛さんデフォ
 
-#DplusKIA #DKWIN #WeConnect…
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Slowly the weather started to get warmer. Looks like spring is here!
-2023-02-14 21:39:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @KremlinTrolls If they’re worried Ukraine burning up shells “too fast”~
+広島公演/大阪公演にて
+買取させていただきたいです
+当方会場入り早めにする予定ですので
+その時間が始まる前/定価あたり
+ものすごくありがたいです
+何個からでも検討させていただ…
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @wmsy139 おけ、DM行く!!
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @wntrult: aespa in MLB Singapore Spring Summer 2023 Collection — The Varsity Jacket https://t.co/XxMG7haTKA
+2023-02-15 22:04:43 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @jenbren1976 @mrjintheuk Mine falls near the Spring Bank Holiday and I think it’s pretty much ideal for me.
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @WhatsTrending: Suga from @bts_bighit is officially debuting as a solo artist. 
 
-THEN SEND 🇺🇦THE PLANES AND TANKS SO 🇺🇦 CAN END THIS FASTER
+The boyband member has announced his first solo tour wh…
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise Lilかんさい 大阪公演
+お譲りします
 
-The West needs to stop being “penny-wise and pound-foolish” 
+【日時】3/21
+【枚数】1〜2枚
+【座席】1階17列センブロ
+【金額】5.5〜即決6
+【取引】相談
 
-Trust Ukraine 🇺🇦!
-2023-02-14 21:40:12 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests], using SpringBootContextLoader
-2023-02-14 21:40:12 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-02-14 21:40:12 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests]: TwitterKafkaServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-02-14 21:40:13 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication for test class com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplicationTests
-2023-02-14 21:40:13 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-02-14 21:40:13 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@52851b44, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@584f54e6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5d8bafa9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@576f63f6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2dca0d64, org.springframework.test.context.event.EventPublishingTestExecutionListener@f80945f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ff684e1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23aa363a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ef6ae06, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@55dfebeb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6e35bc3d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1cdc4c27]
-2023-02-14 21:40:14 [main] WARN  o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+必要事項記載の上DMお願いいたします
 
-Found multiple occurrences of org.json.JSONObject on the class path:
+#スプパラ譲 #Lilかんさい譲 #Lilかんさい #春松竹譲
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @tamagooooooo_64 公式からの画像だけど色んな形のチョコ入ってて可愛いの！🥳💓
+お洒落なパッケージてテンションあがるよねぇ🤤✨ https://t.co/sJHEucv5pw
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @sdket12 ケタさんスパガこれからも来てくださいね🥹🥹🥹🥹🥹
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @RandiRicoWLWT U need to get facts straight. On TV says slight. The app has no activities. Stop trying to. Scare people
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sogoomiya: 💖大宮キレイ24 『トキメキのGift＆Spring Beauty』フォロー&RT #キャンペーン 第2弾🎁
 
-	jar:file:/Users/yrolfernando/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/Users/yrolfernando/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+#抽選 で1名さまに「#ランコム／#美容液」が当たる❣💄
 
-You may wish to exclude one of them to ensure predictable runtime behavior
+💡応募方法💡
+✅@sogoomiya  をフォロー
+✅このツイートをRT…
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @nickypromotes: $50 | 750.000 IDR ~ END 72 HOURS 
 
-2023-02-14 21:40:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - Starting TwitterKafkaServiceApplicationTests using Java 15.0.1 on Yrols-MBP with PID 81686 (started by yrolfernando in /Users/yrolfernando/Desktop/Development/Spring/microservices-demo/twitter-to-kafka-service)
-2023-02-14 21:40:14 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
-2023-02-14 21:40:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplicationTests - Started TwitterKafkaServiceApplicationTests in 2.137 seconds (JVM running for 4.446)
-2023-02-14 21:40:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
-2023-02-14 21:40:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-14 21:40:15 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Welcome to Twitter to Kafka Service
-2023-02-14 21:40:15 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
-2023-02-14 21:40:19 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Energy and persistence conquer all things,f3yp0Awh5 #舔脚 Autumn is a second spring when every leaf is a flower.
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Collins #偏门 Kirk Wyat(t) #投资 Quintion Dunlop https://t.co/QrPx58frD1
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text The JS frameworks are exponentially booming in the market!
+RT & Follow 
 
-VueJs is quite ahead in the race
+@ExartaOfficial 
+@spring_daos 
+@ImmoFutures
+@bitunix
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ
+少年忍者公演求めてます。
 
-In fact, VueJs has the highest #GitHub ranking!
-
-Know what makes #developers choose VueJs over other JS frameworks👇
-
-#programming #CodeNewbie #Java #javascript 
-https://t.co/R7OgJHZBow
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Freedland: The talk in the Russia-Ukraine war is of a spring offensive - just as it was in wars past, in both 1918 and 1356. The Long V…
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Jill Eddie Tina Bessemer Jill Eddie Tina Bessemer Spring Bloomer https://t.co/GKcRsA3xa7
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @updatecharts: Há 6 anos, BTS lançava “Spring Day” em homenagem as vítimas de um acidente marítimo que ocorreu na Coréia do Sul.
-
-A canç…
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Today 14/02/2023, 33 KV Line Spring Deplopper substation Omega Chinhat under breakdown expected time One Hours approximately. @aksharmaBharat @mduppcl @MVVNLmd @UPPCLLKO @UppclChairman @MVVNLHQ @EMofficeUP @CMOfficeUP @ChiefSecyUP
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @shoheisaveus とても楽しみです💖
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @CulturalLingnan: #LingnanSpecialty The Lingnan specialty "Hakka Mother Wine (Hakka Rice Wine)" has been around for thousands of years.…
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ononkitaplar: “Ölümün olduğu bu dünyada,  Hiçbir şey çok da ciddi değildir aslında...”  Franz Kafka https://t.co/3pjGaEVlQZ
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 【プログラミング学習のProgate】Javaのレベルが16にUPしました！ https://t.co/OMQC3xNjNj #Progate
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Spring_03599525: တဖွတ်ဖွတ်နဲ့😁
-
-🔞More vids in my telegram channel 🔞
-မန်ဘာဝင်ချင်သူများ
-‌Fee 3000MMKပါ
-‌Kpay or waveဖြင့်ပေးဆောင်နိုင်သ…
-2023-02-14 21:40:31 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @carp_akinomono: 【カープ】沖縄キャンプに向けて選手の入れ替えが発表。アドゥワ・會澤・韮澤が1軍合流 
-https://t.co/dzQBFGmyyk
-｜
-｜
-#carp #カープ https://t.co/MbmENnXhe9
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kamiyan_l_Ay: 【交換】ジャンプGIGA EARLY SPRING 2023 雑誌 付録
-
-譲：鬼滅の刃 ポスター 3
-マッシュル クラフト風シール6
-
-求：呪術廻戦 クリアファイル
-
-6冊予約済み
-2：1のご交換可能です
-よろしくお願い致します https…
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text PLS JUST ONE UK DATE https://t.co/xY5pqoznw1
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @pritongtilapia_: spring with you 🌸
-
-finally able to post this art suijgsjdgbn anyways congrats @/StellaManami on ur new outfit www #ill…
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @dethrood2: #pixelart in honor of Valentine's Day ☀️🧊😊 and the approach of spring, of course ✨ https://t.co/dMflbMpbny
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text This is a top 5 ppv for me. Spring Stampede 1999 will forever go hard af.
-Ouu😘❤️‍🔥 https://t.co/0sjkN6SDtu
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @charts_k: .@BTS_twt’s “Spring Day” (2017) has surpassed 8 MILLION unique listeners on Melon!
-
-It’s the first song by an idol group to a…
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ononkitaplar: “Ölümün olduğu bu dünyada,  Hiçbir şey çok da ciddi değildir aslında...”  Franz Kafka https://t.co/3pjGaEVlQZ
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kdubs_matt: First day of spring but I’m thinking summer blossoms. Hit the shore with Summer Camilla. 🌊 🌸 https://t.co/8RGH3So3Z2
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Maks_NAFO_FELLA: The US and its allies promise to help the Ukrainians launch a counteroffensive in the spring - US Defense Minister Llo…
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @carp_akinomono: 【カープ】沖縄キャンプに向けて選手の入れ替えが発表。アドゥワ・會澤・韮澤が1軍合流 
-https://t.co/dzQBFGmyyk
-｜
-｜
-#carp #カープ https://t.co/MbmENnXhe9
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @oc_ogawacoffee: ／
-フォロー&RTで
-で10名様にプレゼント
-期間限定　春珈琲　ドリップコーヒー　10杯分
-＼
-◆期間
-2/13(月)～2/24(金)
-
-◆参加条件
-①本アカウント
-@oc_ogawacoffee
-)をフォロー
-②本投稿をRT
-#小川珈琲…
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @terfasaurus @agcolehamilton @ScottishYL I know you'd like to believe that the only reason anyone would support this policy is because of some kind of conspiracy, but that's not the reality. It came from the grassroots of our party and won the overwhelming support of the membership.
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yoong_coffee: Spring Day (2017) มียอดผู้ฟังไม่ซ้ำกัน (Unique Listeners) ทะลุ 8 ล้านรายบน MelOn แล้ว!
-
-สร้างสถิติใหม่กลายเป็นเพลงของวงไอ…
-2023-02-14 21:40:38 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Looking to add to your training - this is the one for you 😊
-We will be hosting our Spring Performance Combat workshop on the 4th and 5th of March in Chester - this 2 day course is led by stage combat specialist Kaitlin Howard.
-Find out more and book here: https://t.co/EOvIRMfnAC https://t.co/5WWGNLXjN9
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Bitterroot to see new military-style program for teens this spring https://t.co/I8pC5qb6Ge https://t.co/xMjMUwoGg1
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @LynnChateau One of my favourite films and songs              🥀🌹🥀🌹🥀
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ IMPACTors公演 お譲り先を探しております
-
-【日時】3/12 夜 千秋楽
-【座席】1階14〜16列 9-20
+【譲】2/19 昼
+【座席】1階又は2階左右列、前列
 【枚数】1枚
-【金額】即決23
-【取引】名古屋手渡し可能な方即決20
+【金額】ご提示下さい
+【取引】都内事前手渡しまたはサイト通し当日手渡し
+お心当たりある方はDMお願い致します。
 
-お心当たりのある方は必要事項明記の上DMまでご連絡お願い致します。
-#スプパラ譲 #IMPACTors譲
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @defstwomoles: jaebeom lim, a winter child who beautiful like the flowers that bloom in spring, calm as autumn, and shining like a summe…
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @charts_k: .@BTS_twt’s “Spring Day” (2017) has surpassed 8 MILLION unique listeners on Melon!
-
-It’s the first song by an idol group to a…
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @hana_xia1215: 2023 XIA THE BEST BALLAD SPRING CONCERT VOL.3 IN JAPAN 4월 9일 막콘 티켓 1장 양도 구합니다. 😭😭좌석 상관없습니다.들어가기만 한다면 감사합니다.😭coconut분들 rt감…
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @4613summer 包み紙の上から｢お！ピンクはハートかぁ｣って思ったらウッディと目が合って笑った。可愛い＆美味しすぎた
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sc_pppan: Spring Paradise Lil かんさい公演
-交換を探しております。
-
-【譲】3/31夜 1階3〜4列下手 1枚
-
-【求】3/23昼夜.4/2夜 1枚
-
-お心当たりのある方は、お手数ですがDMよりご連絡お願いします。
-#スプパラ交換   #L…
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @GraphicsJin: Seokjin's beautiful and emotional vocals in spring day. 🥹🥹
-
-UNTIL THE SPRING DAY COMES AGAIN
-OUR SPRING DAY IS YET TO COME…
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @chenniepii: from Palace Skateboards 2023 Spring Collection https://t.co/xYp4KkH6QY
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Pk_bts_land: Spring Day - 12am kst 
-
-#38. Bugs (+11)
-#63. MelOn  (+5)
-#98. Genie (+18)
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ IMPACTors 公演お譲り先探しております
-
-【譲】3/8 17:00
-【座席】2階～4列18-33番
-【金額】10.0～12.0
-【枚数】2枚
-【取引】大阪事前手渡し優先
-
-お心当たりありましたら金額明記の上DMお待ちしております。
-
-#impactors譲 #impactors求 #スプパラ譲 #スプパラ求
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring paradise スプパラ 少年忍者
-お譲りしていただける方を探しております。
-
-【求】 少年忍者公演 2/18夜、2/19以外
-【枚数】1枚
-【金額】ご提示ください
-【座席】どこでも可
-【取引】アプリ通し(要相談)
-
-お心当たりのある方はdmまでご連絡いただけますと嬉しいです。
- #スプパラ求  #少年忍者求
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sugatradamus: OUR SPRING DAY IS YET TO COME
-
-I’m voting for #BTSARMY as the #BestFanArmy at 2023 #iHeartAwards! https://t.co/SSOZJXm9Zo
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @spring_seol 내가 선택한 거잖아.
-2023-02-14 21:40:45 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sui_29n: 【譲渡 買取】あんスタ イベコレ 缶バッジ 2020 2021 2022 AUTUMN SPRING SUMMER WINTER SS フィーチャー テーマスカウト ホワイトブリム シティーライダー
-
-꒰ 譲 ꒱ 司 翠
-
-꒰ 求 ꒱ 440円＋送料…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @atomic_hope: Listen to director @FrankieFenton get challenged by @SeanRadioRocks live on air last night on @RTEArena 
-
-***OUT IN CINEMA…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @hoopseen: The most important stage of the spring is a month away. Lock in your spot for the HoopSeen Spring Preview. 
-
-📅: March 12
-📍: S…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise Lilかんさい公演のチケットのお譲り先を探しております。
-
-【譲】3/29 17:00〜
-【枚数】1階1桁列　1枚
-【金額】ご提示ください（相場）
-【取引】要相談
-
-担当、年齢、希望額を明記の上DMまでご連絡ください
-#スプパラ譲 #スプパラ求
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @WorldWarNow_ Brasil não fez tal solicitação.
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @v_hotrends: IDOL CHAMP
-The Best K-POP Boy Idol To Go Hot Spring Trip Together
-
-✅VOTE FOR #TAEHYUNG UNLIMITED 
-🥈⚠️
-
-🗓️Feb 21 | 11:59 PM…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @charts_k: .@BTS_twt’s “Spring Day” (2017) has surpassed 8 MILLION unique listeners on Melon!
-
-It’s the first song by an idol group to a…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Stowe Donahue Carey Spring Stowe #沈阳 #大连 https://t.co/s0rHsoNpgd
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Only the spring dares to tread from the clouds of heavy makeup 8expertair1541 
-#玉林 #荆门 #铜仁 https://t.co/rfFICXwe1R
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @lgvd: In anticipation of spring and finding these little blooms poking through last year's leaves.
-
-Snowdrops. #watercolour #watercolor…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BadgerVB: 🚨MARK YOUR CALENDARS🚨
-
-The spring schedule is here! Can't wait to be back home in the Field House with all of you on April 5t…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yoong_coffee: Spring Day (2017) มียอดผู้ฟังไม่ซ้ำกัน (Unique Listeners) ทะลุ 8 ล้านรายบน MelOn แล้ว!
-
-สร้างสถิติใหม่กลายเป็นเพลงของวงไอ…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @charts_k: .@BTS_twt's 'You Never Walk Alone' and its title track "Spring Day" was released 6 years ago today (2017)! It remains on Melo…
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 大阪手渡し、即決11.0
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Independent Her name is Belle
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Harold #苏州 Kent Pansy #北京 Len Paul https://t.co/AN6OfWuRYY
-2023-02-14 21:41:00 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @DGSvirginia  https://t.co/IZBzDX5h96
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラLil かんさい 公演
-お譲り先を探しております。
-
-【日時】1/30 夜公演
-【枚数】2枚
-【座席】1階〜4列上手通路横含む
-【金額】最高20 即決22
-
-必要事項明記の上DMお願い致します。
-
-#スプパラ譲 #リトル譲 #Lilかんさい譲 #スプパラ求
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TheMontyDon: Our bees are out and about and loving the crocus in the Spring garden. https://t.co/XlLGF106BJ
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeHoraceDrewDirk   
-#河间 #攀枝花 #汕尾 https://t.co/GhhDL8Mf5W
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yontengoP: 過去事例だと
-
-✅「エラーなんて出てません！」
-⇒いや目の前でJavaくんは真っ赤な文字でNullPointerExceptionって言うてるよ
-✅「コンパイルエラーないです！」
-⇒目の前でEclipseくんが「セミコロンが無い」つってるよ
-
-✅「…
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Taekooks_Doll Pretttty💞🌸
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @almutafawiq7r: #كلية_التقنيه
-حل اختبارات واجبات اسايمنت بروجكت مشاريع
-حاسب برمجة تقنية معلومات شبكات برمجيات
- Packet Tracer
-Visual Basi…
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @0304_0305_DAY: ۴(๑ꆨ◡ꉺ๑) 함께 맞이하는 봄
-
-TXT 데뷔일을 기념하기 위해 카페 이벤트
-를 준비합니다
-                                          ۴(๑ꆨ◡ꉺ๑)
-✎ 합정 카페 와디즈𝟛𝟘𝟛
-✎…
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeLion-likeGardenerStanley   
-#定远 #贵阳 #淮北 https://t.co/MvQ7mT6KMN
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Livraison7j7: Télégram👇https://t.co/FcNc29n3z6
-
-#Shit #meditation #RobloxDev #PSG #franceverte #Annecy_live #violencepolicières #maruaj…
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @spring_nwinter: i'm unwell. https://t.co/a3x9vZmyxY
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ IMPACTors
-お譲り先を探しております。
-
-【日程】3/8 8日 17:00 2部
-【座席】1階 3列9~20 番
-【枚数】1枚
-【金額】ご提示ください(即決あり)
-【取引】要相談
-
-DMまでご連絡お願い致します。
-
-#IMPACTors譲 #スプパラ譲
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Karen Adam: Spring will fill Scotland's independence movement with optimism https://t.co/c5sP3mamfm
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Wall ago affect case spring among plan.
-girlfriend #宁波  https://t.co/iMb5I1DeVM
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text A2- https://t.co/LJ6lYmvFe4
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Maxwell #郑州 Franklin Webb #惠州 https://t.co/NbuuR9TwZz
-2023-02-14 21:41:06 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Sozyuku: “Ölümün olduğu bu dünyada, 
-Hiçbir şey çok da ciddi değildir aslında...”
-
-Franz Kafka
-2023-02-14 21:41:10 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Join us at the Spring Party in soho Club and get a chance to win a FREE @TheSpicyIsland holiday - yes, you read that right - one lucky couple will get a SpicyIsland holiday absolutely FREE! Click here: https://t.co/gniNRPejbA
-
-#spicyisland #spicypeople #spicymatch https://t.co/hugLU5aj9l
-2023-02-14 21:41:10 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @tmsii_art Pushes via spring loader system into the firing chamber, then spits the spent shell out the opposite side to loading, or out the top through a sort of vent system to prevent the gun from overheating?
-2023-02-14 21:41:10 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @BTS7normalboys @kafka_army @mobinanz87
-2023-02-14 21:41:10 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Java sucks
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @charts_k: .@BTS_twt’s “Spring Day” (2017) has surpassed 8 MILLION unique listeners on Melon!
-
-It’s the first song by an idol group to a…
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yontengoP: 特に最近はユーザフレンドリーが進んで昔よりエラーメッセージとかも表に出さないしエラー頻度も減ってるだろうし
-
-「🌼🌼しばらくお待ちください…🌼🌼」って画面に見慣れてた所から突如
-
-「⚠️java.lang.ArrayIndexOutOfBounds…
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise Lilかんさい公演のチケットのお譲り先を探しております。
-
-【譲】3/29 17:00〜
-【枚数】1階1桁列　1枚
-【金額】ご提示ください
-【取引】要相談
-
-担当、年齢、希望額を明記の上DMまでご連絡ください
-#スプパラ譲 #スプパラ求
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AnMILLEofficial: Spring Collection
-
-渡辺梨加さん着用アイテムにつきまして、
-お問い合わせ多数いただきましてありがとうございます！！
-
-入荷スケジュールをまとめましたので、
-是非チェックしてみてください♡
-
-また、一部着用アイテムは現在…
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kafka_daily: SHE IS ACTUALLY SO FINE ???? https://t.co/kV90pIMcqT
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Only the spring dares to tread from the clouds of heavy makeup 2yunshdf2786 
-#湖南 #娄底 #贵州 https://t.co/yv9nVCK6TM
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @starshipgirlz: Youtuber 'Autumn/Gaeul Forever' has a border collie named Gaeul that they took on a walk, and on that walk they met a ki…
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Javaから.accdbファイルに接続するのODBCデータソースだったよなと思ってたけれどそもそもそれが古すぎた
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @FozWrestle @How2Wrestling yeah I think this has gotta be the one 😭
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Yanchengcity: In the coming spring months, Yancheng will be like this. https://t.co/Oi3GuPPxUr
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 15% off on my site today coz I love you all ❤️❤️❤️
-Code VAL15 #ValentinesDay https://t.co/EYN79UlmK4 https://t.co/0zOhIFeLxU
-2023-02-14 21:41:11 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Maks_NAFO_FELLA: The US and its allies promise to help the Ukrainians launch a counteroffensive in the spring - US Defense Minister Llo…
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 担当している稼働人数、125から103になり、
-しかも最近成約件数も少ないし、
-自分営業としてもうダメかも🙅‍♀️
-
-本当に誰か助けってって叫びたいぐらいです！
-
-java正社員4名営業中です。
-助けって！お願い！
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @SpicyMatch: Join us at the Spring Party in soho Club and get a chance to win a FREE @TheSpicyIsland holiday - yes, you read that right…
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @misile_s: 🍫
- #HonkaiStarRail #kafka https://t.co/Z6HyjBGm3G
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text me except the paragraph ends at "repulsive" https://t.co/ePYz1C3Zpc
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MJairosi: [@edmnangagwa's friend @passion_java is moving around telling young & vulnerable women that he owns gold & diamond mines in Z…
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Merci Estelle pour la traduction 💜❤️ https://t.co/AdkdPhQcBb
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Rogbid_Official: Spring Giveaway🎊
-Stand a chance to win totally 5 #Rogbid smartwatches⌚️
-Win 🎁 now: https://t.co/RFcrA48Ud0 https://t.c…
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Derrick Lytton #上海 Spring Temple #杭州 https://t.co/CcBwrFbtfd
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @shyjjmn: feeling emotional at how jimin didn't look back when hobi called him in spring day but only smiled & looked back in yet to com…
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @starshipgirlz: Youtuber 'Autumn/Gaeul Forever' has a border collie named Gaeul that they took on a walk, and on that walk they met a ki…
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @SpicyMatch: Join us at the Spring Party in soho Club and get a chance to win a FREE @TheSpicyIsland holiday - yes, you read that right…
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @JordanReffett @UW_Football @Mariners Astros got better, Mariners didnt. Always scary when the defending champ improves upon roster.  The West is Houston's by wide margin if they stay healthy.  Seattle's shot at playoffs is another wild card bid.
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 東西ジャニーズJr. Spring paradise 
-スプパラ のお譲り先を探しています
-
-【譲】Lilかんさい 3/23 夜
-【枚数】1枚　（同行）
-【座席】1階9〜12列　1〜10番
-【金額】ご提示ください
-【取引】要相談
-
-當間担不可
-お心当たりのある方は必要事項記載の上DMお願い致します。
-
-#スプパラ譲  #Lilかんさい譲
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Andrea Obadiah Arvin Brewster Spring Bradley Arthur Hopkin(s) #无锡 #厦门 #泉州 https://t.co/EvA9mhRjaO
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 💯😌💘👌💫
-Pressure eye spring arm onto person.
-hiloys2.14  #裸聊 #连麦 #语爱    https://t.co/Z02Z4xGsnI
-2023-02-14 21:41:19 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @nijhuis_joost Top poëzie
+ #スプパラ譲 #少年忍者求
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @WonderfulDest: Only 33 days until spring... 🙋‍♀️😍❤️ https://t.co/RPLd0oxzyv
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RollingStone: Suga will be the first BTS member to hit the road on their own, with U.S. dates scheduled for the spring. https://t.co/oV…
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Mctweet_Alan @KAFKA_Dev 17 boeken schrijven misschien?
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ApostleJoelSLW: @Aron9011 @Mavendetta13 @CucsmanM 🇿🇼🇿🇼False ministers of the gospel supporting the Antichrist regime in Zimbabwe🇿🇼🇿🇼: C…
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Covid keeps me to my room, but a surprise Valentine’s gift of colour pencils has made my exile so much more bearable. Listening to the birds as I bring a wasp to life and dream of spring… https://t.co/Ib2FCLaJeW
+2023-02-15 22:04:49 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @aumy_f: オブジェクト指向というものはprimaryな引数を前置したfoo.fn(bar)という関数呼び出し構文であって、それを実現するのがJavaではクラスでJSでは第1級関数の動的this束縛でRustではimplでNimではUFCS、という立場を取っています
