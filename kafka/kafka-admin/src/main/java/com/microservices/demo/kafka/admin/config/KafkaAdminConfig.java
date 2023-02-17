@@ -16,7 +16,7 @@ public class KafkaAdminConfig {
 
     private final KafkaConfigData kafkaConfigData;
 
-    private KafkaAdminConfig(KafkaConfigData configData) {
+    public KafkaAdminConfig(KafkaConfigData configData) {
         this.kafkaConfigData = configData;
     }
 

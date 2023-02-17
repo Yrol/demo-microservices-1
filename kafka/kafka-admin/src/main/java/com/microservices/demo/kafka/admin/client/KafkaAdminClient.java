@@ -22,6 +22,15 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
+
+/**
+ * Kafka Admin module responsible for creating new Kafka topics.
+ * This module will also perform checks such as topic creation status, Schema server is up and running & etc prior to running microservices.
+ * The additional check make the application more resilient since the other microservices will depend on topic creation & etc.
+ * NOTE: more advance checks have also been performed in Docker compose to ensure the status of the application.
+ * */
+
+
 @Component
 public class KafkaAdminClient {
 

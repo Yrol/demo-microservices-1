@@ -15,7 +15,6 @@ import javax.annotation.PreDestroy;
 
 /**
  * TwitterKafkaProducer service used for creating topics using topic name, key and value
- *
  * */
 @Service
 public class TwitterKafkaProducer implements KafkaProducer<Long, TwitterAvroModel> {

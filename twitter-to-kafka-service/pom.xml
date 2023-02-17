@@ -26,6 +26,18 @@
             <artifactId>app-config-data</artifactId>
         </dependency>
 
+        <!--Overriding the local kafka-admin package -->
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
+            <artifactId>kafka-admin</artifactId>
+        </dependency>
+
+        <!--Overriding the local kafka-admin package -->
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
+            <artifactId>kafka-producer</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
