@@ -12,8 +12,6 @@
     <artifactId>twitter-to-kafka-service</artifactId>
 
     <dependencies>
-
-
         <!-- Overriding the required dependencies of parent pom file without the versions -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -60,12 +58,6 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <build>
         <plugins>
             <!--
@@ -75,6 +67,21 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <!-- Docker install and build configuration-->
+                <configuration>
+                    <image>
+                        <name>${project.groupId}/twitter.to.kafka.service:${project.version}</name>
+                    </image>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

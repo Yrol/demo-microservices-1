@@ -43,8 +43,8 @@ public class TwitterKafkaServiceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         LOG.info("App started");
-        LOG.info(Arrays.toString(twitterToKafkaServiceConfigData.getTwitterKeywords().toArray())); // Will print the values of "twitter-keywords"
-        LOG.info(twitterToKafkaServiceConfigData.getWelcomeMessage());
+//        LOG.info(Arrays.toString(twitterToKafkaServiceConfigData.getTwitterKeywords().toArray())); // Will print the values of "twitter-keywords"
+//        LOG.info(twitterToKafkaServiceConfigData.getWelcomeMessage());
 
         // Check if the schema registry is running and Kafka topics has been created - before starting the twitter stream below.
         streamInitializer.init();

@@ -98,6 +98,8 @@ public class TwitterV2StreamHelper {
                     } catch (TwitterException e) {
                         LOG.error("Could not create status for text: {}", tweet, e);
                     }
+
+                    // Update the listener if Tweets are found. The twitterKafkaStatusListener.onStatus() consist of a kafka event producer method which will create new topics
                     if (status != null) {
                         twitterKafkaStatusListener.onStatus(status);
                     }

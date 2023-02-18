@@ -1,5 +1,6 @@
 # Event-Driven microservices demo project
-A containerized event-driven microservices demo project developed using `Spring Boot`, `Kafka`, `Elasticsearch` and `Docker`.
+A containerized event-driven microservices demo project developed using `Spring Boot`, `Kafka`, `Elasticsearch` and `Docker`. The application will 
+read Tweets from Tweeter API and create new Kafka topics using Tweet data.
 
 ## Kafka
 
@@ -37,7 +38,13 @@ For this we can use the docker based Kafkacat as below.
   ```
   docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b  localhost:19092  -L
   ```
-  
+
+***Checking a particular topic in Kafkacat***<br/>
+The following command will check whether a particular topic has been created (ex: twitter-topic).
+```
+docker run -it --network=host confluentinc/cp-kafkacat kafkacat -C -b  localhost:19092  -t twitter-topic
+```
+
 **Generate Avro schemas via IntelliJ**<br/>
 Assuming that the project is opened in IntelliJ (an alternative to running the command `mvn clean install` when Maven is installed on the machine).
 * Select the Maven tab
@@ -48,6 +55,15 @@ Assuming that the project is opened in IntelliJ (an alternative to running the c
 
 * Type and enter "mvn clean install"
 
-<p><img src="https://i.imgur.com/K0Xid2W.png"></img></p>
+<p><img src="https://i.imgur.com/K0Xid2W.png"/></p>
+
+## Docker
+
+**Docker building the microservices** <br/>
+The microservices of this application can docker build using the command `mvn install -DskipTests` via intelliJ or commandline. It should be 
+executed under `microservices-demo` as shown below.
+
+<p><img src="https://i.imgur.com/JaXcuop.png"/></p>
+
 
 
