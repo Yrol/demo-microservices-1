@@ -65,5 +65,22 @@ executed under `microservices-demo` as shown below.
 
 <p><img src="https://i.imgur.com/JaXcuop.png"/></p>
 
+**Starting the services** <br/>
+After building the microservices, the services can be started by running the following
+ command inside `docker-compose` directory.
+```
+docker-compose up
+```
+
+Once the services are up and running, we should be able to see them using the command:
+```
+docker ps -a
+```
+<p><img src="https://i.imgur.com/3BjxzDA.png"/></p>
+
+
+
+
+
 
 

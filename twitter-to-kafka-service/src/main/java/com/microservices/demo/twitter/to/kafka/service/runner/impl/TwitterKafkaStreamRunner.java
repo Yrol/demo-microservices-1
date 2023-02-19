@@ -24,8 +24,8 @@ import java.util.List;
 
 
 //@ConditionalOnProperty(name = "twitter-to-kafka-service.enable-v2-tweets", havingValue = "false")
-@ConditionalOnExpression("${twitter-to-kafka-service.enable-v1-tweets} && not ${twitter-to-kafka-service.enable-v2-tweets} && not ${twitter-to-kafka-service.enable-mock-tweets}")
 @Component
+@ConditionalOnExpression("${twitter-to-kafka-service.enable-v1-tweets} && not ${twitter-to-kafka-service.enable-v2-tweets} && not ${twitter-to-kafka-service.enable-mock-tweets}")
 public class TwitterKafkaStreamRunner implements StreamRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterKafkaStreamRunner.class);
