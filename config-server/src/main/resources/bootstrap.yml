@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        # Using a local git (local file system)
+        git:
+          uri:
+          clone-on-start: true
+    fail-fast: true # fail immediately if the above config is unable to load from local git

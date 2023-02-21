@@ -1,0 +1,8 @@
+server:
+  port:8080
+
+logging:
+  level:
+    ROOT: INFO
+    org.spring.framework.cloud.config: DEBUG # debug info for the config-server. This overrides what's already defined in twitter-to-kafka-service/src/main/resources/logback.xml (level="info")
+
