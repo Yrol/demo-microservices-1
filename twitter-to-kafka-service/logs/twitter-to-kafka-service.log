@@ -9989,3 +9989,623 @@ https://t.co/H0nopEPg3t https://t.co/0AhRqu7FjR sending to kafka topic twitter-t
 2023-02-22 20:58:20 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1558515020941602816, "id": 1628333323683774464, "text": "生放送!! HELLO! SMILE PARADISE 2023 SPRING 開催決定！\n\n🔗生放送➤ https://t.co/FIxK75qf8Z\n🔗生放送➤ https://t.co/FIxK75qf8Z\n\n#WATWING #NOA #BUDDiiS\n#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/WG9Xf8sKGh", "createdAt": 1677059891000}' to topic='twitter-topic'
 2023-02-22 20:58:20 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @doramaworld: Takahata Mitsuki & Tanaka Kei star as double leads in TV Asahi Spring 2023 drama "unknown" starting in Apr at 9pm on Tue;… sending to kafka topic twitter-topic
 2023-02-22 20:58:20 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 256231993, "id": 1628333326426578944, "text": "RT @doramaworld: Takahata Mitsuki & Tanaka Kei star as double leads in TV Asahi Spring 2023 drama \"unknown\" starting in Apr at 9pm on Tue;\u2026", "createdAt": 1677059892000}' to topic='twitter-topic'
+2023-02-22 21:40:41 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2023-02-22 21:40:44 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=twitter-to-kafka-service,config-client, profiles=[twitter_to_kafka], label=null, version=1e50223bec5fa0650095c32d47f8f8d98f00b556, state=null
+2023-02-22 21:40:44 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/Yrol/spring-cloud-config-server/config-client-twitter_to_kafka.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/Yrol/spring-cloud-config-server/config-client.yml'}]
+2023-02-22 21:40:44 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - The following profiles are active: twitter_to_kafka
+2023-02-22 21:40:47 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d159959a-7e01-3284-a730-60377ad90669
+2023-02-22 21:40:47 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$961cf67d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-22 21:40:48 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-02-22 21:40:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2023-02-22 21:40:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2023-02-22 21:40:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1677062448941
+2023-02-22 21:40:51 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2023-02-22 21:40:51 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 16.294 seconds (JVM running for 20.343)
+2023-02-22 21:40:51 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-22 21:40:51 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 0 topic(s), attempt {}
+2023-02-22 21:40:51 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading [twitter-topic] topic(s), attempt 0
+2023-02-22 21:40:56 [reactor-http-nio-2] WARN  r.n.http.client.HttpClientConnect - [id: 0xb0f7e85e, L:/127.0.0.1:49538 ! R:localhost/127.0.0.1:8081] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-02-22 21:40:58 [reactor-http-nio-3] WARN  r.n.http.client.HttpClientConnect - [id: 0x7d1ae240, L:/127.0.0.1:49540 ! R:localhost/127.0.0.1:8081] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-02-22 21:41:02 [reactor-http-nio-4] WARN  r.n.http.client.HttpClientConnect - [id: 0x24a3b740, L:/127.0.0.1:49543 ! R:localhost/127.0.0.1:8081] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-02-22 21:41:10 [reactor-http-nio-1] WARN  r.n.http.client.HttpClientConnect - [id: 0x884fe35c, L:/127.0.0.1:49549 ! R:localhost/127.0.0.1:8081] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-02-22 21:41:10 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-22 21:41:10 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2023-02-22 21:41:12 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:798)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.main(TwitterKafkaServiceApplication.java:39)
+Caused by: com.microservices.demo.kafka.admin.exception.KafkaClientException: Reached max number of retry for reading kafka topic(s)
+	at com.microservices.demo.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:164)
+	at com.microservices.demo.kafka.admin.client.KafkaAdminClient.checkSchemaRegistry(KafkaAdminClient.java:135)
+	at com.microservices.demo.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:28)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterKafkaServiceApplication.run(TwitterKafkaServiceApplication.java:50)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:795)
+	... 5 common frames omitted
+2023-02-22 21:43:29 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2023-02-22 21:43:30 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=twitter-to-kafka-service,config-client, profiles=[twitter_to_kafka], label=null, version=1e50223bec5fa0650095c32d47f8f8d98f00b556, state=null
+2023-02-22 21:43:30 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/Yrol/spring-cloud-config-server/config-client-twitter_to_kafka.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/Yrol/spring-cloud-config-server/config-client.yml'}]
+2023-02-22 21:43:30 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - The following profiles are active: twitter_to_kafka
+2023-02-22 21:43:32 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d159959a-7e01-3284-a730-60377ad90669
+2023-02-22 21:43:32 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$9f774d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-22 21:43:33 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-02-22 21:43:33 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2023-02-22 21:43:33 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2023-02-22 21:43:33 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1677062613417
+2023-02-22 21:43:35 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2023-02-22 21:43:35 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - Started TwitterKafkaServiceApplication in 8.907 seconds (JVM running for 11.803)
+2023-02-22 21:43:35 [main] INFO  c.m.d.t.t.k.s.TwitterKafkaServiceApplication - App started
+2023-02-22 21:43:35 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 0 topic(s), attempt {}
+2023-02-22 21:43:35 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading [twitter-topic] topic(s), attempt 0
+2023-02-22 21:43:36 [main] INFO  c.m.d.t.t.k.s.i.i.KafkaStreamInitializer - Topic with name twitter-topic is ready for operations!
+2023-02-22 21:43:36 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-02-22 21:43:38 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterV2StreamHelper - Created rules for twitter stream Java
+2023-02-22 21:43:48 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Only the spring dares to tread from the 2617 
+#南京 #无锡 #黔东 https://t.co/TT3AWUMvLy sending to kafka topic twitter-topic
+2023-02-22 21:43:48 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1035278348719714310, "id": 1628344753900380162, "text": "Only the spring dares to tread from the 2617 \n#南京 #无锡 #黔东 https://t.co/TT3AWUMvLy", "createdAt": 1677062617000}' to topic='twitter-topic'
+2023-02-22 21:43:48 [main] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2023-02-22 21:43:48 [main] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2023-02-22 21:43:48 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'internal.auto.downgrade.txn.commit' was supplied but isn't a known config.
+2023-02-22 21:43:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2023-02-22 21:43:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2023-02-22 21:43:48 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1677062628664
+2023-02-22 21:43:48 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: O0KDpII2TW-eOno4-3iDKA
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO! SMILE PARADISE 2023 SPRING Live Link
+ 
+📺生放送 ▼ 無料登録
+
+📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2
+📺生放送 🇯🇵 https://t.co/PNbyPexgi2
+
+#WATWING #NOA #BUDDiiS
+#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/dBwXrwBkkb sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1574330408459591681, "id": 1628344755406127104, "text": "HELLO! SMILE PARADISE 2023 SPRING Live Link\n \n📺生放送 ▼ 無料登録\n\n📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2\n📺生放送 🇯🇵 https://t.co/PNbyPexgi2\n\n#WATWING #NOA #BUDDiiS\n#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/dBwXrwBkkb", "createdAt": 1677062617000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "This is what they dream of, they will not be able to do it," he said.
+According to Budanov, decisive battles are expected at the front from the middle to the end of spring, which could become a turning point in the war.
+/6 sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2604194205, "id": 1628344759931609090, "text": "\"This is what they dream of, they will not be able to do it,\" he said.\nAccording to Budanov, decisive battles are expected at the front from the middle to the end of spring, which could become a turning point in the war.\n/6", "createdAt": 1677062618000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Only the spring dares to tread from the 2999 
+#菏泽 #三亚 #濮阳 https://t.co/rCRVPELYNc sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 978706448367591424, "id": 1628344756505038848, "text": "Only the spring dares to tread from the 2999 \n#菏泽 #三亚 #濮阳 https://t.co/rCRVPELYNc", "createdAt": 1677062617000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text According to Vadim Skibitsky, a spokesman for the Main Intelligence Directorate of the Ministry of Defense, in a comment to the Associated Press, the activation of the occupying forces began in early February.
+https://t.co/bZjwbvfH7T
+/7 sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2604194205, "id": 1628344763236642816, "text": "According to Vadim Skibitsky, a spokesman for the Main Intelligence Directorate of the Ministry of Defense, in a comment to the Associated Press, the activation of the occupying forces began in early February.\nhttps://t.co/bZjwbvfH7T\n/7", "createdAt": 1677062619000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO! SMILE PARADISE 2023 SPRING 生放送 Live Link
+
+🔗生放送🇯🇵 ➡️https://t.co/pdgSo6pJTn
+
+🔗生放送🇯🇵 ➡️https://t.co/UDZwoA2K3u
+
+#WATWING #NOA #BUDDiiS
+#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/WpszKl1BB2 sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1618264235506814977, "id": 1628344764591636480, "text": "HELLO! SMILE PARADISE 2023 SPRING 生放送 Live Link\n\n🔗生放送🇯🇵 ➡️https://t.co/pdgSo6pJTn\n\n🔗生放送🇯🇵 ➡️https://t.co/UDZwoA2K3u\n\n#WATWING #NOA #BUDDiiS\n#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/WpszKl1BB2", "createdAt": 1677062619000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @kchartsmaster: 6 years ago this week, 'Spring Day' by @BTS_twt debuted at #1 on the Circle Digital Chart. https://t.co/qw7RWucnEC sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1567889075742310407, "id": 1628344761844113409, "text": "RT @kchartsmaster: 6 years ago this week, 'Spring Day' by @BTS_twt debuted at #1 on the Circle Digital Chart. https://t.co/qw7RWucnEC", "createdAt": 1677062619000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @fruitsgood0 ご参加ありがとうございます！
+結果は…
+
+ごめんなさい、はずれです😢
+
+キャンペーンは2/28まで毎日参加可能です🙌
+明日もチャレンジしてね❣
+
+°˖✧✧˖°
+模様替えで気分をリセット🎶
+Springコレクション特集ページはこちら🔽
+°˖✧✧˖°
+https://t.co/H0nopEPg3t https://t.co/3vm558ed8x sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1086707112665743365, "id": 1628344765103374337, "text": "@fruitsgood0 ご参加ありがとうございます！\n結果は\u2026\n\nごめんなさい、はずれです😢\n\nキャンペーンは2/28まで毎日参加可能です🙌\n明日もチャレンジしてね❣\n\n°˖✧✧˖°\n模様替えで気分をリセット🎶\nSpringコレクション特集ページはこちら🔽\n°˖✧✧˖°\nhttps://t.co/H0nopEPg3t https://t.co/3vm558ed8x", "createdAt": 1677062619000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Not much bigger than 1072 just a spring 
+#营口 #三亚 #邵阳 https://t.co/4khxOlQkb1 sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1294336433084223488, "id": 1628344762389635072, "text": "Not much bigger than 1072 just a spring \n#营口 #三亚 #邵阳 https://t.co/4khxOlQkb1", "createdAt": 1677062619000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TakuyaAkahoshi: Spring has sprung.
+春の訪れ
+
+代々木公園の河津桜とメジロ https://t.co/De2n9DKSns sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 822132324804546565, "id": 1628344761777094656, "text": "RT @TakuyaAkahoshi: Spring has sprung.\n春の訪れ\n\n代々木公園の河津桜とメジロ https://t.co/De2n9DKSns", "createdAt": 1677062619000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @y
+Spring Paradise スプパラ1枚ずつの交換を探しております。
+
+【譲】
+Lil かんさい 3/23昼,3/30夜 1階 7〜10列
+
+【求】
+Lil かんさい 3/23昼,4/1,4/2昼
+AmBitious 3/4,3/5
+同等席、2階1列まで
+
+お心当たりのある方はDMまでお願い致します。
+
+#スプパラ交換 #Lilかんさい交換 #アンビ求 sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1248619710586834945, "id": 1628344768576245762, "text": "@y\nSpring Paradise スプパラ1枚ずつの交換を探しております。\n\n【譲】\nLil かんさい 3/23昼,3/30夜 1階 7〜10列\n\n【求】\nLil かんさい 3/23昼,4/1,4/2昼\nAmBitious 3/4,3/5\n同等席、2階1列まで\n\nお心当たりのある方はDMまでお願い致します。\n\n#スプパラ交換 #Lilかんさい交換 #アンビ求", "createdAt": 1677062620000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 随分とにぎやかになりました。むしめがねです。 https://t.co/ut8PUpfhGy sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1547047317861068800, "id": 1628344770153283586, "text": "随分とにぎやかになりました。むしめがねです。 https://t.co/ut8PUpfhGy", "createdAt": 1677062621000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ClassLegalUK: You can now pre-order your print copy of Financial Remedies Journal Issue 1 | Spring 2023 for just £12. Or, purchase an a… sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1121429637735813123, "id": 1628344771797295106, "text": "RT @ClassLegalUK: You can now pre-order your print copy of Financial Remedies Journal Issue 1 | Spring 2023 for just £12. Or, purchase an a\u2026", "createdAt": 1677062621000}' to topic='twitter-topic'
+2023-02-22 21:43:50 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @pravda_eng: 🔎 The Chief of Main Directorate of Intelligence of the Ministry of Defence of Ukraine, major general Kyrylo Budanov, gave a… sending to kafka topic twitter-topic
+2023-02-22 21:43:50 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1224247639, "id": 1628344777006538754, "text": "RT @pravda_eng: 🔎 The Chief of Main Directorate of Intelligence of the Ministry of Defence of Ukraine, major general Kyrylo Budanov, gave a\u2026", "createdAt": 1677062622000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @a_zoz_77 حلوين لكن اللغات والعملات محدودة sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1289976715423490051, "id": 1628344774171172864, "text": "@a_zoz_77 حلوين لكن اللغات والعملات محدودة", "createdAt": 1677062622000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 幸子かわいい https://t.co/Nyme0peunm sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 987688952399151105, "id": 1628344774540529665, "text": "幸子かわいい https://t.co/Nyme0peunm", "createdAt": 1677062622000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @SlavaUk30722777: 🌸Spring will definitely come! We invoke her with a beautiful ritual song performed by Elizabeth Chukhlib❤️ https://t.c… sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1627064940204032004, "id": 1628344774179622913, "text": "RT @SlavaUk30722777: 🌸Spring will definitely come! We invoke her with a beautiful ritual song performed by Elizabeth Chukhlib❤️ https://t.c\u2026", "createdAt": 1677062622000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO! SMILE PARADISE 2023 SPRING Live Link
+ 
+📺生放送 ▼ 無料登録
+
+📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2
+📺生放送 🇯🇵 https://t.co/PNbyPexgi2
+
+#WATWING #NOA #BUDDiiS
+#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/zyzmJYJ2i0 sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1574330408459591681, "id": 1628344773286440960, "text": "HELLO! SMILE PARADISE 2023 SPRING Live Link\n \n📺生放送 ▼ 無料登録\n\n📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2\n📺生放送 🇯🇵 https://t.co/PNbyPexgi2\n\n#WATWING #NOA #BUDDiiS\n#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/zyzmJYJ2i0", "createdAt": 1677062621000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @sare9904 حریف  اینا نمیشن 😏 sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1281499154640969728, "id": 1628344774611861505, "text": "@sare9904 حریف  اینا نمیشن 😏", "createdAt": 1677062622000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Spring_Rain0427 うまくね？ sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1310794825839472642, "id": 1628344780655845376, "text": "@Spring_Rain0427 うまくね？", "createdAt": 1677062623000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 😍💌😌😝💋
+Spring minute sense continue official information vote writer.
+sacansa 221  #滴蜡 #学生妹 #轮奸   https://t.co/CJ5GpBdVh8 sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 330137137, "id": 1628344786288537601, "text": "😍💌😌😝💋\nSpring minute sense continue official information vote writer.\nsacansa 221  #滴蜡 #学生妹 #轮奸   https://t.co/CJ5GpBdVh8", "createdAt": 1677062624000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 【  #3年型  】
+応募させて頂きます⸜(*ˊᵕˋ*)⸝ https://t.co/WJKYvdWTdQ sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1542829943989891072, "id": 1628344783482814465, "text": "【  #3年型  】\n応募させて頂きます⸜(*ˊᵕˋ*)⸝ https://t.co/WJKYvdWTdQ", "createdAt": 1677062624000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @shiro_hksi え？！運命では？！
+2人で一緒に勉強頑張ってほしいですね☺️ sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1045263377805664257, "id": 1628344787333169153, "text": "@shiro_hksi え？！運命では？！\n2人で一緒に勉強頑張ってほしいですね☺️", "createdAt": 1677062625000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text اذا كنت مهتم بتعلم مهارات البرمجة او احد لغات البرمجة التالية
+( java -python -javascript- html - css php - sql )
+او احد التخصصات التالية:
+(تصميم وبرمجة مواقع الويب- تطوير مواقع الويب -برمجة تطبيقات الموبايل
+
+لمزيد من التفاصيل تواصل معنا عبر الخاص أو عبر الواتساب +970595135144 sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1594985982021042176, "id": 1628344790260621312, "text": "اذا كنت مهتم بتعلم مهارات البرمجة او احد لغات البرمجة التالية\n( java -python -javascript- html - css php - sql )\nاو احد التخصصات التالية:\n(تصميم وبرمجة مواقع الويب- تطوير مواقع الويب -برمجة تطبيقات الموبايل\n\nلمزيد من التفاصيل تواصل معنا عبر الخاص أو عبر الواتساب +970595135144", "createdAt": 1677062625000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text What in it for you across social welfare, household bills and the price at pumps
+https://t.co/GxleP2T8mQ sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4833396790, "id": 1628344789685919744, "text": "What in it for you across social welfare, household bills and the price at pumps\nhttps://t.co/GxleP2T8mQ", "createdAt": 1677062625000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Only the spring dares to tread from the 2559 
+#平阴 #郓城 #周村 https://t.co/boPpYmN3OC sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 806257596005023749, "id": 1628344786100035584, "text": "Only the spring dares to tread from the 2559 \n#平阴 #郓城 #周村 https://t.co/boPpYmN3OC", "createdAt": 1677062624000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RomComMystery: Mrs. Stoneburner’s shaky hand replaced the receiver. Kicking a toe plate on the baseboard moulding caused a six-foot tal… sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 759844827567501312, "id": 1628344791506329600, "text": "RT @RomComMystery: Mrs. Stoneburner\u2019s shaky hand replaced the receiver. Kicking a toe plate on the baseboard moulding caused a six-foot tal\u2026", "createdAt": 1677062626000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @episode2222 ご参加ありがとうございます！
+結果は…
+
+ごめんなさい、はずれです😢
+
+キャンペーンは2/28まで毎日参加可能です🙌
+明日もチャレンジしてね❣
+
+°˖✧✧˖°
+模様替えで気分をリセット🎶
+Springコレクション特集ページはこちら🔽
+°˖✧✧˖°
+https://t.co/H0nopEPg3t https://t.co/wXxe4QYNyy sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1086707112665743365, "id": 1628344792135663616, "text": "@episode2222 ご参加ありがとうございます！\n結果は\u2026\n\nごめんなさい、はずれです😢\n\nキャンペーンは2/28まで毎日参加可能です🙌\n明日もチャレンジしてね❣\n\n°˖✧✧˖°\n模様替えで気分をリセット🎶\nSpringコレクション特集ページはこちら🔽\n°˖✧✧˖°\nhttps://t.co/H0nopEPg3t https://t.co/wXxe4QYNyy", "createdAt": 1677062626000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Dorothy Mandy Lou(ie) #网赚 #文爱
+Boy decide social win try.
+2023-02-22 18:44:04 https://t.co/wj0yEU6DNh sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1874869340, "id": 1628344797097512960, "text": "Spring Dorothy Mandy Lou(ie) #网赚 #文爱\nBoy decide social win try.\n2023-02-22 18:44:04 https://t.co/wj0yEU6DNh", "createdAt": 1677062627000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Not much bigger than 1161 just a spring 
+#内江 #沈阳 #鸡西 https://t.co/zRls7X8qwz sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 788397482057269252, "id": 1628344795176513538, "text": "Not much bigger than 1161 just a spring \n#内江 #沈阳 #鸡西 https://t.co/zRls7X8qwz", "createdAt": 1677062627000}' to topic='twitter-topic'
+2023-02-22 21:43:53 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Paradise スプパラ 少年忍者
+交換を探してます。
+【譲】
+2/23 昼夜どちらか（DMにてお伝え）
+1階3列以内3〜9番
+【求】
+2/23 昼夜（お伝え願います）
+1階1列か2列3〜C番
+現金上乗せします。
+#スプパラ譲 #スプパラ交換 #スプパラ求 #少年忍者交換 #少年忍者譲 sending to kafka topic twitter-topic
+2023-02-22 21:43:53 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 976738221496283137, "id": 1628344796543868929, "text": "Spring Paradise スプパラ 少年忍者\n交換を探してます。\n【譲】\n2/23 昼夜どちらか（DMにてお伝え）\n1階3列以内3〜9番\n【求】\n2/23 昼夜（お伝え願います）\n1階1列か2列3〜C番\n現金上乗せします。\n#スプパラ譲 #スプパラ交換 #スプパラ求 #少年忍者交換 #少年忍者譲", "createdAt": 1677062627000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @unherd: Russia remains dependent on inexperienced men and depleted munitions | @BethanyAElliott https://t.co/mGXBLfPjzY sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1559183316, "id": 1628344795155337216, "text": "RT @unherd: Russia remains dependent on inexperienced men and depleted munitions | @BethanyAElliott https://t.co/mGXBLfPjzY", "createdAt": 1677062627000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 🤏🤨😝😋💯
+Language between spring agree from.
+commemorate #西安   约 炮 https://t.co/p7ODyjFDAZ sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4282985952, "id": 1628344800779948033, "text": "🤏🤨😝😋💯\nLanguage between spring agree from.\ncommemorate #西安   约 炮 https://t.co/p7ODyjFDAZ", "createdAt": 1677062628000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MariaGXanthou: Spring 🌹🌸🌺🌷🌼🌿is definitely coming. Bahar geliyor. https://t.co/x3PpSeNtAw sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 34641676, "id": 1628344800704442368, "text": "RT @MariaGXanthou: Spring 🌹🌸🌺🌷🌼🌿is definitely coming. Bahar geliyor. https://t.co/x3PpSeNtAw", "createdAt": 1677062628000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 653232🦛🤤🐌😙看片👉点头像✈️查看电报群链接wait for spring  https://t.co/UqnCFYh3ya sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1602442402341740544, "id": 1628344802021642240, "text": "653232🦛🤤🐌😙看片👉点头像✈️查看电报群链接wait for spring  https://t.co/UqnCFYh3ya", "createdAt": 1677062628000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO! SMILE PARADISE 2023 SPRING Live Link
+ 
+📺生放送 ▼ 無料登録
+
+📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2
+📺生放送 🇯🇵 https://t.co/PNbyPexgi2
+
+#WATWING #NOA #BUDDiiS
+#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/RK36JacaRI sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1574330408459591681, "id": 1628344799035260929, "text": "HELLO! SMILE PARADISE 2023 SPRING Live Link\n \n📺生放送 ▼ 無料登録\n\n📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2\n📺生放送 🇯🇵 https://t.co/PNbyPexgi2\n\n#WATWING #NOA #BUDDiiS\n#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/RK36JacaRI", "createdAt": 1677062627000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text wts/lfb
+
+blackpink spring edition 2nd press
+✅ jisoo
+✅ jennie
+✅ rosé
+✅ lisa
+✅ keyring
+
+Shopee COD: https://t.co/K0CqcVct5l
+
+t. photocard pc pob spring ed keyring https://t.co/ut9DmnktZY sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1612330117711409152, "id": 1628344804232011778, "text": "wts/lfb\n\nblackpink spring edition 2nd press\n✅ jisoo\n✅ jennie\n✅ rosé\n✅ lisa\n✅ keyring\n\nShopee COD: https://t.co/K0CqcVct5l\n\nt. photocard pc pob spring ed keyring https://t.co/ut9DmnktZY", "createdAt": 1677062629000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @hyori_sunie: [Weibo] 230222 Jessica Jung update
+
+Sy__Jessica: 春天来了🐰🌸🌷🌱要出去一起玩吗？#见证争分夺秒的春天
+Trans: Spring is coming. Wanna go out and play… sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1185932652169191424, "id": 1628344805196718080, "text": "RT @hyori_sunie: [Weibo] 230222 Jessica Jung update\n\nSy__Jessica: 春天来了🐰🌸🌷🌱要出去一起玩吗？#见证争分夺秒的春天\nTrans: Spring is coming. Wanna go out and play\u2026", "createdAt": 1677062629000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 29 Best Skin Care and Beauty Tools to Elevate Your Beauty Routine for Spring    https://t.co/p7XKnIlKZh https://t.co/EaBYNi1jvf sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 448014421, "id": 1628344804777111552, "text": "29 Best Skin Care and Beauty Tools to Elevate Your Beauty Routine for Spring    https://t.co/p7XKnIlKZh https://t.co/EaBYNi1jvf", "createdAt": 1677062629000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Come to Henley Youth Choir Spring Showcase, 7.30pm, Thurs 23rd Mar, d:two, Henley 😍👏🎶 Great opportunity for  young singers age 8-17 to come & see what HYC is all about! Tckts £5.00 adults, free for under 18’s. Email:fi.harding@sky.com @TrinityHenley @BadgemoreHenley #henley https://t.co/MzVQa4JAcw sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2412875318, "id": 1628344802348507137, "text": "Come to Henley Youth Choir Spring Showcase, 7.30pm, Thurs 23rd Mar, d:two, Henley 😍👏🎶 Great opportunity for  young singers age 8-17 to come & see what HYC is all about! Tckts £5.00 adults, free for under 18\u2019s. Email:fi.harding@sky.com @TrinityHenley @BadgemoreHenley #henley https://t.co/MzVQa4JAcw", "createdAt": 1677062628000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @XianyuSamuel: Happy Spring Festival. Here's the preview of the reward this month. I had made the L2D video of the content from PLAN B <… sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1261849683430830080, "id": 1628344807675543553, "text": "RT @XianyuSamuel: Happy Spring Festival. Here's the preview of the reward this month. I had made the L2D video of the content from PLAN B <\u2026", "createdAt": 1677062629000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @9_1_5_6_7: 네파 인스타 #안유진
+-
+https://t.co/aZn5DwTpar
+NEPA 2023 Spring & Summer 
+Delight Essential
+
+설렘 가득한 안유진의 봄🌸 https://t.co/aDJcz4Nu3M sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1445554708756647943, "id": 1628344811018403847, "text": "RT @9_1_5_6_7: 네파 인스타 #안유진\n-\nhttps://t.co/aZn5DwTpar\nNEPA 2023 Spring & Summer \nDelight Essential\n\n설렘 가득한 안유진의 봄🌸 https://t.co/aDJcz4Nu3M", "createdAt": 1677062630000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @GetToKnowNature: There were lots of American Robins out digging in the leaves today. Spring is on its way! (Bad news for the worms I gu… sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3339493294, "id": 1628344811253125121, "text": "RT @GetToKnowNature: There were lots of American Robins out digging in the leaves today. Spring is on its way! (Bad news for the worms I gu\u2026", "createdAt": 1677062630000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text what's up, it's your boy, Frannie K, coming at you with another horrifying story sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 966337644, "id": 1628344811303346177, "text": "what's up, it's your boy, Frannie K, coming at you with another horrifying story", "createdAt": 1677062630000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 生放送‼️➤HELLO! SMILE PARADISE 2023 SPRING 無料で視聴 🥳🌟
+
+🔗生放送 ➡️ https://t.co/xcubehtP4a
+📺生放送 ➡️ https://t.co/xcubehtP4a
+
+#WATWING #NOA #BUDDiiS https://t.co/PpchFnGNRB sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1573715926343569408, "id": 1628344810741571585, "text": "生放送\u203C️➤HELLO! SMILE PARADISE 2023 SPRING 無料で視聴 🥳🌟\n\n🔗生放送 ➡️ https://t.co/xcubehtP4a\n📺生放送 ➡️ https://t.co/xcubehtP4a\n\n#WATWING #NOA #BUDDiiS https://t.co/PpchFnGNRB", "createdAt": 1677062630000}' to topic='twitter-topic'
+2023-02-22 21:43:57 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ZeHarpreet: Delhi people have gone from Jackets to Half sleeved Tees in less than 24 hrs.
+Subah geyser, car mein ac, shaam ko fan.
+Enjo… sending to kafka topic twitter-topic
+2023-02-22 21:43:57 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2318615419, "id": 1628344814252208129, "text": "RT @ZeHarpreet: Delhi people have gone from Jackets to Half sleeved Tees in less than 24 hrs.\nSubah geyser, car mein ac, shaam ko fan.\nEnjo\u2026", "createdAt": 1677062631000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AdamaUK_: With #SugarBeet prices up 📈compared to last year, it will pay to invest in an effective weed control programme this spring.… sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 317147535, "id": 1628344812553248769, "text": "RT @AdamaUK_: With #SugarBeet prices up 📈compared to last year, it will pay to invest in an effective weed control programme this spring.\u2026", "createdAt": 1677062631000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO! SMILE PARADISE 2023 SPRING Live Link
+ 
+📺生放送 ▼ 無料登録
+
+📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2
+📺生放送 🇯🇵 https://t.co/PNbyPexgi2
+
+#WATWING #NOA #BUDDiiS
+#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/bgnpgwmLIV sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1574330408459591681, "id": 1628344813505617920, "text": "HELLO! SMILE PARADISE 2023 SPRING Live Link\n \n📺生放送 ▼ 無料登録\n\n📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPexgi2\n📺生放送 🇯🇵 https://t.co/PNbyPexgi2\n\n#WATWING #NOA #BUDDiiS\n#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/bgnpgwmLIV", "createdAt": 1677062631000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @swapnakpanda: 60 YouTube channels you will never regret subscribing to:
+
+❯ C ➟ Jacob Sorber
+❯ C++ ➟ TheCherno
+❯ Java ➟ amigoscode
+❯ C#… sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 89688318, "id": 1628344813665005568, "text": "RT @swapnakpanda: 60 YouTube channels you will never regret subscribing to:\n\n❯ C ➟ Jacob Sorber\n❯ C++ ➟ TheCherno\n❯ Java ➟ amigoscode\n❯ C#\u2026", "createdAt": 1677062631000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @therealdanvega: Spring 6 uses Hibernate 6.1 and there is a really nice new JPQL date/time function EXTRACT 🤩 #Java #Hibernate #SpringBo… sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1549248446309318656, "id": 1628344817515126784, "text": "RT @therealdanvega: Spring 6 uses Hibernate 6.1 and there is a really nice new JPQL date/time function EXTRACT 🤩 #Java #Hibernate #SpringBo\u2026", "createdAt": 1677062632000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @TWMCLtd so russian soldiers will increase looting again in the next weeks. spring/summer is coming and refridgerators are needed badly then. sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 31175626, "id": 1628344820644052992, "text": "@TWMCLtd so russian soldiers will increase looting again in the next weeks. spring/summer is coming and refridgerators are needed badly then.", "createdAt": 1677062633000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @MB85555744: 1/3) 🧵Head of GUR MOU Budanov say: "Decisive battles wait Ukraine from mid to end of spring. This will be a turning point i… sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1100338489810391041, "id": 1628344822493741056, "text": "RT @MB85555744: 1/3) 🧵Head of GUR MOU Budanov say: \"Decisive battles wait Ukraine from mid to end of spring. This will be a turning point i\u2026", "createdAt": 1677062633000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Hi! I’m doing 2 events on Saturday in Havant, at The Spring - 12pm YOU ARE HISTORY for kids, and 5pm ASK A HISTORIAN for teens & adults. I’ll sign books & chat after both events, tickets cheap, do come down if you’re nearby! 
+
+https://t.co/3R6WF3dRBi sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 309126590, "id": 1628344823630512129, "text": "Hi! I\u2019m doing 2 events on Saturday in Havant, at The Spring - 12pm YOU ARE HISTORY for kids, and 5pm ASK A HISTORIAN for teens & adults. I\u2019ll sign books & chat after both events, tickets cheap, do come down if you\u2019re nearby! \n\nhttps://t.co/3R6WF3dRBi", "createdAt": 1677062633000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring's around the corner, but it's still icy out there 🧊
+
+#MLB #RedSox #MLBEurope | @RedSox https://t.co/dEskyQyH5u sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 824305873224876035, "id": 1628344819272630274, "text": "Spring's around the corner, but it's still icy out there 🧊\n\n#MLB #RedSox #MLBEurope | @RedSox https://t.co/dEskyQyH5u", "createdAt": 1677062632000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @nongdew40gmail1: Will Spring Come? 
+I love to listen to #WillSpringCome by #Def  #WillSpringCome_Def  
+@jaybnow_ https://t.co/iqhvlbaEWc sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1498372039983640576, "id": 1628344821168607232, "text": "RT @nongdew40gmail1: Will Spring Come? \nI love to listen to #WillSpringCome by #Def  #WillSpringCome_Def  \n@jaybnow_ https://t.co/iqhvlbaEWc", "createdAt": 1677062633000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: Jaehyun for Prada Spring Summer 2023 global campaign spotted at Suvarnabhumi Airport in Thailand!
+
+©articulator_yin
+#Pra… sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 939467203161743362, "id": 1628344828064038912, "text": "RT @jaehyuncharts: Jaehyun for Prada Spring Summer 2023 global campaign spotted at Suvarnabhumi Airport in Thailand!\n\n©articulator_yin\n#Pra\u2026", "createdAt": 1677062634000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text エヌ・エイチ・テレビ・ジャパン
+@emransordar622
+
+HELLO! SMILE PARADISE 2023 SPRING 生放送 2月22日
+
+🔗生放送🇯🇵 ➡️https://t.co/pdgSo6pJTn
+
+🔗生放送🇯🇵 ➡️https://t.co/UDZwoA2K3u https://t.co/4kSoIv3LeD sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1618264235506814977, "id": 1628344831104909312, "text": "エヌ・エイチ・テレビ・ジャパン\n@emransordar622\n\nHELLO! SMILE PARADISE 2023 SPRING 生放送 2月22日\n\n🔗生放送🇯🇵 ➡️https://t.co/pdgSo6pJTn\n\n🔗生放送🇯🇵 ➡️https://t.co/UDZwoA2K3u https://t.co/4kSoIv3LeD", "createdAt": 1677062635000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @pravda_eng: 🔎 The Chief of Main Directorate of Intelligence of the Ministry of Defence of Ukraine, major general Kyrylo Budanov, gave a… sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 13572112, "id": 1628344831222198272, "text": "RT @pravda_eng: 🔎 The Chief of Main Directorate of Intelligence of the Ministry of Defence of Ukraine, major general Kyrylo Budanov, gave a\u2026", "createdAt": 1677062635000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text HELLO! SMILE PARADISE 2023 SPRING Live Link
+ 
+📺生放送 ▼ 無料登録
+
+📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPewIsu
+📺生放送 🇯🇵 https://t.co/PNbyPewIsu
+
+#WATWING #NOA #BUDDiiS
+#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/GnPrfcCLXB sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1574330408459591681, "id": 1628344835139567622, "text": "HELLO! SMILE PARADISE 2023 SPRING Live Link\n \n📺生放送 ▼ 無料登録\n\n📺𝙇𝙄𝙑𝙀🇯🇵➡️https://t.co/PNbyPewIsu\n📺生放送 🇯🇵 https://t.co/PNbyPewIsu\n\n#WATWING #NOA #BUDDiiS\n#NOA譲 #NOA求 #WATWING譲 #WATWING求 https://t.co/GnPrfcCLXB", "createdAt": 1677062636000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @BubblesxMakeup: กำลังหากระเป๋าตังใหม่เจออันนี้ก็น่ารักกก chanel เป็นสีของคอล spring summer 2023 🍡🍧🍵 https://t.co/P1ydBW7kvq sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 305534406, "id": 1628344833717989380, "text": "RT @BubblesxMakeup: กำลังหากระเป๋าตังใหม่เจออันนี้ก็น่ารักกก chanel เป็นสีของคอล spring summer 2023 🍡🍧🍵 https://t.co/P1ydBW7kvq", "createdAt": 1677062636000}' to topic='twitter-topic'
+2023-02-22 21:44:03 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @islandtv_up: 「東西ジャニーズJr. Spring Paradise｣
+初日の本番前に撮影したドロン！
+#少年忍者
+https://t.co/9dAQwG1x4z #ISLANDTV sending to kafka topic twitter-topic
+2023-02-22 21:44:03 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 827909513936150528, "id": 1628344834758176770, "text": "RT @islandtv_up: 「東西ジャニーズJr. Spring Paradise｣\n初日の本番前に撮影したドロン！\n#少年忍者\nhttps://t.co/9dAQwG1x4z #ISLANDTV", "createdAt": 1677062636000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @UniqloThailand: ผ่านไหมครับลุคนี้?
+ขอเป็นหนุ่มญี่ปุ่นหนึ่งวันกับ "Uniqlo U Spring/Summer 2023" ตั้งแต่หัวจรดเท้า วางขายแล้วที่ยูนิโคล่น… sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 133366179, "id": 1628344837765484545, "text": "RT @UniqloThailand: ผ่านไหมครับลุคนี้?\nขอเป็นหนุ่มญี่ปุ่นหนึ่งวันกับ \"Uniqlo U Spring/Summer 2023\" ตั้งแต่หัวจรดเท้า วางขายแล้วที่ยูนิโคล่น\u2026", "createdAt": 1677062637000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Oracle_EBS: Spend a day with the @MySQL engineering team, community experts, and customers at Level Up! You'll learn how application #d… sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 80790897, "id": 1628344839308705792, "text": "RT @Oracle_EBS: Spend a day with the @MySQL engineering team, community experts, and customers at Level Up! You'll learn how application #d\u2026", "createdAt": 1677062637000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Night_Moon38 ご参加ありがとうございます！
+結果は…
+
+ごめんなさい、はずれです😢
+
+キャンペーンは2/28まで毎日参加可能です🙌
+明日もチャレンジしてね❣
+
+°˖✧✧˖°
+模様替えで気分をリセット🎶
+Springコレクション特集ページはこちら🔽
+°˖✧✧˖°
+https://t.co/H0nopEPg3t https://t.co/u32tQPzo5Z sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1086707112665743365, "id": 1628344844451196929, "text": "@Night_Moon38 ご参加ありがとうございます！\n結果は\u2026\n\nごめんなさい、はずれです😢\n\nキャンペーンは2/28まで毎日参加可能です🙌\n明日もチャレンジしてね❣\n\n°˖✧✧˖°\n模様替えで気分をリセット🎶\nSpringコレクション特集ページはこちら🔽\n°˖✧✧˖°\nhttps://t.co/H0nopEPg3t https://t.co/u32tQPzo5Z", "createdAt": 1677062638000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text FREE family event @MindworksSurrey
+ for children, young people and families living in #Surrey. Performances from young people, wellbeing arts and crafts, giveaways and so much more. 4th March! @amplifysurrey 🙌👇
+ 
+https://t.co/sZODrOtj1d https://t.co/CYi9cUxOzQ sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 56663992, "id": 1628344843029053440, "text": "FREE family event @MindworksSurrey\n for children, young people and families living in #Surrey. Performances from young people, wellbeing arts and crafts, giveaways and so much more. 4th March! @amplifysurrey 🙌👇\n \nhttps://t.co/sZODrOtj1d https://t.co/CYi9cUxOzQ", "createdAt": 1677062638000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Not much bigger than 1354 just a spring 
+#海东 #新余 #合肥 https://t.co/ykvhRejujz sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2510416521, "id": 1628344841569722369, "text": "Not much bigger than 1354 just a spring \n#海东 #新余 #合肥 https://t.co/ykvhRejujz", "createdAt": 1677062638000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Only the spring dares to tread from the 2963 
+#舟山 #东营 #金昌 https://t.co/8mjfCYv2yg sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1262096093304827906, "id": 1628344848091873281, "text": "Only the spring dares to tread from the 2963 \n#舟山 #东营 #金昌 https://t.co/8mjfCYv2yg", "createdAt": 1677062639000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @official_cumi: 1m
+
+Position: Senior Java Developer + Solution Architect (Junior)
+
+Skills Required:
+• We’re looking for 5 - 9 years of e… sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1363142760577044481, "id": 1628344847630303240, "text": "RT @official_cumi: 1m\n\nPosition: Senior Java Developer + Solution Architect (Junior)\n\nSkills Required:\n\u2022 We\u2019re looking for 5 - 9 years of e\u2026", "createdAt": 1677062639000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @masshikkazu: Spring Paradise スプパラ Lilかんさい 交換を探しております
+
+【譲】
+4/1 昼 2階〜2列センブロ通路近く
+2連中1枚同行
+
+【求】3/25 夜、3/26 昼夜、4/1 夜
+
+未成年不可。
+普段お使いのアカウントよりDMで… sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 81063275, "id": 1628344847676616707, "text": "RT @masshikkazu: Spring Paradise スプパラ Lilかんさい 交換を探しております\n\n【譲】\n4/1 昼 2階〜2列センブロ通路近く\n2連中1枚同行\n\n【求】3/25 夜、3/26 昼夜、4/1 夜\n\n未成年不可。\n普段お使いのアカウントよりDMで\u2026", "createdAt": 1677062639000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @sfchronicle: K-pop superstars Twice are expected to set off on an international stadium tour this spring in support of their forthcomin… sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1460220322104295424, "id": 1628344852772704256, "text": "RT @sfchronicle: K-pop superstars Twice are expected to set off on an international stadium tour this spring in support of their forthcomin\u2026", "createdAt": 1677062640000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TakuyaAkahoshi: Spring has sprung.
+春の訪れ
+
+代々木公園の河津桜とメジロ https://t.co/De2n9DKSns sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1593294149263958017, "id": 1628344851765895169, "text": "RT @TakuyaAkahoshi: Spring has sprung.\n春の訪れ\n\n代々木公園の河津桜とメジロ https://t.co/De2n9DKSns", "createdAt": 1677062640000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Only the spring dares to tread from the 2951 
+#海口 #晋中 #铜陵 https://t.co/0TlmI6QlQa sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 990651145952681986, "id": 1628344851208015872, "text": "Only the spring dares to tread from the 2951 \n#海口 #晋中 #铜陵 https://t.co/0TlmI6QlQa", "createdAt": 1677062640000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @official_cumi: 1m
+Android (Java)
+Contract
+Extra/How to Apply
+Apply here: https://t.co/srrgkEUy6u sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1329079014414159877, "id": 1628344850960596992, "text": "RT @official_cumi: 1m\nAndroid (Java)\nContract\nExtra/How to Apply\nApply here: https://t.co/srrgkEUy6u", "createdAt": 1677062640000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text But if I didn't live in a society where being Black Didn't mean that I'm NOT white —  - from Purpose by Tayo Oredein'98, Spring 2021 sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1368957404159881220, "id": 1628344851556352009, "text": "But if I didn't live in a society \rwhere being Black \rDidn't mean that I'm NOT white \u2014 \r\r - from Purpose by Tayo Oredein'98, Spring 2021", "createdAt": 1677062640000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign spotted at Kintetsu Abeno Harukas (Main Store) in Osaka, Japan!
+
+©j… sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 939467203161743362, "id": 1628344852198096897, "text": "RT @jaehyuncharts: JAEHYUN for Prada Spring Summer 2023 global campaign spotted at Kintetsu Abeno Harukas (Main Store) in Osaka, Japan!\n\n©j\u2026", "createdAt": 1677062640000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @9_1_5_6_7: 네파 인스타 #안유진
+-
+https://t.co/aZn5DwTpar
+NEPA 2023 Spring & Summer 
+Delight Essential
+
+설렘 가득한 안유진의 봄🌸 https://t.co/aDJcz4Nu3M sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1584971001078550528, "id": 1628344854794371072, "text": "RT @9_1_5_6_7: 네파 인스타 #안유진\n-\nhttps://t.co/aZn5DwTpar\nNEPA 2023 Spring & Summer \nDelight Essential\n\n설렘 가득한 안유진의 봄🌸 https://t.co/aDJcz4Nu3M", "createdAt": 1677062641000}' to topic='twitter-topic'
+2023-02-22 21:44:07 [main] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring-likeMonicaSibylMabel   
+#通许 #商丘 #伊春 https://t.co/Hcajj08Cd1 sending to kafka topic twitter-topic
+2023-02-22 21:44:07 [main] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2193649472, "id": 1628344853758083072, "text": "Spring-likeMonicaSibylMabel   \n#通许 #商丘 #伊春 https://t.co/Hcajj08Cd1", "createdAt": 1677062640000}' to topic='twitter-topic'
+2023-02-22 21:44:08 [SpringContextShutdownHook] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing kafka producer!
+2023-02-22 21:44:08 [SpringContextShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.

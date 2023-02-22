@@ -1,4 +1,6 @@
 # This file will setup the Spring cloud properties
+# The active profile: "twitter_to_kafka" and config name: "config-client" should match the configuration file: config-server-repository/config-client-twitter_to_kafka.yml
+# As a result, when the config-server service is up and running we should be able to access "config-server-repository/config-client-twitter_to_kafka.yml" by going into http://localhost:8888/config-client/twitter_to_kafka
 
 spring:
   application:
@@ -9,3 +11,7 @@ spring:
     config:
       name: twitter-to-kafka-service,config-client
       uri: http://localhost:8888
+      username: spring_cloud_user
+      password: springCloud_Pwd!
+
+

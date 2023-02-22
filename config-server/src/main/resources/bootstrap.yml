@@ -6,6 +6,13 @@ spring:
       server:
         # Using a local git (local file system)
         git:
-          uri:
+          uri: https://github.com/Yrol/spring-cloud-config-server
+          default-label: master
+          username:
+          password:
           clone-on-start: true
     fail-fast: true # fail immediately if the above config is unable to load from local git
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloud_Pwd!
