@@ -78,7 +78,22 @@ docker ps -a
 ```
 <p><img src="https://i.imgur.com/3BjxzDA.png"/></p>
 
+## Running services without Docker (except Kafka services)
 
++ **Step 1:** <br/>
+Run Kafka services in Docker using the following command inside `docker-compose` directory.
+    ```
+    docker-compose -f common.yml -f kafka_cluster.yml up
+    ```
+
++ **Step 2:** <br/>
+Run `config-server` and `twitter-to-kafka-service` from IntelliJ in order.
++<p><img src="https://i.imgur.com/OB4jYch.png" /></p>
+
+    Once the application is running successfully, it should display the `twitter-to-kafka-service` 
+    connects with `config-server` via http://localhost:8888 to fetch all the configs required.
+    <p><img src="https://i.imgur.com/nw2eT2Y.png" /></p>
+    
 
 
 

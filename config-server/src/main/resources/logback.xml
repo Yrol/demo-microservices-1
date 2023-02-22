@@ -1,6 +1,6 @@
 <configuration>
-    <property name="DEV_HOME" value="./twitter-to-kafka-service/logs"/>
-    <property name="APP_NAME" value="twitter-to-kafka-service"/>
+    <property name="DEV_HOME" value="./config-server/logs"/>
+    <property name="APP_NAME" value="config-server"/>
 
     <!-- Inheriting the common log settings from app-config-data/src/main/resources/logback-common.xml -->
     <include resource="logback-common.xml" />
