@@ -11,7 +11,8 @@
 		<module>kafka/kafka-producer</module>
 		<module>common-config</module>
         <module>config-server</module>
-    </modules>
+<!--		<module>playground</module> commenting out since the playground module will NOT be used a submodule, instead it'll be used as playground to run test-->
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -46,6 +47,7 @@
 		<spring-cloud-dependencies.version>Hoxton.SR9</spring-cloud-dependencies.version>
 		<spring-boot-autoconfigure.version>2.3.4.RELEASE</spring-boot-autoconfigure.version>
 		<spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
+		<jasypt-spring-boot-starter.version>3.0.3</jasypt-spring-boot-starter.version>
 	</properties>
 
 	<repositories>
@@ -225,6 +227,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-security</artifactId>
 				<version>${spring-boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-spring-boot-starter</artifactId>
+				<version>${jasypt-spring-boot-starter.version}</version>
 			</dependency>
 
 		</dependencies>

@@ -4,15 +4,20 @@ spring:
   cloud:
     config:
       server:
-        # Using a local git (local file system)
+        # Using the private Git repository pointing to: config-server-repository
         git:
           uri: https://github.com/Yrol/spring-cloud-config-server
           default-label: master
-          username:
-          password:
+          username: Yrol
+          password: ENC(kDaSe2jvD7N6lrFSs5DBGg8mUt7FIU0fYcyFqcBKsr8eBhEHYMd1V5sSKPUjEBIicup6NFUhUjSNn/aTh1vBsWIW0He1uiWqqxQdE75na+Q=) # jasypt encrypted
           clone-on-start: true
     fail-fast: true # fail immediately if the above config is unable to load from local git
   security:
     user:
       name: spring_cloud_user
-      password: springCloud_Pwd!
+      password: ENC(+5JELXd1zGJg5Wplf6WPjRmX/MCLDtMueo2BpZtr96gyu6xI+9NLxEokZqO+VCkIh06TzJ9s1kff6y0u6o1HkA==) # jasypt encrypted
+
+# Jasypt password configuration
+jasypt:
+  encryptor:
+    password: ${TWITTER_TO_KAFKA_JASYPT}
