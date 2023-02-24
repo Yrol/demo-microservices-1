@@ -20,4 +20,4 @@ spring:
 # Jasypt password configuration
 jasypt:
   encryptor:
-    password: ${TWITTER_TO_KAFKA_JASYPT}
+    password: ${TWITTER_TO_KAFKA_JASYPT}  # Fetching the password from env variables: ~/.zshrc or ~/.bash_profile

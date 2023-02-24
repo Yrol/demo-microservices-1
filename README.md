@@ -88,12 +88,35 @@ Run Kafka services in Docker using the following command inside `docker-compose`
 
 + **Step 2:** <br/>
 Run `config-server` and `twitter-to-kafka-service` from IntelliJ in order.
-+<p><img src="https://i.imgur.com/OB4jYch.png" /></p>
+  <p><img src="https://i.imgur.com/OB4jYch.png" /></p>
 
     Once the application is running successfully, it should display the `twitter-to-kafka-service` 
     connects with `config-server` via http://localhost:8888 to fetch all the configs required.
     <p><img src="https://i.imgur.com/nw2eT2Y.png" /></p>
-    
+
+## Passwords and environment variables
+It is important add correct encrypted passwords to be able to fetch data from Twitter as well as connecting to Spring cloud 
+as a prerequisite. The passwords need to be encrypted using Jasypt and for this purpose Playground module can be used.
+
+### Jasypt decrypt password store location
+The Jasypt decrypt password can be stored in `~/.zshrc` or `~/.bash_profile` as an environment variable. Once added please restart IntelliJ to reflect changes.
+
+### Encrypt passwords using the Playground.
++ **Step 1:** Go to `src/main/java/jasypt/TestJasypt.java` and set the decrypt password from env variables: `standardPBEStringEncryptor.setPassword(System.getenv("TWITTER_TO_KAFKA_JASYPT"));`.
+
++ **Step 2:** Set the password /  string that needs to be encrypted in `standardPBEStringEncryptor.encrypt("string_to_be_encrypted");`.
+
++ **Step 3:** Run the project and copy the decrypted password from the console.
+
++ **Step 4:** Replace all the passwords using Jasypt encryption within the project. Ex: `ENC(abcd123)`.
+
++ **Step 5:** Update Jasypt configuration across the project with the new environment variable name added above to `~/.zshrc` or `~/.bash_profile`.
+<p><img src="https://i.imgur.com/ZjVkdko.png"></p>
+
+<p><img src="https://i.imgur.com/KLm52uQ.png"></p>
+
+
+
 
 
 
