@@ -40,4 +40,32 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <!--
+                - Spring boot Plugin allows to create a jar file for this microservice.
+                - Overriding the org.springframework.boot in parent pom file without the version.
+             -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <!-- Docker install and build configuration-->
+                <configuration>
+                    <image>
+                        <name>${project.groupId}/config.server:${project.version}</name>
+                    </image>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>build-image</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
