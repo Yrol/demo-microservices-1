@@ -11,7 +11,8 @@
 		<module>kafka/kafka-producer</module>
 		<module>common-config</module>
         <module>config-server</module>
-<!--		<module>playground</module> commenting out since the playground module will NOT be used a submodule, instead it'll be used as playground to run test-->
+        <module>kafka-consumer</module>
+        <!--		<module>playground</module> commenting out since the playground module will NOT be used a submodule, instead it'll be used as playground to run test-->
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
