@@ -115,6 +115,16 @@ The Jasypt decrypt password can be stored in `~/.zshrc` or `~/.bash_profile` as 
 
 <p><img src="https://i.imgur.com/KLm52uQ.png"></p>
 
+### Health checks
+**Actuator health check** <br/>
+To check the health of a service, for instance `config-server` service, use cURL when the services are up and running in the docker.
+```
+curl http://localhost:8888/actuator/health    
+```
+
+Where 8888 is the assigned port of the `config-server` service.
+
+
 
 
 
