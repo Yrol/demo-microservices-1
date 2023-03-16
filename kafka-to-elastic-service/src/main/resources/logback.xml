@@ -1,0 +1,7 @@
+<configuration>
+    <property name="DEV_HOME" value="./kafka-to-elastic-service/logs"/>
+    <property name="APP_NAME" value="kafka-to-elastic-service"/>
+
+    <!-- Inheriting the common log settings from app-config-data/src/main/resources/logback-common.xml -->
+    <include resource="logback-common.xml" />
+</configuration>

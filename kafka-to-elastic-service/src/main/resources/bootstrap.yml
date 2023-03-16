@@ -1,0 +1,20 @@
+# This file will setup the Spring cloud properties
+# The active profile: "twitter_to_kafka" and config name: "config-client" should match the configuration file: config-server-repository/config-client-twitter_to_kafka.yml
+# As a result, when the config-server service is up and running we should be able to access "config-server-repository/config-client-twitter_to_kafka.yml" by going into http://localhost:8888/config-client/twitter_to_kafka
+
+spring:
+  application:
+    name: kafka-to-elastic-service
+  profiles:
+    active: kafka_to_elastic
+  cloud:
+    config:
+      name: kafka-to-elastic-service,config-client
+      uri: http://localhost:8888
+      username: spring_cloud_user
+      password: ENC(+5JELXd1zGJg5Wplf6WPjRmX/MCLDtMueo2BpZtr96gyu6xI+9NLxEokZqO+VCkIh06TzJ9s1kff6y0u6o1HkA==) #jasypt encrypted password
+
+# Jasypt password configuration
+jasypt:
+  encryptor:
+    password: ${TWITTER_TO_KAFKA_JASYPT}  # Fetching the password from env variables: ~/.zshrc or ~/.bash_profile

@@ -1,4 +1,4 @@
-package com.microservices.demo.consumer.config;
+package com.microservices.demo.kafka.consumer.config;
 
 import com.microservices.demo.config.KafkaConfigData;
 import com.microservices.demo.config.KafkaConsumerConfigData;
@@ -71,3 +71,4 @@ public class KafkaConsumerConfig<K extends Serializable, V extends SpecificRecor
         return factory;
     }
 }
+
