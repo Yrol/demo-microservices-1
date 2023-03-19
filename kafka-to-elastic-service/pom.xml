@@ -15,16 +15,15 @@
         <!-- Local dependencies-->
         <dependency>
             <groupId>com.microservices.demo</groupId>
+            <artifactId>kafka-consumer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
             <artifactId>kafka-admin</artifactId>
         </dependency>
         <dependency>
             <groupId>com.microservices.demo</groupId>
             <artifactId>kafka-model</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.microservices.demo</groupId>
-            <artifactId>kafka-consumer</artifactId>
         </dependency>
 
         <!--Spring and other dependencies-->
@@ -47,14 +46,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.microservices.demo</groupId>
-            <artifactId>kafka-model</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.microservices.demo</groupId>
-            <artifactId>kafka-model</artifactId>
         </dependency>
     </dependencies>
 

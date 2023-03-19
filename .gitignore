@@ -4,8 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 twitter-to-kafka-service/logs/*
-config-server/logs/*
 twitter-to-kafka-service/twitter-to-kafka-service/logs/archived/*
+kafka-to-elastic-service/logs/*
+config-server/logs/*
 docker-compose/docker-logs/*
 
 ### STS ###

@@ -9,7 +9,7 @@ spring:
           uri: https://github.com/Yrol/spring-cloud-config-server
           default-label: master
           username: Yrol
-          password: ENC(kDaSe2jvD7N6lrFSs5DBGg8mUt7FIU0fYcyFqcBKsr8eBhEHYMd1V5sSKPUjEBIicup6NFUhUjSNn/aTh1vBsWIW0He1uiWqqxQdE75na+Q=) # jasypt encrypted
+          password: ENC(YFZFe/VgBqsPIj4gJAXLX8/XOyXfbFMJ9BNNr9xLkkfVUlHrCzU3FpRKSG9ISiHHRh9PubrIpm6t950OwjgBe2s1bi5FHYg8eSK/6HnR1dA=) # jasypt encrypted
           clone-on-start: true
     fail-fast: true # fail immediately if the above config is unable to load from local git
   security:

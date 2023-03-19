@@ -6,6 +6,8 @@ import com.microservices.demo.kafka.avro.model.TwitterAvroModel;
 import com.microservices.demo.kafka.to.elastic.service.consumer.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.context.event.ApplicationStartedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
 import org.springframework.kafka.support.KafkaHeaders;
@@ -26,10 +28,23 @@ public class TwitterKafkaConsumer implements KafkaConsumer<Long, TwitterAvroMode
 
     private final KafkaConfigData kafkaConfigData;
 
-    public TwitterKafkaConsumer(KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry, KafkaAdminClient kafkaAdminClient, KafkaConfigData kafkaConfigData) {
+    public TwitterKafkaConsumer(KafkaListenerEndpointRegistry kafkaListenerEndpointRegistry,
+                                KafkaAdminClient kafkaAdminClient,
+                                KafkaConfigData kafkaConfigData) {
         this.kafkaListenerEndpointRegistry = kafkaListenerEndpointRegistry;
         this.kafkaAdminClient = kafkaAdminClient;
         this.kafkaConfigData = kafkaConfigData;
+    }
+
+    /**
+     * Annotate with EventListener run when the application start.
+     * Performing some checks on application start.
+    * */
+    @EventListener
+    public void onAppStarted(ApplicationStartedEvent event) {
+        kafkaAdminClient.checkTopicsCreated();
+        LOG.info("Topics with name {} is ready for operations!", kafkaConfigData.getTopicNamesToCreate().toArray());
+        kafkaListenerEndpointRegistry.getListenerContainer("twitterTopicListener").start();
     }
 
     /**
@@ -39,15 +54,14 @@ public class TwitterKafkaConsumer implements KafkaConsumer<Long, TwitterAvroMode
     @KafkaListener(id = "twitterTopicListener", topics = "${kafka-config.topic-name}")
     public void receive(@Payload List<TwitterAvroModel> messages,
                         @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) List<Integer> keys,
-                        @Header(KafkaHeaders.PARTITION_ID) List<Integer> partitions,
+                        @Header(KafkaHeaders.RECEIVED_PARTITION_ID) List<Integer> partitions,
                         @Header(KafkaHeaders.OFFSET) List<Long> offsets) {
-
-        LOG.info("{} number of message received with keys {}, partitions {} and offsets {}, sending it to elastic: Thread Id {}" +
+        LOG.info("{} number of message received with keys {}, partitions {} and offsets {}, " +
+                        "sending it to elastic: Thread id {}",
                 messages.size(),
                 keys.toString(),
                 partitions.toString(),
                 offsets.toString(),
                 Thread.currentThread().getId());
-
     }
 }
