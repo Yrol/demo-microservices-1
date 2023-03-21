@@ -12,9 +12,8 @@ spring:
       name: kafka-to-elastic-service,config-client
       uri: http://localhost:8888
       username: spring_cloud_user
-      password: ENC(+5JELXd1zGJg5Wplf6WPjRmX/MCLDtMueo2BpZtr96gyu6xI+9NLxEokZqO+VCkIh06TzJ9s1kff6y0u6o1HkA==) #jasypt encrypted password
+      password: ENC(+5JELXd1zGJg5Wplf6WPjRmX/MCLDtMueo2BpZtr96gyu6xI+9NLxEokZqO+VCkIh06TzJ9s1kff6y0u6o1HkA==)
 
-# Jasypt password configuration
 jasypt:
   encryptor:
     password: ${TWITTER_TO_KAFKA_JASYPT}  # Fetching the password from env variables: ~/.zshrc or ~/.bash_profile

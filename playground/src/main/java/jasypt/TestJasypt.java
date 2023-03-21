@@ -16,6 +16,6 @@ public class TestJasypt {
         standardPBEStringEncryptor.setIvGenerator(new RandomIvGenerator());
         String result = standardPBEStringEncryptor.encrypt("password_or_string_to_encrypt");
         System.out.println(result);
-//        System.out.println(standardPBEStringEncryptor.decrypt(result));
+//        System.out.println(standardPBEStringEncryptor.decrypt("password_or_string_to_decrypt"));
     }
 }
