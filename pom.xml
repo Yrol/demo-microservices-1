@@ -52,6 +52,7 @@
 		<spring-boot-autoconfigure.version>2.3.4.RELEASE</spring-boot-autoconfigure.version>
 		<spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
 		<jasypt-spring-boot-starter.version>3.0.3</jasypt-spring-boot-starter.version>
+		<spring-boot-starter-data-elasticsearch.version>3.0.4</spring-boot-starter-data-elasticsearch.version>
 	</properties>
 
 	<repositories>
@@ -121,7 +122,6 @@
 				<version>${avro.version}</version>
 			</dependency>
 
-
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-test</artifactId>
@@ -179,6 +179,13 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-webflux</artifactId>
 				<version>${spring-boot-starter-webflux.version}</version>
+			</dependency>
+
+			<!-- Elastic search dependency -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+				<version>${spring-boot-starter-data-elasticsearch.version}</version>
 			</dependency>
 
 			<dependency>
