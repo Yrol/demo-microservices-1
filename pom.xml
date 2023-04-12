@@ -98,15 +98,24 @@
 				<version>${project.version}</version>
 			</dependency>
 
+			<!-- Local Dependency - kafka-model -->
 			<dependency>
 				<groupId>com.microservices.demo</groupId>
 				<artifactId>kafka-model</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
+			<!-- Local Dependency - kafka-consumer -->
 			<dependency>
 				<groupId>com.microservices.demo</groupId>
 				<artifactId>kafka-consumer</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- Local Dependency - elastic-model -->
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>elastic-model</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
