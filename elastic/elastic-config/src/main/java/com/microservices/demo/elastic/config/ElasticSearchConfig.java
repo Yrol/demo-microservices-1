@@ -7,6 +7,9 @@ import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.elasticsearch.config.AbstractElasticsearchConfiguration;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -18,6 +21,7 @@ import java.util.Objects;
  * **/
 
 @Configuration
+@EnableElasticsearchRepositories(basePackages = "com.microservices.demo.elastic.index.client.repository")
 public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
     private final ElasticConfigData elasticConfigData;
@@ -42,5 +46,9 @@ public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
                                         .setSocketTimeout(elasticConfigData.getSocketTimeoutMs())
                 )
         );
+    }
+
+    public ElasticsearchOperations elasticsearchTemplate() {
+        return new ElasticsearchRestTemplate(elasticsearchClient());
     }
 }
