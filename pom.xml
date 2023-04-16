@@ -119,6 +119,20 @@
 				<version>${project.version}</version>
 			</dependency>
 
+			<!-- Local Dependency - elastic-config -->
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>elastic-config</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- Local Dependency - elastic-index-client -->
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>elastic-index-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>

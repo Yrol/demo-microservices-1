@@ -26,6 +26,21 @@
             <artifactId>kafka-model</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
+            <artifactId>elastic-model</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
+            <artifactId>elastic-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
+            <artifactId>elastic-index-client</artifactId>
+        </dependency>
+
         <!--Spring and other dependencies-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -50,6 +65,10 @@
         <dependency>
             <groupId>com.github.ulisesbocchio</groupId>
             <artifactId>jasypt-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.microservices.demo</groupId>
+            <artifactId>elastic-model</artifactId>
         </dependency>
     </dependencies>
 
