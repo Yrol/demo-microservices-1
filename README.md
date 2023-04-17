@@ -57,6 +57,15 @@ Assuming that the project is opened in IntelliJ (an alternative to running the c
 
 <p><img src="https://i.imgur.com/K0Xid2W.png"/></p>
 
+## ElasticSearch
+The Docker based ElasticSearch services are located in `/microservices-demo/docker-compose/elastic_cluster.yml`. The cluster consist of 3 nodes and the service can be accessed via `localhost:9200`.
+
+To start ElasticSearch via Docker use the following command.
+```
+docker-compose -f common.yml -f elastic_cluster.yml up
+```
+
+
 ## Docker
 
 **Docker building the microservices** <br/>
